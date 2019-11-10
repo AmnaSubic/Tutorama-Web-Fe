@@ -1,0 +1,92 @@
+/* Mobile Phones and Tablets*/
+@media only screen and (max-width: 991px) {
+  .ol {
+    overflow-y: auto;
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: midnightblue;
+    transition: 0.5s;
+  }
+
+  .ol a {
+    display: block;
+    transition: 0.3s;
+    padding: 8px;
+  }
+
+  .ol .closeBtn {
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+
+  .ol-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .ol ul {
+    list-style: none;
+  }
+
+  .toggler {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+
+  nav {
+    position: fixed;
+  }
+
+}
+
+/*Computers*/
+
+@media only screen and (min-width: 992px) {
+  .toggler {
+    display: none;
+  }
+
+  #web-name a:hover, .ol a:hover {
+    color: crimson;
+    transition: 0.5s;
+  }
+
+  nav{
+    margin: auto 0;
+  }
+}
+
+.ol a {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+#web-name {
+  font-size: 27px;
+  width: 183px;
+}
+
+#web-name a {
+  text-decoration: none;
+  color: white;
+}
+
+#web-name a:focus, .ol a:focus, .active {
+  color: crimson;
+}
+
+
+
+
