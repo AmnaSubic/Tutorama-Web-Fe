@@ -44,8 +44,12 @@
     cursor: pointer;
   }
 
-  nav {
-    position: fixed;
+  .navbar-fixed-top {
+   position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
   }
 
 }
@@ -62,8 +66,13 @@
     transition: 0.5s;
   }
 
-  nav{
+  .navbar-fixed-top {
+    position: fixed;
     margin: auto 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
   }
 }
 
