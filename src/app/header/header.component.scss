@@ -46,10 +46,6 @@
 
   .navbar-fixed-top {
    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
   }
 
 }
@@ -69,15 +65,11 @@
   .navbar-fixed-top {
     position: fixed;
     margin: auto 0;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
   }
 }
 
 .ol a {
-  font-size: 20px;
+  font-size: 15px;
   text-decoration: none;
   color: white;
 }
@@ -92,10 +84,20 @@
   color: white;
 }
 
+#web-name span {
+    font-weight: bold;
+}
+
 #web-name a:focus, .ol a:focus, .active {
   color: crimson;
 }
 
+.navbar-fixed-top {
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
 
 
 
