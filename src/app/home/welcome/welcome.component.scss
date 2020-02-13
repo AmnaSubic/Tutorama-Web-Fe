@@ -22,14 +22,9 @@
   z-index: 1;
 }
 
-@media only screen and (min-width: 480px) and (max-width: 1408px) {
-  #bg {
-    left: 50%;
-    margin-left: -704px;
-  }
-
+@media only screen and (min-width: 992px){
   #text {
-    margin: 200px 0 0 calc((100% - 460px) * 0.5);
+    margin-left: calc((100% - 460px) * 0.5);
     width: 460px;
     height: 250px;
 
@@ -45,11 +40,74 @@
       font: normal normal normal 38px/1.4em montserrat, sans-serif;
     }
   }
+
+  .blocks {
+    margin-left: calc((100% - 630px) * 0.5);
+  }
+
+  .block {
+    margin-left: 15px;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .block:first-child {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 991px) {
+  #bg {
+    left: 50%;
+    margin-left: -704px;
+  }
+
+  #text {
+    margin-left: calc((100% - 410px) * 0.5);
+    width: 410px;
+    height: 225px;
+
+    p {
+      font: normal normal normal 13px/1.4em montserrat, sans-serif;
+    }
+
+    h1 {
+      font: normal normal bold 52px/1.4em montserrat, sans-serif;
+    }
+
+    h2 {
+      font: normal normal normal 30.875px/1.4em montserrat, sans-serif;
+    }
+  }
+
+  .blocks {
+    margin-left: calc((100% - 470px) * 0.5);
+  }
+
+  .block {
+    margin-left: 10px;
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+
+    p {
+      font-size: 13px;
+    }
+  }
+
+  .block:first-child {
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 479px) {
   #text {
-    margin: 200px 0 0 calc((100% - 360px) * 0.5);
+    margin-left: calc((100% - 360px) * 0.5);
     width: 360px;
     height: 200px;
 
@@ -65,6 +123,38 @@
       font: normal normal normal 23.75px/1.4em montserrat, sans-serif;
     }
   }
+
+  .blocks {
+    margin-left: calc((100% - 315px) * 0.5);
+  }
+
+  .block {
+    margin-left: 15px;
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+
+    p {
+      font-size: 10px;
+    }
+  }
+
+  .block:first-child {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .block:last-child {
+    margin-top: 15px;
+    display: flow;
+    margin-left: 0;
+    width: 315px;
+
+    img,p {
+      margin-top: 10%;
+    }
+  }
+
 }
 
 #text {
@@ -72,6 +162,9 @@
   text-align: center;
   position: relative;
   z-index: 3;
+  margin-top: 200px;
+  margin-right: 0;
+  margin-bottom: 0;
 
   p {
     text-transform: uppercase;
@@ -80,25 +173,17 @@
 
 .blocks {
   position: relative;
-  margin-left: calc((100% - 600px) * 0.5);
   z-index: 3;
 }
 
 .block {
   font-size: 20px;
   text-align: center;
-  height: 200px;
-  width: 200px;
-  display: inline-block;
   background-color: white;
-  margin-left: 15px;
   contain: content;
+
+  img, p {
+    margin-top: 12.5%;
+  }
 }
 
-.block:first-child {
-  margin-left: 0;
-}
-
-.block img, .block p {
-  margin: 25px 0;
-}
