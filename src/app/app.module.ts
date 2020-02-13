@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { LayoutComponent } from './layout/layout.component';
 import { FooterComponent } from './footer/footer.component';
 import { WelcomeComponent } from './home/welcome/welcome.component';
+import { InfoComponent } from './home/info/info.component';
+import { ContactComponent } from './home/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { WelcomeComponent } from './home/welcome/welcome.component';
       HomeComponent,
       LayoutComponent,
       FooterComponent,
-      WelcomeComponent
+      WelcomeComponent,
+      InfoComponent,
+      ContactComponent
   ],
   imports: [
       BrowserModule,

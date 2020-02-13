@@ -1,5 +1,10 @@
+#welcome {
+  height: 644.096px;
+  width: 100%;
+}
+
 .overlay {
-  background-color: #264bd1;
+  background-color: #060cbf;
   opacity: 0.7;
   position: absolute;
   top: 0;
@@ -10,7 +15,6 @@
   height: 844.096px;
   z-index: 2;
 }
-
 
 #bg {
   min-width: 1408px;
@@ -59,6 +63,10 @@
   .block:first-child {
     margin-left: 0;
   }
+
+  .contents {
+    margin-top: 45px;
+  }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 991px) {
@@ -103,6 +111,10 @@
   .block:first-child {
     margin-left: 0;
   }
+
+  .contents {
+    margin-top: 35px;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -145,16 +157,15 @@
   }
 
   .block:last-child {
-    margin-top: 15px;
+    margin-top: 10px;
     display: flow;
     margin-left: 0;
     width: 315px;
-
-    img,p {
-      margin-top: 10%;
-    }
   }
 
+  .contents {
+    margin-top: 30px;
+  }
 }
 
 #text {
@@ -182,7 +193,7 @@
   background-color: white;
   contain: content;
 
-  img, p {
+  p {
     margin-top: 12.5%;
   }
 }
