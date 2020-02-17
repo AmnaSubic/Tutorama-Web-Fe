@@ -20,6 +20,20 @@
   width: fit-content;
 }
 
+
+.paragraph-container {
+  background-color: #e1e8fa;
+  height: auto;
+  position: relative;
+  z-index: 3;
+}
+
+#image {
+  z-index: 4;
+  position: relative;
+  width: auto;
+}
+
 @media only screen and (min-width: 992px) {
   #info p {
     font: normal normal normal 16px/1.4em montserrat, sans-serif;
@@ -27,31 +41,21 @@
 
   #info h1 {
     font: normal normal bold 35px/1.4em montserrat, sans-serif;
-  }
-
-  .info-container {
-    height: fit-content;
-    margin: 150px calc((100% - 765px) * 0.5) 0;
-    position: absolute;
-    align-content: center;
+    top: 150px;
+    left: calc((100% - 765px) * 0.5);
   }
 
   .paragraph-container {
-    background-color: #e1e8fa;
-    height: auto;
     width: 500px;
-    position: relative;
-    top: -400px;
-    left: 265px;
-    z-index: 3;
+    top: -250px;
+    margin-left: 265px;
+    left: calc((100% - 765px) * 0.5);
   }
 
   #image {
-    z-index: 4;
-    top: 50px;
-    position: relative;
+    top: 200px;
+    left: calc((100% - 765px) * 0.5);
     height: 400px;
-    width: auto;
   }
 }
 
@@ -62,41 +66,72 @@
 
   #info h1 {
     font: normal normal bold 30.875px/1.4em montserrat, sans-serif;
-    left: 230px;
-    top: 40px;
-  }
-
-  .info-container {
-    height: fit-content;
-    margin: 100px calc((100% - 450px) * 0.5) 0;
-    position: absolute;
-    align-content: center;
+    left: 51%;
+    top: 140px;
   }
 
   .paragraph-container {
-    background-color: #e1e8fa;
-    height: auto;
-    width: 430px;
-    position: relative;
-    top: -250px;
-    left: 20px;
-    z-index: 3;
+    width: 80%;
+    top: -100px;
+    left: 10%;
   }
 
   #image {
-    z-index: 4;
-    top: -50px;
-    position: relative;
+    top: 50px;
     height: 300px;
-    width: auto;
+    left: 3%;
   }
 
   p:first-child {
     padding-left: 160px;
   }
+
+  @media only screen and (min-width: 480px) and (max-width: 495px) {
+    #image {
+      top: 110px;
+    }
+  }
+
+  @media only screen and (min-width: 496px) and (max-width: 542px) {
+    #image {
+      top: 95px;
+    }
+  }
+
+  @media only screen and (min-width: 543px) and (max-width: 565px) {
+    #image {
+      top: 80px;
+    }
+  }
+
+  @media only screen and (min-width: 566px) and (max-width: 626px) {
+    #image {
+      top: 65px;
+    }
+  }
 }
 
+@media only screen and (max-width: 479px) {
+  #info p {
+    font: normal normal normal 10px/1.4em montserrat, sans-serif;
+  }
 
+  #info h1 {
+    font: normal normal bold 23.75px/1.4em montserrat, sans-serif;
+    left: calc((100% - 260px) * 0.5);
+    top: 50px;
 
+  }
 
+  .paragraph-container {
+    width: 300px;
+    top: 100px;
+    left: calc((100% - 300px) * 0.5);
+  }
 
+  #image {
+    height: 350px;
+    top: 70px;
+    left: calc((100% - 260px) * 0.5);
+  }
+}

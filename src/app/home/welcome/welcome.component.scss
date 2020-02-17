@@ -120,8 +120,8 @@
 
 @media screen and (max-width: 479px) {
   #text {
-    margin-left: calc((100% - 360px) * 0.5);
-    width: 360px;
+    margin-left: calc((100% - 320px) * 0.5);
+    width: 320px;
     height: 200px;
 
     p {
@@ -138,14 +138,14 @@
   }
 
   .blocks {
-    margin-left: calc((100% - 315px) * 0.5);
+    margin-left: calc((100% - 300px) * 0.5);
   }
 
   .block {
-    margin-left: 15px;
+    margin-left: 10px;
     display: inline-block;
-    height: 150px;
-    width: 150px;
+    height: 145px;
+    width: 145px;
 
     p {
       font-size: 10px;
@@ -161,7 +161,7 @@
     margin-top: 10px;
     display: flow;
     margin-left: 0;
-    width: 315px;
+    width: 300px;
   }
 
   .contents {
