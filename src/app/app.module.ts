@@ -12,6 +12,8 @@ import { WelcomeComponent } from './home/welcome/welcome.component';
 import { InfoComponent } from './home/info/info.component';
 import { ContactComponent } from './home/contact/contact.component';
 import { HowItWorksComponent } from './home/how-it-works/how-it-works.component';
+import { OpenNavDirective } from './directives/open-nav.directive';
+import { CloseNavDirective } from './directives/close-nav.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { HowItWorksComponent } from './home/how-it-works/how-it-works.component'
       WelcomeComponent,
       InfoComponent,
       ContactComponent,
-      HowItWorksComponent
+      HowItWorksComponent,
+      OpenNavDirective,
+      CloseNavDirective
   ],
   imports: [
       BrowserModule,
