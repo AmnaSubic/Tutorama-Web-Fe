@@ -139,6 +139,7 @@
 
   .blocks {
     margin-left: calc((100% - 300px) * 0.5);
+    width: 300px;
   }
 
   .block {
@@ -159,9 +160,13 @@
 
   .block:last-child {
     margin-top: 10px;
-    display: flow;
     margin-left: 0;
     width: 300px;
+    height: 145px;
+
+    p {
+      margin-top: 15px;
+    }
   }
 
   .contents {

@@ -4,9 +4,6 @@
   background-color: #c5d5fb;
   position: relative;
   z-index: 2;
-}
-
-#info p, h1 {
   color: #000a2d;
 }
 
@@ -17,7 +14,7 @@
 
 #info h1 {
   position: relative;
-  width: fit-content;
+  color: #010E78;
 }
 
 
@@ -40,9 +37,10 @@
   }
 
   #info h1 {
-    font: normal normal bold 35px/1.4em montserrat, sans-serif;
+    font: normal normal bold 64px/1.4em montserrat, sans-serif;
     top: 150px;
     left: calc((100% - 765px) * 0.5);
+    width: 425px;
   }
 
   .paragraph-container {
@@ -65,48 +63,40 @@
   }
 
   #info h1 {
-    font: normal normal bold 30.875px/1.4em montserrat, sans-serif;
-    left: 51%;
-    top: 140px;
+    font: normal normal bold 52px/1.4em montserrat, sans-serif;
+    left: calc((100% - 600px) * 0.5);
+    top: 65px;
+    width: 600px;
   }
 
   .paragraph-container {
     width: 80%;
-    top: -100px;
+    top: 30px;
     left: 10%;
   }
 
   #image {
-    top: 50px;
-    height: 300px;
-    left: 3%;
+    top: 80px;
+    left: calc((100% - 281.25px) * 0.5);
+    height: 375px;
   }
 
-  p:first-child {
-    padding-left: 160px;
-  }
-
-  @media only screen and (min-width: 480px) and (max-width: 495px) {
-    #image {
-      top: 110px;
+  @media only screen and (max-width: 600px) {
+    #info h1 {
+      width: 395px;
+      text-align: center;
+      left: calc((100% - 395px) * 0.5);
+      top: 2.5%;
     }
-  }
 
-  @media only screen and (min-width: 496px) and (max-width: 542px) {
     #image {
-      top: 95px;
+      height: 350px;
+      left: calc((100% - 260px) * 0.5);
+      top: 25px;
     }
-  }
 
-  @media only screen and (min-width: 543px) and (max-width: 565px) {
-    #image {
-      top: 80px;
-    }
-  }
-
-  @media only screen and (min-width: 566px) and (max-width: 626px) {
-    #image {
-      top: 65px;
+    .paragraph-container {
+      top: 0;
     }
   }
 }
@@ -117,10 +107,11 @@
   }
 
   #info h1 {
-    font: normal normal bold 23.75px/1.4em montserrat, sans-serif;
-    left: calc((100% - 260px) * 0.5);
+    font: normal normal bold 40px/1.4em montserrat, sans-serif;
+    left: calc((100% - 320px) * 0.5);
     top: 50px;
-
+    width: 320px;
+    text-align: center;
   }
 
   .paragraph-container {
