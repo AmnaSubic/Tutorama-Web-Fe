@@ -9,6 +9,6 @@ export class OpenNavDirective {
 
   @HostListener('click', ['$event.target'])
   onClick() {
-    document.getElementById('navBarItems').style.height = '100%';
+    document.getElementById('nav-bar-items').style.height = '100%';
   }
 }

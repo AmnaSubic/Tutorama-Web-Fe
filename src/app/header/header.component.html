@@ -1,39 +1,35 @@
-<nav id="navBar" class="navbar navbar-expand-lg navbar-fixed-top">
+<nav id="nav-bar" class="navbar navbar-expand-md">
     <div class="container my-4">
-        <div id="gridContainer">
-            <div id="web-name">
-                <a href="http://127.0.0.1:2400/" target="_self">
-                    Tutorama<span style="font-weight: bolder;">.ba</span>
-                </a>
-            </div>
-        </div>
+      <div id="web-name">
+        <a href="http://192.168.1.44:2400/" target="_self">
+          <img width="100" height="100" src="../../assets/Img/logo4.png" alt="Tutorama.ba Logo"> Tutorama<span style="font-weight: bolder;">.ba</span>
+        </a>
+      </div>
 
-        <div id="navBarItems" class="ol">
-            <span class="toggler closeBtn" appCloseNav>&times;</span>
-            <ul id="nav" class="ol-content navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a href="" routerLink="/" class="nav-link">HOME</a>
-                <li class="nav-item">
-                    <a href="#info" class="nav-link">INFO</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#how-it-works" class="nav-link">HOW IT WORKS</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">CONTACT</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/creator" routerLink="/creator" class="nav-link">CREATOR</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">REGISTER</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">LOGIN</a>
-                </li>
-            </ul>
-        </div>
-        <span class="toggler" appOpenNav>&#9776;</span>
+      <div id="nav-bar-items">
+        <span id="closeBtn" appCloseNav>&times;</span>
+        <ul id="nav" class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="" routerLink="/" class="nav-link">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="/creator" routerLink="/creator" class="nav-link">CREATOR</a>
+          </li>
+          <li class="nav-item">
+            <a href="/contact" routerLink="/contact" class="nav-link">CONTACT</a>
+          </li>
+          <li class="nav-item">
+            <div id="line"></div>
+          </li>
+          <li class="nav-item">
+            <a href="#"  routerLink="/login" class="nav-link">LOGIN</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" routerLink="/sign-up" class="nav-link">SIGN UP</a>
+          </li>
+        </ul>
+      </div>
+      <span id="toggler" appOpenNav>&#9776;</span>
     </div>
 </nav>
 

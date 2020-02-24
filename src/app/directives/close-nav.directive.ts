@@ -9,6 +9,6 @@ export class CloseNavDirective {
 
   @HostListener('click', ['$event.target'])
   onClick() {
-    document.getElementById('navBarItems').style.height = '0%';
+    document.getElementById('nav-bar-items').style.height = '0%';
   }
 }

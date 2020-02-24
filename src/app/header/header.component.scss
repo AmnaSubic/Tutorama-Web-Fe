@@ -1,6 +1,6 @@
 /* Mobile Phones and Tablets*/
-@media only screen and (max-width: 991px) {
-  .ol {
+@media only screen and (max-width: 767px) {
+  #nav-bar-items {
     overflow-y: auto;
     height: 0;
     width: 100%;
@@ -8,25 +8,25 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: midnightblue;
+    background-color: #205743;
     transition: 0.5s;
   }
 
-  .ol a {
+  #nav-bar-items a {
     display: block;
     transition: 0.3s;
     padding: 8px;
+    color: white;
   }
 
-  .ol .closeBtn {
+  #closeBtn {
     position: absolute;
-    color: white;
     font-size: 40px;
     top: 15px;
     right: 35px;
   }
 
-  .ol-content {
+  #nav {
     position: relative;
     top: 25%;
     width: 100%;
@@ -34,70 +34,78 @@
     margin-top: 30px;
   }
 
-  .ol ul {
+  #nav-bar-items ul {
     list-style: none;
   }
 
-  .toggler {
+  #toggler, #closeBtn {
     font-size: 30px;
-    color: white;
+    color: #111922;
     cursor: pointer;
   }
 
-  .navbar-fixed-top {
-   position: absolute;
+  #closeBtn {
+    color: white;
   }
-
 }
 
 /*Computers*/
 
-@media only screen and (min-width: 992px) {
-  .toggler {
+@media only screen and (min-width: 768px) {
+  #toggler, #closeBtn {
     display: none;
   }
 
-  #web-name a:hover, .ol a:hover {
-    color: crimson;
-    transition: 0.5s;
+  #line {
+    width: 2px;
+    height: 40px;
+    background-color: #111922;
+    margin: 0 15px;
   }
 
-  .navbar-fixed-top {
-    position: fixed;
+  #nav-bar-items li:last-child {
+    border: solid 1px #205743;
+  }
+
+  #nav-bar {
     margin: auto 0;
   }
 }
 
-.ol a {
+#nav-bar-items a {
   font-size: 15px;
   text-decoration: none;
-  color: white;
-}
-
-#web-name {
-  font-size: 27px;
-  width: 183px;
 }
 
 #web-name a {
   text-decoration: none;
-  color: white;
+  font-size: 27px;
+  width: 183px;
+  display: inline;
+}
+
+#web-name {
+  font-size: 27px;
 }
 
 #web-name span {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-#web-name a:focus, .ol a:focus, .active {
-  color: crimson;
-}
-
-.navbar-fixed-top {
+#nav-bar {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1030;
+  z-index: 1;
+  position: absolute;
 }
 
+a {
+  color: #111922;
+}
 
+#web-name a:hover, .ol a:hover {
+  color: crimson;
+  transition: 0.5s;
+}
 
