@@ -12,9 +12,11 @@ import { OpenNavDirective } from './directives/open-nav.directive';
 import { CloseNavDirective } from './directives/close-nav.directive';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { MainComponent } from './home/main/main.component';
 import { PopularSubjectsComponent } from './home/popular-subjects/popular-subjects.component';
+import { WhyTutoramaComponent } from './home/why-tutorama/why-tutorama.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { PopularSubjectsComponent } from './home/popular-subjects/popular-subjec
       OpenNavDirective,
       CloseNavDirective,
       MainComponent,
-      PopularSubjectsComponent
+      PopularSubjectsComponent,
+      WhyTutoramaComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +43,6 @@ import { PopularSubjectsComponent } from './home/popular-subjects/popular-subjec
 })
 export class AppModule {
   constructor() {
-    library.add(fab);
+    library.add(fab, fas);
   }
 }

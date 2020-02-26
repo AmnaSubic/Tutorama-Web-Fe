@@ -1,131 +1,164 @@
 @media only screen and (min-width: 1200px) {
-  #main {
+  #main-contents {
     height: 800px;
     width: 1110px;
     left: calc((100% - 1110px) * 0.5);
   }
 
-  #main h1 {
+  #main-contents h1 {
     font: normal normal bold 76px/1.4em 'Grand Hotel', serif;
   }
 
-  #main p {
+  #main-contents p {
     font: normal normal normal 19px/1.4em montserrat, sans-serif;
+  }
+
+  .homepage-buttons {
+    width: 160px;
+  }
+
+  .button-link {
+    width: 160px;
   }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  #main {
+  #main-contents {
     height: 800px;
     width: 930px;
     left: calc((100% - 930px) * 0.5);
   }
 
-  #main h1 {
+  #main-contents h1 {
     font: normal normal bold 64px/1.4em 'Grand Hotel', serif;
   }
 
-  #main p {
+  #main-contents p {
     font: normal normal normal 16px/1.4em montserrat, sans-serif;
+  }
+
+  .homepage-buttons {
+    width: 140px;
+  }
+
+  .button-link {
+    width: 140px;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  #main {
+  #main-contents {
     height: 800px;
     width: 690px;
     left: calc((100% - 690px) * 0.5);
   }
 
-  #main h1 {
+  #main-contents h1 {
     font: normal normal bold 52px/1.4em 'Grand Hotel', serif;
   }
 
-  #main p {
+  #main-contents p {
     font: normal normal normal 13px/1.4em montserrat, sans-serif;
+  }
+
+  .homepage-buttons {
+    width: 120px;
+  }
+
+  .button-link {
+    width: 120px;
   }
 }
 
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  #main {
+  #main-contents {
     height: 800px;
     width: 540px;
     left: calc((100% - 540px) * 0.5);
   }
 
-  #main h1 {
+  #main-contents h1 {
     font: normal normal bold 40px/1.4em 'Grand Hotel', serif ;
   }
 
-  #main p {
+  #main-contents p {
     font: normal normal normal 10px/1.4em montserrat, sans-serif;
   }
 
-  #main img {
+  #main-contents img {
     width: 540px;
     height: auto;
+  }
+
+  .homepage-buttons {
+    width: 110px;
+  }
+
+  .button-link {
+    width: 110px;
   }
 }
 
 @media only screen and (max-width: 575px) {
-  #main {
+  #main-contents {
     height: 650px;
     width: 90.625%;
     min-width: 290px;
     left: 4.6875%;
   }
 
-  #main h1 {
+  #main-contents h1 {
     font: normal normal bold 40px/1.4em 'Grand Hotel', serif ;
   }
 
-  #main p {
+  #main-contents p {
     font: normal normal normal 10px/1.4em montserrat, sans-serif;
   }
 
-  #main img {
+  #main-contents img {
     width: calc(100% - 30px);
     height: auto;
   }
+
+  .homepage-buttons {
+    width: 90px;
+  }
+
+  .button-link {
+    width: 90px;
+  }
 }
 
-#main {
+#main-contents {
   position: relative;
 }
 
-#main img {
+#main-contents img {
   position: absolute;
   bottom: 0;
   right: 0;
 }
 
-#main h1, #main p {
+#main-contents h1, #main-contents p {
   position: relative;
   left: 15px;
 }
 
-#main h1 {
+#main-contents h1 {
   top: 150px;
 }
 
-#main p {
+#main-contents p {
   top: 160px;
 }
 
-#join {
-  position: relative;
-  border-radius: 25px;
-  border-width: 1px;
-  border-color: white;
-  height: 50px;
-  width: 120px;
-  background-color: #205743;
+.button-link {
   top: 170px;
   left: calc((100% - 120px) * 0.5);
 }
 
-#join a {
-  color: white;
-  text-decoration: none;
+#main {
+  background-color: #CDD3CC;
+  width: 100%;
 }

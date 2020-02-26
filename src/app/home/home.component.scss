@@ -1,0 +1,66 @@
+.homepage-buttons {
+  border-radius: 25px;
+  border-width: 0;
+  background-color: #205743;
+  color: white;
+  text-decoration: none;
+}
+
+.button-link {
+  position: relative;
+}
+
+@media only screen and (min-width: 1200px) {
+  .homepage-buttons {
+    font: normal normal normal 17px/1.4em montserrat, sans-serif;
+    height: 55px;
+  }
+
+  .button-link {
+    height: 55px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .homepage-buttons {
+    font: normal normal normal 15px/1.4em montserrat, sans-serif;
+    height: 50px;
+  }
+
+  .button-link {
+    height: 50px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .homepage-buttons {
+    font: normal normal normal 13px/1.4em montserrat, sans-serif;
+    height: 45px;
+  }
+
+  .button-link {
+    height: 45px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .homepage-buttons {
+    font: normal normal normal 11px/1.4em montserrat, sans-serif;
+    height: 40px;
+  }
+
+  .button-link {
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .homepage-buttons {
+    font: normal normal normal 9px/1.4em montserrat, sans-serif;
+    height: 35px;
+  }
+
+  .button-link {
+    height: 35px;
+  }
+}
