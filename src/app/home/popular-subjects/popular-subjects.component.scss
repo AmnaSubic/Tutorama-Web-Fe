@@ -1,44 +1,44 @@
 @media only screen and (min-width: 1200px) {
   #subjects {
-    width: 1110px;
-    left: calc((100% - 1110px) * 0.5);
+    width: 760px;
+    left: calc((100% - 760px) * 0.5);
     height: 550px;
   }
 
   #subjects h2 {
-    font: normal normal bold 54px/1.4em 'Playfair Display', serif;
+    font: normal normal bold 40px/1.4em 'Playfair Display', serif;
   }
 
   .button-link {
-    top: -65px;
-    width: 200px;
-    left: calc(100% - 200px);
+    top: -50px;
+    width: 170px;
+    left: calc(100% - 170px);
   }
 
   .homepage-buttons {
-    width: 200px;
+    width: 170px;
   }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   #subjects {
-    width: 930px;
-    left: calc((100% - 930px) * 0.5);
+    width: 760px;
+    left: calc((100% - 760px) * 0.5);
     height: 500px;
   }
 
   #subjects h2 {
-    font: normal normal bold 43.875px/1.4em 'Playfair Display', serif;
+    font: normal normal bold 35px/1.4em 'Playfair Display', serif;
   }
 
   .button-link {
-    top: -56px;
-    width: 180px;
-    left: calc(100% - 180px);
+    top: -45px;
+    width: 160px;
+    left: calc(100% - 160px);
   }
 
   .homepage-buttons {
-    width: 180px;
+    width: 160px;
   }
 }
 
@@ -50,7 +50,7 @@
   }
 
   #subjects h2 {
-    font: normal normal bold 33.75px/1.4em 'Playfair DIsplay', serif;
+    font: normal normal bold 30px/1.4em 'Playfair DIsplay', serif;
   }
 
   .button-link {
@@ -66,21 +66,19 @@
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   #subjects {
-    width: 540px;
-    left: calc((100% - 540px) * 0.5);
-    height: 800px;
+    width: 450px;
+    left: calc((100% - 450px) * 0.5);
+    height: 600px;
   }
 
   #subjects h2 {
-    font: normal normal bold 23.625px/1.4em 'Playfair Display', serif;
-    text-align: center;
-    left: 0 !important;
+    font: normal normal bold 25px/1.4em 'Playfair Display', serif;
   }
 
   .button-link {
-    top: 600px;
+    top: -38px;
     width: 140px;
-    left: calc((100% - 140px) * 0.5);
+    left: calc((100% - 140px));
   }
 
   .homepage-buttons {
@@ -88,25 +86,52 @@
   }
 
   #subjects-container {
-    width: 315px !important;
-    left: calc((100% - 315px) * 0.5) !important;
+    width: 450px !important;
+    left: calc((100% - 450px) * 0.5) !important;
   }
 
   .sub-row {
-    width: 315px !important;
+    width: 450px !important;
   }
+
+  .sub-row:last-child {
+    position: relative;
+    top: -125px;
+  }
+
+  .link {
+    position: relative;
+  }
+
+  .sub-row:last-child .link:first-child {
+    left: 300px;
+  }
+
+  .sub-row:last-child .link:nth-child(2) {
+    left: -150px;
+    top: 125px;
+  }
+
+  .sub-row:last-child .link:nth-child(3) {
+    left: -150px;
+    top: 125px;
+  }
+
+  .sub-row:last-child .link:last-child {
+    left: 300px;
+  }
+
 }
 
 @media only screen and (max-width: 575px) {
   #subjects {
-    width: 90.625%;
-    min-width: 315px;
-    left: 4.6875%;
+    width: 315px;
+    left: calc((100% - 315px) * 0.5);
     height: 800px;
   }
 
   #subjects h2 {
-    font: normal normal bold 23.625px/1.4em 'Playfair Display', serif;
+    font: normal normal bold 20px/1.4em 'Playfair Display', serif;
     text-align: center;
     left: 0 !important;
   }
@@ -139,7 +164,6 @@
 #subjects h2 {
   position: relative;
   top: 0;
-  left: 15px;
   margin: 0;
 }
 
@@ -148,10 +172,10 @@
   border-width: 0;
   height: 110px;
   width: 135px;
-  background-color: #CDD3CC;
+  background-color: #e7eae6;
   color: #111922;
   margin-top: 15px;
-  font: normal normal normal 15px/1.4em montserrat, sans-serif;
+  font: normal normal 500 15px/1.4em montserrat, sans-serif;
 }
 
 .link {
@@ -169,7 +193,8 @@
 }
 
 .sub fa-icon {
-  color: #111922;
+  color: #194733;
+
 }
 
 .sub-row {

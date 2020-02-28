@@ -1,7 +1,67 @@
+@media only screen and (min-width: 1200px) {
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  #desc h2 {
+    font: normal normal bold 35px/1.4em 'Playfair Display', serif;
+    width: 350px;
+  }
+
+  #reasons-container h3 {
+    font: normal normal 700 25px/1.4em 'Open Sans Condensed', sans-serif;
+  }
+
+  #reasons-container p, #desc p {
+    font: normal normal 400 20px/1.4em 'Open Sans', sans-serif;
+  }
+
+  .button-link {
+    width: 120px;
+  }
+
+  .homepage-buttons {
+    width: 120px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+}
+
+@media only screen and (max-width: 575px) {
+
+}
+
+
 #why-tutorama {
   width: 90%;
   position: relative;
   left: 10%;
+  top: 100px;
   height: 500px;
-  background-color: #c2cac1;
+  background-color: #e7eae6;
 }
+
+.pic {
+  border-radius: 37.5px;
+  border-width: 0;
+  width: 75px;
+  height: 75px;
+  color: #194733;
+  background-color: #c2cac1;
+  text-align: center;
+}
+
+.pic fa-icon {
+  position: relative;
+  top: 20px;
+}
+
+
+
+
