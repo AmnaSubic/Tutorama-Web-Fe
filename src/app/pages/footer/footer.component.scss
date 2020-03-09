@@ -1,0 +1,37 @@
+footer {
+  height: 100px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  color: #828282;
+}
+
+fa-icon {
+  margin-left: 15px;
+  font-size: 15px;
+}
+
+footer p {
+  font: normal normal normal 10px/1.4em 'Open Sans', sans-serif;
+}
+
+@media only screen and (max-width: 575px) {
+  footer p {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  #f-container {
+    width: 440px;
+    margin-left: calc((100% - 440px) * 0.5);
+  }
+
+  footer p {
+    display: inline;
+  }
+
+  footer p:first-child {
+    margin-right: 50px;
+  }
+}

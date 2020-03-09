@@ -1,0 +1,186 @@
+@media only screen and (min-width: 992px) {
+  #why-tutorama, #content {
+    height: 750px;
+  }
+
+  #content {
+    position: relative;
+    width: 850px;
+    left: calc((100% - 850px) * 0.5);
+  }
+
+  #desc {
+    width: 300px;
+    top: 100px;
+    left: 0;
+  }
+
+  #desc h2 {
+    font: normal normal bold 38px/1.4em 'Playfair Display', serif;
+    width: 300px;
+    padding-bottom: 20px;
+  }
+
+  #reasons-container h3 {
+    font: normal normal 700 22px/2em 'Open Sans Condensed', sans-serif;
+  }
+
+  #reasons-container p, #desc p {
+    font: normal normal 400 15px/1.4em 'Open Sans', sans-serif;
+    text-align: justify;
+  }
+
+  #reasons-container {
+    width: 475px;
+    top: -300px;
+    margin-right: 75px;
+    left: 375px;
+  }
+
+  .reason {
+    margin-top: 50px;
+    width: 200px;
+    display: inline-block;
+  }
+
+  .reason:nth-child(odd) {
+    margin-right: 75px;
+  }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #why-tutorama, #content {
+    height: 1150px;
+  }
+
+  #desc {
+    width: 300px;
+    top: 100px;
+    left: calc((100% - 300px) * 0.5);
+  }
+
+  #desc h2 {
+    font: normal normal bold 38px/1.4em 'Playfair Display', serif;
+    width: 300px;
+    padding-bottom: 20px;
+  }
+
+  #reasons-container h3 {
+    font: normal normal 700 22px/2em 'Open Sans Condensed', sans-serif;
+    text-align: center;
+  }
+
+  #reasons-container p, #desc p {
+    font: normal normal 400 15px/1.4em 'Open Sans', sans-serif;
+    text-align: justify;
+  }
+
+  #reasons-container {
+    width: 90%;
+    top: 100px;
+    left: 5%;
+  }
+
+  .reason {
+    margin-top: 50px;
+    width: 300px;
+    display: inline-block;
+  }
+
+  .reason:first-child, .reason:nth-child(3) {
+    margin-right: calc(100% - 600px);
+  }
+
+  .pic {
+    position: relative;
+    left: calc((100% - 60px) * 0.5);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #why-tutorama, #content {
+    height: 1400px;
+  }
+
+  #desc {
+    width: 250px;
+    top: 100px;
+    left: calc((100% - 250px) * 0.5);
+  }
+
+  #desc h2 {
+    font: normal normal bold 30.5px/1.4em 'Playfair Display', serif;
+    padding-bottom: 20px;
+  }
+
+  #reasons-container h3 {
+    font: normal normal 700 17.6px/2em 'Open Sans Condensed', sans-serif;
+    text-align: center;
+  }
+
+  #reasons-container p, #desc p {
+    font: normal normal 400 12px/1.4em 'Open Sans', sans-serif;
+    text-align: justify;
+  }
+
+  #reasons-container {
+    width: 250px;
+    top: 100px;
+    left: calc((100% - 250px) * 0.5);
+    margin-right: 0;
+  }
+
+  .reason {
+    margin-top: 50px;
+  }
+
+  .pic {
+    position: relative;
+    left: calc((100% - 60px) * 0.5);
+  }
+}
+
+#desc, #reasons-container {
+  position: relative;
+}
+
+
+#why-tutorama {
+  width: 90%;
+  position: relative;
+  left: 10%;
+  background-color: #e7eae6;
+  margin-bottom: 100px;
+}
+
+.pic {
+  border-radius: 37.5px;
+  border-width: 0;
+  width: 60px;
+  height: 60px;
+  color: #194733;
+  background-color: #c2cac1;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.pic fa-icon {
+  position: relative;
+  top: 12.5px;
+}
+
+.button-link {
+  width: 120px;
+  position: relative;
+  left: calc((100% - 120px) * 0.5);
+}
+
+.homepage-buttons {
+  width: 120px;
+}
+
+
+
+
+
