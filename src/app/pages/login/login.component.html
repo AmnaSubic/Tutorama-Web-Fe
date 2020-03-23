@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div id="login">
+  <form action="" method="post">
+    <div id="image">
+      <h2>Login to Tutorama.ba</h2>
+      <img src="../../../assets/images/man-laptop.jpg" alt="">
+    </div>
+
+    <div class="form-container">
+      <label for="eml">Username
+        <input type="email" placeholder="Enter email" id="eml" name="eml" required="required">
+      </label>
+
+      <label for="psw">Password
+        <input type="password" placeholder="Enter password" id="psw" name="psw" required="required">
+      </label>
+
+      <label>
+        <input type="checkbox" name="remember"> Remember me
+      </label>
+      <span>Forgot <a routerLink="/forgot-password">password?</a></span>
+
+      <button type="submit">Login</button>
+    </div>
+
+    <div class="form-container">
+      <span>Don't have an account? <a routerLink="/register">Sign Up</a></span>
+    </div>
+  </form>
+</div>
+<app-footer></app-footer>
