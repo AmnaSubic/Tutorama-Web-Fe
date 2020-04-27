@@ -63,7 +63,7 @@
     margin: 0 15px;
   }
 
-  #nav-bar-items li:last-child {
+  .box {
     border: solid 1px #0c424d;
   }
 
@@ -76,12 +76,12 @@
     border-bottom: solid 1.5px #f4c030;
   }
 
-  #nav-bar-items ul li:last-child a:hover {
+  .box:hover {
     border-bottom: none;
     transition: none;
   }
 
-  #nav-bar-items ul li:last-child:hover {
+  .box:hover {
     border: solid 1px #f4c030;
     transition: 0.5s;
   }

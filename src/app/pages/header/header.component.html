@@ -22,10 +22,12 @@
             <div id="line"></div>
           </li>
           <li class="nav-item">
-            <a routerLink="/login" class="nav-link">LOGIN</a>
+            <a routerLink="/login" class="nav-link" *ngIf="!loggedIn">LOGIN</a>
+            <a routerLink="/profile" class="nav-link" *ngIf="loggedIn">PROFILE</a>
           </li>
           <li class="nav-item">
-            <a routerLink="/register" class="nav-link">SIGN UP</a>
+            <a routerLink="/register" class="nav-link box" *ngIf="!loggedIn">SIGN UP</a>
+            <a href="#" (click)="logout($event)" class="nav-link box" *ngIf="loggedIn">LOG OUT</a>
           </li>
         </ul>
       </div>

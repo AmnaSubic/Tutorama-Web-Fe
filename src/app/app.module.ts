@@ -23,8 +23,10 @@ import {OpenNavDirective} from './directives/open-nav.directive';
 import {CloseNavDirective} from './directives/close-nav.directive';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import {FormsModule} from '@angular/forms';
-import { StudentRegisterComponent } from './pages/register/student-register/student-register.component';
-import { TutorRegisterComponent } from './pages/register/tutor-register/tutor-register.component';
+import {HttpClientModule} from '@angular/common/http';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { ForgotPasswordResponseComponent } from './pages/forgot-password-response/forgot-password-response.component';
 
 @NgModule({
   declarations: [
@@ -42,8 +44,9 @@ import { TutorRegisterComponent } from './pages/register/tutor-register/tutor-re
     OpenNavDirective,
     CloseNavDirective,
     PageNotFoundComponent,
-    StudentRegisterComponent,
-    TutorRegisterComponent
+    ProfileComponent,
+    ForgotPasswordComponent,
+    ForgotPasswordResponseComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,8 @@ import { TutorRegisterComponent } from './pages/register/tutor-register/tutor-re
     NgbModule,
     FontAwesomeModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,31 +3,43 @@ import {HomeComponent} from './pages/home/home.component';
 import {RegisterComponent} from './pages/register/register.component';
 import {LoginComponent} from './pages/login/login.component';
 import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component';
-import {StudentRegisterComponent} from './pages/register/student-register/student-register.component';
-import {TutorRegisterComponent} from './pages/register/tutor-register/tutor-register.component';
-
+import {ProfileComponent} from './pages/profile/profile.component';
+import {BeforeLoginService} from './services/before-login.service';
+import {AfterLoginService} from './services/after-login.service';
+import {ForgotPasswordComponent} from './pages/forgot-password/forgot-password.component';
+import {ForgotPasswordResponseComponent} from './pages/forgot-password-response/forgot-password-response.component';
 
 
 export const appRoutes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate: [BeforeLoginService]
   },
   {
     path: 'register',
-    component: RegisterComponent
+    component: RegisterComponent,
+    canActivate: [BeforeLoginService]
   },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
+    canActivate: [BeforeLoginService]
   },
   {
-    path: 'register/student',
-    component: StudentRegisterComponent
+    path: 'profile',
+    component: ProfileComponent,
+    canActivate: [AfterLoginService]
   },
   {
-    path: 'register/tutor',
-    component: TutorRegisterComponent
+    path: 'forgot-password',
+    component: ForgotPasswordComponent,
+    canActivate: [BeforeLoginService]
+  },
+  {
+    path: 'forgor-password-response',
+    component: ForgotPasswordResponseComponent,
+    canActivate: [BeforeLoginService]
   },
   {
     path: '**',
