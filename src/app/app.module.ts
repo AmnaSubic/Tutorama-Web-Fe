@@ -23,10 +23,17 @@ import {OpenNavDirective} from './directives/open-nav.directive';
 import {CloseNavDirective} from './directives/close-nav.directive';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { ForgotPasswordResponseComponent } from './pages/forgot-password-response/forgot-password-response.component';
+import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
+import {JarwisService} from './services/jarwis.service';
+import {TokenService} from './services/token.service';
+import {AuthService} from './services/auth.service';
+import {AfterLoginService} from './services/after-login.service';
+import {BeforeLoginService} from './services/before-login.service';
+import {TokenInterceptor} from './interceptor/token.interceptor';
 
 @NgModule({
   declarations: [
@@ -55,9 +62,26 @@ import { ForgotPasswordResponseComponent } from './pages/forgot-password-respons
     FontAwesomeModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SnotifyModule
   ],
-  providers: [],
+  providers: [
+    JarwisService,
+    TokenService,
+    AuthService,
+    AfterLoginService,
+    BeforeLoginService,
+    {
+      provide: 'SnotifyToastConfig',
+      useValue: ToastDefaults
+    },
+    SnotifyService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
