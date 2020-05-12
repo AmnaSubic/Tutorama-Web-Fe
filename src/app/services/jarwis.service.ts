@@ -14,6 +14,9 @@ export class JarwisService {
     return this.http.get(`${this.baseUrl}/me`);
   }
 
+  currentUserId() {
+
+  }
 
   register(data) {
     return this.http.post(`${this.baseUrl}/register`, data);
@@ -29,5 +32,13 @@ export class JarwisService {
 
   changePassword(data) {
     return this.http.post(`${this.baseUrl}/resetPassword`, data);
+  }
+
+  getSubjects() {
+    return this.http.get(`${this.baseUrl}/subjects`);
+  }
+
+  postService(data) {
+    return this.http.post(`${this.baseUrl}/addService`, data);
   }
 }

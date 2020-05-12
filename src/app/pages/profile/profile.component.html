@@ -1,1 +1,6 @@
-<p>{{currentUser.First_Name}}</p>
+<div id="profile">
+  <p>{{currentUser.First_Name}}</p>
+  <a *ngIf="isAdmin()">
+    <button routerLink="/add-service">Add Service</button>
+  </a>
+</div>

@@ -18,6 +18,7 @@
       </label>
       <label for="gender">Gender
         <select name="gender" id="gender" required="required" [(ngModel)]="form.Gender">
+          <option value="" disabled="disabled">Select...</option>
           <option value="0">Female</option>
           <option value="1">Male</option>
         </select>
@@ -49,9 +50,23 @@
 
       <label for="stu-or-tu">Do you wish to register as Student or Tutor?
         <select name="stu-or-tu" id="stu-or-tu" required="required" [(ngModel)]="form.Is_Tutor">
+          <option value="" disabled="disabled">Select...</option>
           <option value="0">Student</option>
           <option value="1">Tutor</option>
         </select>
+      </label>
+      <label [hidden]="!form.Is_Tutor" for="availability">How available are you?
+        <select name="availability" id="availability" [(ngModel)]="form.Availability">
+          <option value="" disabled="disabled">Select...</option>
+          <option value="fixed">Fixed</option>
+          <option value="flexible">Flexible</option>
+        </select>
+      </label>
+      <label [hidden]="!form.Is_Tutor" for="experience" [(ngModel)]="form.Experience">Experience
+        <input type="text" id="experience" name="experience" placeholder="e.g. I was a math assistant for 5 years">
+      </label>
+      <label [hidden]="!form.Is_Tutor" for="description" [(ngModel)]="form.Description">Description
+        <input type="text" id="description" name="description" placeholder="e.g. Currently a 4th year student of computer science">
       </label>
 
       <button type="submit" [disabled]="!registerForm.valid">Register</button>

@@ -5,7 +5,7 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut faucibus pulvinar elementum integer enim neque volutpat ac. Euismod nisi porta lorem mollis
         aliquam ut porttitor leo.</p>
-      <a routerLink="/register" class="button-link">
+      <a *ngIf="!loggedIn" routerLink="/register" class="button-link">
         <button class="homepage-buttons">
           Try Now <span>&#8594;</span>
         </button>

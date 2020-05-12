@@ -8,13 +8,13 @@ import { BeforeLoginService } from './services/before-login.service';
 import { AfterLoginService } from './services/after-login.service';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { ForgotPasswordResponseComponent } from './pages/forgot-password-response/forgot-password-response.component';
+import {AddServiceComponent} from "./pages/add-service/add-service.component";
 
 
 export const appRoutes: Routes = [
   {
     path: '',
-    component: HomeComponent,
-    canActivate: [BeforeLoginService]
+    component: HomeComponent
   },
   {
     path: 'register',
@@ -40,6 +40,10 @@ export const appRoutes: Routes = [
     path: 'forgot-password-response',
     component: ForgotPasswordResponseComponent,
     canActivate: [BeforeLoginService]
+  },
+  {
+    path: 'add-service',
+    component: AddServiceComponent
   },
   {
     path: '**',

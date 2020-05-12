@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthService} from "../../services/auth.service";
 import {JarwisService} from "../../services/jarwis.service";
-import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-profile',
@@ -13,13 +11,15 @@ export class ProfileComponent implements OnInit {
 
   constructor(
     private jarwisService: JarwisService
-  ) {
-    this.jarwisService.currentUserValue().subscribe((resp: any) => {
-      this.currentUser = resp
-    });
+  ) { }
+
+  isAdmin() {
+    return this.currentUser.Is_Tutor == 1;
+
   }
 
   ngOnInit() {
+    this.jarwisService.currentUserValue().subscribe(data => this.currentUser = data);
   }
 
 }

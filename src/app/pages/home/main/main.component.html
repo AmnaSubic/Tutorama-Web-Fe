@@ -3,7 +3,7 @@
     <div id="main-text">
       <h1>The place for all your tutoring needs</h1>
       <p>Welcome to Tutorama.ba - Bosnia and Herzegovina's first tutoring web application.</p>
-      <a routerLink="/register" class="button-link">
+      <a *ngIf="!loggedIn" routerLink="/register" class="button-link">
         <button class="homepage-buttons">
           Join Now
         </button>

@@ -1,6 +1,11 @@
 <div id="subjects">
   <h2>Choose popular subjects</h2>
-  <a routerLink="/register" class="button-link">
+  <a *ngIf="loggedIn" routerLink="" class="button-link">
+    <button class="homepage-buttons">
+      All Subjects <span>&#8594;</span>
+    </button>
+  </a>
+  <a *ngIf="!loggedIn" routerLink="/register" class="button-link">
     <button class="homepage-buttons">
       All Subjects <span>&#8594;</span>
     </button>

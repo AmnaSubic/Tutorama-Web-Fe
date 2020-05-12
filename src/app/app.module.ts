@@ -34,6 +34,7 @@ import {AuthService} from './services/auth.service';
 import {AfterLoginService} from './services/after-login.service';
 import {BeforeLoginService} from './services/before-login.service';
 import {TokenInterceptor} from './interceptor/token.interceptor';
+import { AddServiceComponent } from './pages/add-service/add-service.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import {TokenInterceptor} from './interceptor/token.interceptor';
     PageNotFoundComponent,
     ProfileComponent,
     ForgotPasswordComponent,
-    ForgotPasswordResponseComponent
+    ForgotPasswordResponseComponent,
+    AddServiceComponent
   ],
   imports: [
     BrowserModule,
