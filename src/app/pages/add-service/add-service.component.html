@@ -25,7 +25,7 @@
 
     <div [hidden]="!added">
       <p>Service successfully added</p>
-      <p>Add another?</p><button type="reset">Add</button>
+      <p>Add another?</p><button type="reset" (click)="reset()">Add</button>
     </div>
   </form>
 </div>

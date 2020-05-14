@@ -14,10 +14,6 @@ export class JarwisService {
     return this.http.get(`${this.baseUrl}/me`);
   }
 
-  currentUserId() {
-
-  }
-
   register(data) {
     return this.http.post(`${this.baseUrl}/register`, data);
   }
@@ -40,5 +36,17 @@ export class JarwisService {
 
   postService(data) {
     return this.http.post(`${this.baseUrl}/addService`, data);
+  }
+
+  getUserServices() {
+    return this.http.get(`${this.baseUrl}/userServices`);
+  }
+
+  postAvailableTime(data) {
+    return this.http.post(`${this.baseUrl}/addAvailableTime`, data);
+  }
+
+  getUserAvailableTimes() {
+    return this.http.get(`${this.baseUrl}/getUserAvailableTimes`);
   }
 }

@@ -35,6 +35,7 @@ import {AfterLoginService} from './services/after-login.service';
 import {BeforeLoginService} from './services/before-login.service';
 import {TokenInterceptor} from './interceptor/token.interceptor';
 import { AddServiceComponent } from './pages/add-service/add-service.component';
+import { AddAvailableTimeComponent } from './pages/add-available-time/add-available-time.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { AddServiceComponent } from './pages/add-service/add-service.component';
     ProfileComponent,
     ForgotPasswordComponent,
     ForgotPasswordResponseComponent,
-    AddServiceComponent
+    AddServiceComponent,
+    AddAvailableTimeComponent
   ],
   imports: [
     BrowserModule,

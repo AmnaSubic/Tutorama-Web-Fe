@@ -8,6 +8,9 @@ import {JarwisService} from "../../services/jarwis.service";
 })
 export class ProfileComponent implements OnInit {
   public currentUser;
+  public services;
+  public subjects;
+  public availableTimes;
 
   constructor(
     private jarwisService: JarwisService
@@ -20,6 +23,16 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.jarwisService.currentUserValue().subscribe(data => this.currentUser = data);
+    // @ts-ignore
+    this.jarwisService.getUserServices().subscribe((data: any[]) => this.services = data.data);
+    // @ts-ignore
+    this.jarwisService.getSubjects().subscribe((data: any[]) => this.subjects = data.data);
+    // @ts-ignore
+    this.jarwisService.getUserAvailableTimes().subscribe((data: any[]) => this.availableTimes = data.data);
+  }
+
+  isFixed() {
+    return this.currentUser.Availability == 'fixed';
   }
 
 }

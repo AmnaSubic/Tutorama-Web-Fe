@@ -8,7 +8,7 @@ import {JarwisService} from "../../services/jarwis.service";
 })
 export class AddServiceComponent implements OnInit {
   public currentUser;
-  public subjects
+  public subjects;
   public service = {
     Tutor_ID: null,
     Subject_ID: null,
@@ -37,4 +37,7 @@ export class AddServiceComponent implements OnInit {
     this.added = true;
   }
 
+  reset() {
+    this.added = false;
+  }
 }
