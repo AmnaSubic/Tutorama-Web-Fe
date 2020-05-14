@@ -36,6 +36,7 @@ import {BeforeLoginService} from './services/before-login.service';
 import {TokenInterceptor} from './interceptor/token.interceptor';
 import { AddServiceComponent } from './pages/add-service/add-service.component';
 import { AddAvailableTimeComponent } from './pages/add-available-time/add-available-time.component';
+import { ServicesListComponent } from './pages/services-list/services-list.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { AddAvailableTimeComponent } from './pages/add-available-time/add-availa
     ForgotPasswordComponent,
     ForgotPasswordResponseComponent,
     AddServiceComponent,
-    AddAvailableTimeComponent
+    AddAvailableTimeComponent,
+    ServicesListComponent
   ],
   imports: [
     BrowserModule,

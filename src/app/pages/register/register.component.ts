@@ -9,7 +9,6 @@ import {Router} from '@angular/router';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-
   public form = {
     First_Name: null,
     Last_Name: null,
@@ -53,6 +52,6 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.form.Is_Tutor = null;
   }
-
 }

@@ -10,6 +10,7 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
 import { ForgotPasswordResponseComponent } from './pages/forgot-password-response/forgot-password-response.component';
 import {AddServiceComponent} from "./pages/add-service/add-service.component";
 import {AddAvailableTimeComponent} from "./pages/add-available-time/add-available-time.component";
+import {ServicesListComponent} from "./pages/services-list/services-list.component";
 
 
 export const appRoutes: Routes = [
@@ -51,6 +52,10 @@ export const appRoutes: Routes = [
     path: 'add-available-time',
     component: AddAvailableTimeComponent,
     canActivate: [AfterLoginService]
+  },
+  {
+    path: 'services',
+    component: ServicesListComponent,
   },
   {
     path: '**',

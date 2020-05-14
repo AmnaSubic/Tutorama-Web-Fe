@@ -31,7 +31,7 @@ export class JarwisService {
   }
 
   getSubjects() {
-    return this.http.get(`${this.baseUrl}/subjects`);
+    return this.http.get(`${this.baseUrl}/getSubjects`);
   }
 
   postService(data) {
@@ -39,7 +39,7 @@ export class JarwisService {
   }
 
   getUserServices() {
-    return this.http.get(`${this.baseUrl}/userServices`);
+    return this.http.get(`${this.baseUrl}/getUserServices`);
   }
 
   postAvailableTime(data) {
@@ -48,5 +48,9 @@ export class JarwisService {
 
   getUserAvailableTimes() {
     return this.http.get(`${this.baseUrl}/getUserAvailableTimes`);
+  }
+
+  getServices() {
+    return this.http.get(`${this.baseUrl}/getServices`);
   }
 }

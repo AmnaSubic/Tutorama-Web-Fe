@@ -18,7 +18,6 @@ export class ProfileComponent implements OnInit {
 
   isAdmin() {
     return this.currentUser.Is_Tutor == 1;
-
   }
 
   ngOnInit() {

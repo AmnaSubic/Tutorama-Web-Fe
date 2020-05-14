@@ -55,17 +55,17 @@
           <option value="1">Tutor</option>
         </select>
       </label>
-      <label [hidden]="!form.Is_Tutor" for="availability">How available are you?
+      <label  [hidden]="form.Is_Tutor == 0 || !form.Is_Tutor" for="availability">How available are you?
         <select name="availability" id="availability" [(ngModel)]="form.Availability">
           <option value="" disabled="disabled">Select...</option>
           <option value="fixed">Fixed</option>
           <option value="flexible">Flexible</option>
         </select>
       </label>
-      <label [hidden]="!form.Is_Tutor" for="experience" [(ngModel)]="form.Experience">Experience
+      <label [hidden]="form.Is_Tutor == 0 || !form.Is_Tutor" for="experience" [(ngModel)]="form.Experience">Experience
         <input type="text" id="experience" name="experience" placeholder="e.g. I was a math assistant for 5 years">
       </label>
-      <label [hidden]="!form.Is_Tutor" for="description" [(ngModel)]="form.Description">Description
+      <label [hidden]="form.Is_Tutor == 0 || !form.Is_Tutor" for="description" [(ngModel)]="form.Description">Description
         <input type="text" id="description" name="description" placeholder="e.g. Currently a 4th year student of computer science">
       </label>
 
