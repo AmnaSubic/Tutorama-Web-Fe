@@ -2,10 +2,11 @@
   <ul>
     <li *ngFor="let service of services">
       <p>{{service.Name}}</p>
-      <p>{{service.First_Name}}</p>
-      <p>{{service.Last_Name}}</p>
+      <p>{{service.Town}}</p>
+      <p>{{service.Country}}</p>
       <p>{{service.Service_Cost}} KM/h</p>
       <p>{{service.Service_Level}}</p>
+      <a [routerLink]="['/services', service.Service_ID]"><button>More Info</button></a>
     </li>
   </ul>
 </div>

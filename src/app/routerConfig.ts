@@ -11,6 +11,8 @@ import { ForgotPasswordResponseComponent } from './pages/forgot-password-respons
 import {AddServiceComponent} from "./pages/add-service/add-service.component";
 import {AddAvailableTimeComponent} from "./pages/add-available-time/add-available-time.component";
 import {ServicesListComponent} from "./pages/services-list/services-list.component";
+import {ServiceInfoComponent} from "./pages/services-list/service-info/service-info.component";
+import {TutorProfileComponent} from "./pages/tutor-profile/tutor-profile.component";
 
 
 export const appRoutes: Routes = [
@@ -56,6 +58,14 @@ export const appRoutes: Routes = [
   {
     path: 'services',
     component: ServicesListComponent,
+  },
+  {
+    path: 'services/:id',
+    component: ServiceInfoComponent
+  },
+  {
+    path: 'tutor-profile/:id',
+    component: TutorProfileComponent
   },
   {
     path: '**',

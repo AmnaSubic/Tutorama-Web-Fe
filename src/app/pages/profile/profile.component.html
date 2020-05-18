@@ -1,7 +1,7 @@
 <div id="profile">
   <p>{{currentUser.First_Name}}</p>
-  <a *ngIf="isAdmin()">
-    <button routerLink="/add-service">Add Service</button>
+  <a *ngIf="isAdmin()" routerLink="/add-service">
+    <button>Add Service</button>
   </a>
   <ul *ngIf="isAdmin()">
     <li *ngFor="let service of services">
@@ -10,8 +10,8 @@
       <p>{{service.Service_Cost}} KM/h</p>
     </li>
   </ul>
-  <a *ngIf="isAdmin() && isFixed()">
-    <button routerLink="/add-available-time">Add Available Time</button>
+  <a *ngIf="isAdmin() && isFixed()" routerLink="/add-available-time">
+    <button>Add Available Time</button>
   </a>
   <ul *ngIf="isAdmin() && isFixed()">
     <li *ngFor="let availableTime of availableTimes">

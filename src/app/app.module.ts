@@ -37,6 +37,9 @@ import {TokenInterceptor} from './interceptor/token.interceptor';
 import { AddServiceComponent } from './pages/add-service/add-service.component';
 import { AddAvailableTimeComponent } from './pages/add-available-time/add-available-time.component';
 import { ServicesListComponent } from './pages/services-list/services-list.component';
+import { ServiceInfoComponent } from './pages/services-list/service-info/service-info.component';
+import { ScheduleClassComponent } from './pages/schedule-class/schedule-class.component';
+import { TutorProfileComponent } from './pages/tutor-profile/tutor-profile.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +62,10 @@ import { ServicesListComponent } from './pages/services-list/services-list.compo
     ForgotPasswordResponseComponent,
     AddServiceComponent,
     AddAvailableTimeComponent,
-    ServicesListComponent
+    ServicesListComponent,
+    ServiceInfoComponent,
+    ScheduleClassComponent,
+    TutorProfileComponent
   ],
   imports: [
     BrowserModule,

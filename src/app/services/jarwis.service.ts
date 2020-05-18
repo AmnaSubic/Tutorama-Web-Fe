@@ -10,7 +10,7 @@ export class JarwisService {
 
   constructor(private http: HttpClient) { }
 
-  currentUserValue() {
+  getAuthUser() {
     return this.http.get(`${this.baseUrl}/me`);
   }
 
@@ -38,19 +38,35 @@ export class JarwisService {
     return this.http.post(`${this.baseUrl}/addService`, data);
   }
 
-  getUserServices() {
-    return this.http.get(`${this.baseUrl}/getUserServices`);
+  getAuthUserServices() {
+    return this.http.get(`${this.baseUrl}/getAuthUserServices`);
   }
 
   postAvailableTime(data) {
     return this.http.post(`${this.baseUrl}/addAvailableTime`, data);
   }
 
-  getUserAvailableTimes() {
-    return this.http.get(`${this.baseUrl}/getUserAvailableTimes`);
+  getAuthUserAvailableTimes() {
+    return this.http.get(`${this.baseUrl}/getAuthUserAvailableTimes`);
   }
 
   getServices() {
     return this.http.get(`${this.baseUrl}/getServices`);
+  }
+
+  getServiceInfo(id) {
+    return this.http.get(`${this.baseUrl}/getServices/${id}`, id);
+  }
+
+  getUser(id) {
+    return this.http.get(`${this.baseUrl}/getUser/${id}`, id);
+  }
+
+  getUserServices(id) {
+    return this.http.get(`${this.baseUrl}/getUser/${id}/services`, id);
+  }
+
+  getUserAvailableTimes(id) {
+    return this.http.get(`${this.baseUrl}/getUser/${id}/availableTimes`, id)
   }
 }

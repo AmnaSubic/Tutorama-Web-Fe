@@ -21,13 +21,13 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.jarwisService.currentUserValue().subscribe(data => this.currentUser = data);
+    this.jarwisService.getAuthUser().subscribe(data => this.currentUser = data);
     // @ts-ignore
-    this.jarwisService.getUserServices().subscribe((data: any[]) => this.services = data.data);
+    this.jarwisService.getAuthUserServices().subscribe((data: any[]) => this.services = data.data);
     // @ts-ignore
     this.jarwisService.getSubjects().subscribe((data: any[]) => this.subjects = data.data);
     // @ts-ignore
-    this.jarwisService.getUserAvailableTimes().subscribe((data: any[]) => this.availableTimes = data.data);
+    this.jarwisService.getAuthUserAvailableTimes().subscribe((data: any[]) => this.availableTimes = data.data);
   }
 
   isFixed() {
