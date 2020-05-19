@@ -1,17 +1,15 @@
 <div id="info">
-  <div *ngFor="let s of serviceInfo">
-    <p>{{s.Name}}</p>
-    <p>{{s.First_Name}}</p>
-    <p>{{s.Last_Name}}</p>
-    <p>{{s.Service_Level}}</p>
-    <p>{{s.Service_Cost}} KM/h</p>
-    <p>{{s.Experience}}</p>
-    <p>{{s.Description}}</p>
-    <p>{{s.Town}}</p>
-    <p>{{s.Country}}</p>
+    <p>{{serviceInfo.Subject_Name}}</p>
+    <p>{{serviceInfo.First_Name}}</p>
+    <p>{{serviceInfo.Last_Name}}</p>
+    <p>{{serviceInfo.Service_Level}}</p>
+    <p>{{serviceInfo.Service_Cost}} KM/h</p>
+    <p>{{serviceInfo.Experience}}</p>
+    <p>{{serviceInfo.Description}}</p>
+    <p>{{serviceInfo.Town}}</p>
+    <p>{{serviceInfo.Country}}</p>
     <a [routerLink]="[]"><button>Schedule Class</button></a>
-    <a [routerLink]="['/tutor-profile', s.Tutor_ID]"><button>Go to Tutor Profile</button></a>
-  </div>
+    <a [routerLink]="['/tutor-profile', serviceInfo.Tutor_ID]"><button>Go to Tutor Profile</button></a>
 
   <button (click)="goBack()">Back</button>
 </div>

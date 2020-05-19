@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {JarwisService} from "../../services/jarwis.service";
+import {JarwisService} from "../../../services/jarwis.service";
 
 @Component({
   selector: 'app-add-available-time',
@@ -23,7 +23,7 @@ export class AddAvailableTimeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.jarwisService.currentUserValue().subscribe(data => this.currentUser = data);
+    this.jarwisService.getAuthUser().subscribe(data => this.currentUser = data);
   }
 
   onSubmit() {

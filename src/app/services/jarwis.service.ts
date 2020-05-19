@@ -69,4 +69,9 @@ export class JarwisService {
   getUserAvailableTimes(id) {
     return this.http.get(`${this.baseUrl}/getUser/${id}/availableTimes`, id)
   }
+
+  getAuthClasses() {
+    return this.http.get(`${this.baseUrl}/getAuthClasses`);
+  }
+
 }

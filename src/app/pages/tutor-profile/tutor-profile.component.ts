@@ -22,7 +22,7 @@ export class TutorProfileComponent implements OnInit {
   ngOnInit() {
     let id = this.route.snapshot.params.id;
     // @ts-ignore
-    this.jarwisService.getUser(id).subscribe(data => this.tutor = data.data);
+    this.jarwisService.getUser(id).subscribe(data => this.tutor = data);
     this.jarwisService.getUserServices(id).subscribe(data => this.services = data);
     // @ts-ignore
     this.jarwisService.getUserAvailableTimes(id).subscribe(data => this.availableTimes = data.data);

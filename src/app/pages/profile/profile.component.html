@@ -1,19 +1,19 @@
 <div id="profile">
   <p>{{currentUser.First_Name}}</p>
-  <a *ngIf="isAdmin()" routerLink="/add-service">
+  <a *ngIf="isTutor()" routerLink="/add-service">
     <button>Add Service</button>
   </a>
-  <ul *ngIf="isAdmin()">
+  <ul *ngIf="isTutor()">
     <li *ngFor="let service of services">
-      <h3 *ngFor="let subject of subjects" [hidden]="subject.Subject_ID != service.Subject_ID">{{subject.Name}}</h3>
+      <h3>{{service.Subject_Name}}</h3>
       <p>{{service.Service_Level}}</p>
       <p>{{service.Service_Cost}} KM/h</p>
     </li>
   </ul>
-  <a *ngIf="isAdmin() && isFixed()" routerLink="/add-available-time">
+  <a *ngIf="isTutor() && isFixed()" routerLink="/add-available-time">
     <button>Add Available Time</button>
   </a>
-  <ul *ngIf="isAdmin() && isFixed()">
+  <ul *ngIf="isTutor() && isFixed()">
     <li *ngFor="let availableTime of availableTimes">
       <p>{{availableTime.Day}}</p>
       <p>{{availableTime.Start_Time}}</p>
@@ -22,4 +22,6 @@
       <p *ngIf="availableTime.Is_Free == 1">Free</p>
     </li>
   </ul>
+
+  <a routerLink="/profile/classes"><button>Go to classes</button></a>
 </div>

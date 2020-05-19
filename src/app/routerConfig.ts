@@ -8,11 +8,13 @@ import { BeforeLoginService } from './services/before-login.service';
 import { AfterLoginService } from './services/after-login.service';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { ForgotPasswordResponseComponent } from './pages/forgot-password-response/forgot-password-response.component';
-import {AddServiceComponent} from "./pages/add-service/add-service.component";
-import {AddAvailableTimeComponent} from "./pages/add-available-time/add-available-time.component";
+import {AddServiceComponent} from "./pages/profile/add-service/add-service.component";
+import {AddAvailableTimeComponent} from "./pages/profile/add-available-time/add-available-time.component";
 import {ServicesListComponent} from "./pages/services-list/services-list.component";
 import {ServiceInfoComponent} from "./pages/services-list/service-info/service-info.component";
 import {TutorProfileComponent} from "./pages/tutor-profile/tutor-profile.component";
+import {ClassesListComponent} from "./pages/profile/classes-list/classes-list.component";
+import {ClassInfoComponent} from "./pages/profile/classes-list/class-info/class-info.component";
 
 
 export const appRoutes: Routes = [
@@ -66,6 +68,14 @@ export const appRoutes: Routes = [
   {
     path: 'tutor-profile/:id',
     component: TutorProfileComponent
+  },
+  {
+    path: 'profile/classes',
+    component: ClassesListComponent
+  },
+  {
+    path: 'profile/classes/:id',
+    component: ClassInfoComponent
   },
   {
     path: '**',

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {JarwisService} from "../../services/jarwis.service";
+import {JarwisService} from "../../../services/jarwis.service";
 
 @Component({
   selector: 'app-add-service',
@@ -23,7 +23,7 @@ export class AddServiceComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.jarwisService.currentUserValue().subscribe(data => this.currentUser = data);
+    this.jarwisService.getAuthUser().subscribe(data => this.currentUser = data);
     // @ts-ignore
     this.jarwisService.getSubjects().subscribe((data: any[]) => this.subjects = data.data);
   }

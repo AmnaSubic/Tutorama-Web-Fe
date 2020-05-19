@@ -34,12 +34,14 @@ import {AuthService} from './services/auth.service';
 import {AfterLoginService} from './services/after-login.service';
 import {BeforeLoginService} from './services/before-login.service';
 import {TokenInterceptor} from './interceptor/token.interceptor';
-import { AddServiceComponent } from './pages/add-service/add-service.component';
-import { AddAvailableTimeComponent } from './pages/add-available-time/add-available-time.component';
+import { AddServiceComponent } from './pages/profile/add-service/add-service.component';
+import { AddAvailableTimeComponent } from './pages/profile/add-available-time/add-available-time.component';
 import { ServicesListComponent } from './pages/services-list/services-list.component';
 import { ServiceInfoComponent } from './pages/services-list/service-info/service-info.component';
 import { ScheduleClassComponent } from './pages/schedule-class/schedule-class.component';
 import { TutorProfileComponent } from './pages/tutor-profile/tutor-profile.component';
+import { ClassesListComponent } from './pages/profile/classes-list/classes-list.component';
+import { ClassInfoComponent } from './pages/profile/classes-list/class-info/class-info.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +67,9 @@ import { TutorProfileComponent } from './pages/tutor-profile/tutor-profile.compo
     ServicesListComponent,
     ServiceInfoComponent,
     ScheduleClassComponent,
-    TutorProfileComponent
+    TutorProfileComponent,
+    ClassesListComponent,
+    ClassInfoComponent
   ],
   imports: [
     BrowserModule,
