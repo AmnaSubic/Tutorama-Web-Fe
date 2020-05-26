@@ -15,6 +15,7 @@ import {ServiceInfoComponent} from "./pages/services-list/service-info/service-i
 import {TutorProfileComponent} from "./pages/tutor-profile/tutor-profile.component";
 import {ClassesListComponent} from "./pages/profile/classes-list/classes-list.component";
 import {ClassInfoComponent} from "./pages/profile/classes-list/class-info/class-info.component";
+import {ScheduleClassComponent} from "./pages/schedule-class/schedule-class.component";
 
 
 export const appRoutes: Routes = [
@@ -72,6 +73,10 @@ export const appRoutes: Routes = [
   {
     path: 'profile/classes',
     component: ClassesListComponent
+  },
+  {
+    path: 'services/:id/schedule-class',
+    component: ScheduleClassComponent
   },
   {
     path: 'profile/classes/:id',

@@ -8,7 +8,7 @@
     <p>{{serviceInfo.Description}}</p>
     <p>{{serviceInfo.Town}}</p>
     <p>{{serviceInfo.Country}}</p>
-    <a [routerLink]="[]"><button>Schedule Class</button></a>
+    <a [routerLink]="['/services', serviceInfo.Service_ID,'schedule-class']"><button>Schedule Class</button></a>
     <a [routerLink]="['/tutor-profile', serviceInfo.Tutor_ID]"><button>Go to Tutor Profile</button></a>
 
   <button (click)="goBack()">Back</button>

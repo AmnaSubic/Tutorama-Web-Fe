@@ -1,1 +1,26 @@
-<p>class-info works!</p>
+<div id="class-info">
+  <p>{{class.Subject_Name}}</p>
+  <p>{{class.Status}}</p>
+  <p>{{class.Stu_Status}}</p>
+
+  <div *ngIf="show()">
+    <button (click)="onAccept()" *ngIf="class.Status == 'pending'">Accept</button>
+    <button (click)="onReject()" *ngIf="class.Status == 'pending'">Reject</button>
+    <button (click)="onStart()" *ngIf="class.Status == 'accepted'">Start</button>
+    <button (click)="onFinish()" *ngIf="class.Status == 'started'">Done</button>
+    <button (click)="onCancel()" *ngIf="class.Status == 'started' || class.Status == 'accepted'">Cancel</button>
+  </div>
+
+  <div *ngIf="showStu()">
+    <button (click)="onStart()" *ngIf="class.Stu_Status == null">Start</button>
+    <button (click)="onFinish()" *ngIf="class.Stu_Status == 'started'">Done</button>
+    <button (click)="onCancel()" *ngIf="class.Stu_Status == null || class.Stu_Status == 'started'">Cancel</button>
+  </div>
+
+  <div *ngIf="changed == true">
+    <p>Status changed to {{val}}</p>
+    <button (click)="reload()">OK</button>
+  </div>
+
+  <button (click)="goBack()">Back</button>
+</div>

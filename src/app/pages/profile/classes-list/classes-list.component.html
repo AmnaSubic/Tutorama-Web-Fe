@@ -1,9 +1,17 @@
 <div id="classes-list">
-  <p>{{user}}</p>
-  <ul>
-    <li *ngFor="let c of classes">
-      <p>{{c.Subject_Name}}</p>
-    </li>
-  </ul>
+  <div id="wrap">
+    <button id="back" (click)="goBack()">&larr; Back</button>
+    <div id="cards">
+      <div id="card" *ngFor="let c of classes">
+        <div id="content">
+          <h3>{{c.Subject_Name}}</h3>
+          <p id="level">{{c.Service_Level}}</p>
+          <p>{{dateFormat(c.Date)}}</p>
+          <p>{{timeFormat(c.Start_at)}} - {{timeFormat(c.End_at)}}</p>
+        </div>
+        <a [routerLink]="['/profile/classes', c.Class_ID]"><button id="class-info" class="button">More info &rarr;</button></a>
+      </div>
+    </div>
+  </div>
 </div>
 

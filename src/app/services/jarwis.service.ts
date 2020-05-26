@@ -74,4 +74,20 @@ export class JarwisService {
     return this.http.get(`${this.baseUrl}/getAuthClasses`);
   }
 
+  postClass(data) {
+    return this.http.post(`${this.baseUrl}/addClass`, data);
+  }
+
+  getClassInfo(id) {
+    return this.http.get(`${this.baseUrl}/getServices/${id}`, id);
+  }
+
+  updateClassStatus(status, id) {
+    return this.http.post(`${this.baseUrl}/updateClassStatus/${status}/${id}`, status, id);
+  }
+
+  updateStudentClassStatus(status, id) {
+    return this.http.post(`${this.baseUrl}/updateStudentClassStatus/${status}/${id}`, status, id);
+  }
+
 }
