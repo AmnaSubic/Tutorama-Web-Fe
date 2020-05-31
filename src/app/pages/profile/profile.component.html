@@ -1,27 +1,52 @@
 <div id="profile">
-  <p>{{currentUser.First_Name}}</p>
-  <a *ngIf="isTutor()" routerLink="/add-service">
-    <button>Add Service</button>
-  </a>
-  <ul *ngIf="isTutor()">
-    <li *ngFor="let service of services">
-      <h3>{{service.Subject_Name}}</h3>
-      <p>{{service.Service_Level}}</p>
-      <p>{{service.Service_Cost}} KM/h</p>
-    </li>
-  </ul>
-  <a *ngIf="isTutor() && isFixed()" routerLink="/add-available-time">
-    <button>Add Available Time</button>
-  </a>
-  <ul *ngIf="isTutor() && isFixed()">
-    <li *ngFor="let availableTime of availableTimes">
-      <p>{{availableTime.Day}}</p>
-      <p>{{availableTime.Start_Time}}</p>
-      <p>{{availableTime.End_Time}}</p>
-      <p *ngIf="availableTime.Is_Free == 0">Reserved</p>
-      <p *ngIf="availableTime.Is_Free == 1">Free</p>
-    </li>
-  </ul>
-
-  <a routerLink="/profile/classes"><button>Go to classes</button></a>
+  <div id="wrapper">
+    <div id="navigation">
+      <div id="user">
+        <img width="100" height="100" *ngIf="!isTutor()" src="../../../assets/images/free-school-icons-vector.png" alt="">
+        <img width="100" height="100" *ngIf="isTutor()" src="../../../assets/images/education-flat-icons-set-vector.png" alt="">
+        <h4>{{currentUser.First_Name}} {{currentUser.Last_Name}}</h4>
+        <p>@{{currentUser.Username}}</p>
+      </div>
+      <div class="nav-row" appOpenProfileInfo>
+        <fa-icon appOpenProfileInfo class="nav-row-item" [icon]="['fas','user']" size="1x"></fa-icon>
+        <p class="nav-row-item">User information</p>
+        <fa-icon class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
+      </div>
+      <div class="nav-row" appOpenServices>
+        <fa-icon appOpenServices class="nav-row-item" [icon]="['fas','concierge-bell']" size="1x"></fa-icon>
+        <p class="nav-row-item">Services</p>
+        <fa-icon class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
+      </div>
+      <div class="nav-row" appOpenAvailableTimes>
+        <fa-icon appOpenAvailableTimes class="nav-row-item" [icon]="['fas','clock']" size="1x"></fa-icon>
+        <p class="nav-row-item">Available times</p>
+        <fa-icon class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
+      </div>
+      <div class="nav-row" appOpenClasses>
+        <fa-icon appOpenClasses class="nav-row-item" [icon]="['fas','book-open']" size="1x"></fa-icon>
+        <p class="nav-row-item">Classes</p>
+        <fa-icon class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
+      </div>
+      <div class="nav-row" appOpenReviews>
+        <fa-icon appOpenReviews class="nav-row-item" [icon]="['fas','star-half-alt']" size="1x"></fa-icon>
+        <p class="nav-row-item">Reviews</p>
+        <fa-icon class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
+      </div>
+    </div>
+    <div id="component">
+      <div id="profile-info">
+        <p>Profile works!</p>
+      </div>
+      <div id="services">
+        <p>Services works!</p>
+      </div>
+      <div id="available-times">
+        <p>Available works!</p>
+      </div>
+      <app-classes-list id="classes"></app-classes-list>
+      <div id="reviews">
+        <p>Reviews works!</p>
+      </div>
+    </div>
+  </div>
 </div>

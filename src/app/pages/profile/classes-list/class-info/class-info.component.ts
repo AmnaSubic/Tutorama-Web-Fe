@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {JarwisService} from '../../../../services/jarwis.service';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {Location} from '@angular/common';
+import {SnotifyService} from "ng-snotify";
 
 @Component({
   selector: 'app-class-info',
@@ -18,12 +19,13 @@ export class ClassInfoComponent implements OnInit {
   constructor(
     private jarwisService: JarwisService,
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private Notify: SnotifyService
   ) { }
 
   ngOnInit() {
     this.jarwisService.getAuthUser().subscribe(data => this.user = data);
-    this.jarwisService.getClassInfo(this.id).subscribe(data => this.class = data);
+    this.jarwisService.getAuthClassInfo(this.id).subscribe(data => this.class = data);
   }
 
   public val: string;
@@ -31,7 +33,7 @@ export class ClassInfoComponent implements OnInit {
   show() {
     if (this.user.Is_Tutor)
       if (this.class.Stu_Status != 'Cancelled')
-        return this.class.Status != 'Finished' || this.class.Status != 'Cancelled' || this.class.Status != 'Rejected';
+        return this.class.Status == 'Pending' || this.class.Status == 'Started' || this.class.Status == 'Accepted';
     return false;
   }
 
@@ -41,10 +43,6 @@ export class ClassInfoComponent implements OnInit {
         return false;
       else return this.class.Stu_Status == 'Started' || this.class.Stu_Status == null;
     return false;
-  }
-
-  reload() {
-    location.reload();
   }
 
   onStart() {
@@ -76,18 +74,62 @@ export class ClassInfoComponent implements OnInit {
   }
 
   onReject() {
-    this.val = 'rRejected';
+    this.val = 'Rejected';
     if (this.user.Is_Tutor)
       this.jarwisService.updateClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
     else this.jarwisService.updateStudentClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
   }
 
-  public changed = false;
   handleResponse() {
-    this.changed = true;
+    this.Notify.confirm('Status changed to: ' + this.val, {
+      buttons: [{
+        text: 'Okay', action: (toast) => {
+          this.reload()
+          this.Notify.remove(toast.id)
+        },
+      }]
+    });
+  }
+
+  reload() {
+    location.reload();
   }
 
   goBack() {
     this.location.back();
+  }
+
+  dateFormat(date) {
+    let d = date.split('-', 3);
+    return d[2] + '.' + d[1] + '.' + d[0];
+  }
+
+  timeFormat(time) {
+    let t = time.split(':', 2);
+    return t[0] + ':' + t[1];
+  }
+
+  tOrS() {
+    if (this.user.Is_Tutor)
+      return 'student';
+    else return 'tutor';
+  }
+
+  age(date) {
+    let d = date.split('-', 1)
+    let current = new Date().getFullYear();
+    return current - d[0];
+  }
+
+  stuStatus(status) {
+    if (status == null)
+      return 'n/a';
+    else return status;
+  }
+
+  gender(gender) {
+    if (gender)
+      return 'Male';
+    else return 'Female';
   }
 }

@@ -26,8 +26,7 @@ export class ScheduleClassComponent implements OnInit {
     eth: null,
     etm: null
   };
-  public place: string;
-
+  public place: string = null;
   public error: string;
 
   constructor(
@@ -67,10 +66,17 @@ export class ScheduleClassComponent implements OnInit {
         this.form.End_at += ':0' + this.time.etm;
       else this.form.End_at += ':' + this.time.etm;
       this.form.End_at += ':00'
-      this.jarwisService.postClass(this.form).subscribe(data => this.handleResponse());
+      this.jarwisService.postClass(this.form).subscribe(response => this.handleResponse());
     }
   }
 
+  serviceAddress() {
+    return this.service.Address + ', ' +  this.service.Town + ', ' +this.service.Country;
+  }
+
+  userAddress() {
+    return this.user.Address + ', ' + this.user.Town + ', ' + this.user.Country;
+  }
 
 
   public added = false;
@@ -92,5 +98,16 @@ export class ScheduleClassComponent implements OnInit {
   goBack() {
     this.location.back();
   }
+
+  p() {
+    return this.form.Place == null || this.form.Place == 'Online' || this.form.Place == this.serviceAddress() || this.form.Place == this.userAddress();
+  }
+
+  condition() {
+    if (this.form.Place == this.place)
+      return true;
+  }
+
+
 
 }

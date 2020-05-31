@@ -17,7 +17,7 @@ export class ClassesListComponent implements OnInit {
 
   ngOnInit() {
     // @ts-ignore
-    this.jarwisService.getAuthClasses().subscribe(data => this.classes = data)
+    this.jarwisService.getAuthClasses().subscribe(data => this.classes = data);
   }
 
   goBack() {

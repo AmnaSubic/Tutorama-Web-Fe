@@ -58,8 +58,8 @@
       <label  [hidden]="form.Is_Tutor == 0 || !form.Is_Tutor" for="availability">How available are you?
         <select name="availability" id="availability" [(ngModel)]="form.Availability">
           <option value="" disabled="disabled">Select...</option>
-          <option value="fixed">Fixed</option>
-          <option value="flexible">Flexible</option>
+          <option value="Fixed">Fixed</option>
+          <option value="Flexible">Flexible</option>
         </select>
       </label>
       <label [hidden]="form.Is_Tutor == 0 || !form.Is_Tutor" for="experience" [(ngModel)]="form.Experience">Experience

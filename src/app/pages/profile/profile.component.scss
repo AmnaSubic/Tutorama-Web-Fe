@@ -1,3 +1,61 @@
 #profile {
-  margin-top: 100px;
+  padding-top: 150px;
+  position: relative;
+  min-height: calc(100vh - 100px);
+  background-color: whitesmoke;
 }
+
+#wrapper {
+  //margin-left: calc((100% - px) * 0.5);
+}
+
+#navigation {
+  width: 250px;
+  background-color: white;
+}
+
+#user {
+  height: 250px;
+  width: 250px;
+
+  h4, p {
+    text-align: center;
+  }
+
+  img {
+    margin: calc((100% - 100px) * 0.2) calc((100% - 100px) * 0.5) 20px;
+  }
+}
+
+.nav-row {
+  height: 50px;
+  border-top: 1px solid lightgray;
+}
+
+.nav-row-item {
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 5px;
+  margin-top: 12.5px;
+}
+
+.nav-row-item:last-child {
+  float: right;
+}
+
+#component {
+  width: calc(100% - 250px);
+}
+
+#navigation, #component {
+  display: inline-grid;
+}
+
+app-classes-list, #profile-info, #services, #available-times, #reviews {
+  height: 0;
+  overflow: hidden;
+  margin-right: 50px;
+}
+
+
+

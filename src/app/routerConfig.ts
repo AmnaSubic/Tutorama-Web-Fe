@@ -70,10 +70,10 @@ export const appRoutes: Routes = [
     path: 'tutor-profile/:id',
     component: TutorProfileComponent
   },
-  {
-    path: 'profile/classes',
-    component: ClassesListComponent
-  },
+  //{
+    //path: 'profile/classes',
+    //component: ClassesListComponent
+  //},
   {
     path: 'services/:id/schedule-class',
     component: ScheduleClassComponent

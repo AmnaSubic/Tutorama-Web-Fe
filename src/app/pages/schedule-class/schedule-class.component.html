@@ -22,9 +22,13 @@
     <label for="place">Place</label>
     <select name="place" id="place" required="required" [(ngModel)]="form.Place">
       <option value="" disabled="disabled">Select...</option>
-      <option value="{{service.Address}}">{{service.Address}}</option>
-      <option value="{{user.Address}}">{{user.Address}}</option>
+      <option value="Online">Online</option>
+      <option value="{{serviceAddress()}}">Tutor's home: {{serviceAddress()}}</option>
+      <option value="{{userAddress()}}">Student's home: {{userAddress()}}</option>
+      <option value="{{place}}">Enter Address...</option>
     </select>
+
+    <input type="text" id="other" name="other" [required]="condition()" [hidden]="p()" [disabled]="p()" [(ngModel)]="place">
 
     <button type="submit" [disabled]="!scheduleClassForm.valid">Submit</button>
   </form>

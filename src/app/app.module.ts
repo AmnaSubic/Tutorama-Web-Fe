@@ -6,6 +6,7 @@ import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {RouterModule} from '@angular/router';
 import {HeaderComponent} from './pages/header/header.component';
@@ -42,6 +43,12 @@ import { ScheduleClassComponent } from './pages/schedule-class/schedule-class.co
 import { TutorProfileComponent } from './pages/tutor-profile/tutor-profile.component';
 import { ClassesListComponent } from './pages/profile/classes-list/classes-list.component';
 import { ClassInfoComponent } from './pages/profile/classes-list/class-info/class-info.component';
+import { StatusDirective } from './directives/status.directive';
+import { OpenClassesDirective } from './directives/open-classes.directive';
+import { OpenProfileInfoDirective } from './directives/open-profile-info.directive';
+import { OpenReviewsDirective } from './directives/open-reviews.directive';
+import { OpenServicesDirective } from './directives/open-services.directive';
+import { OpenAvailableTimesDirective } from './directives/open-available-times.directive';
 
 @NgModule({
   declarations: [
@@ -69,7 +76,13 @@ import { ClassInfoComponent } from './pages/profile/classes-list/class-info/clas
     ScheduleClassComponent,
     TutorProfileComponent,
     ClassesListComponent,
-    ClassInfoComponent
+    ClassInfoComponent,
+    StatusDirective,
+    OpenClassesDirective,
+    OpenProfileInfoDirective,
+    OpenReviewsDirective,
+    OpenServicesDirective,
+    OpenAvailableTimesDirective
   ],
   imports: [
     BrowserModule,
@@ -102,6 +115,6 @@ import { ClassInfoComponent } from './pages/profile/classes-list/class-info/clas
 })
 export class AppModule {
   constructor() {
-    library.add(fab, fas);
+    library.add(fab, fas, far);
   }
 }

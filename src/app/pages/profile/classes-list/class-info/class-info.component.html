@@ -1,26 +1,88 @@
 <div id="class-info">
-  <p>{{class.Subject_Name}}</p>
-  <p>{{class.Status}}</p>
-  <p>{{class.Stu_Status}}</p>
-
-  <div *ngIf="show()">
-    <button (click)="onAccept()" *ngIf="class.Status == 'pending'">Accept</button>
-    <button (click)="onReject()" *ngIf="class.Status == 'pending'">Reject</button>
-    <button (click)="onStart()" *ngIf="class.Status == 'accepted'">Start</button>
-    <button (click)="onFinish()" *ngIf="class.Status == 'started'">Done</button>
-    <button (click)="onCancel()" *ngIf="class.Status == 'started' || class.Status == 'accepted'">Cancel</button>
+  <div id="title">
+    <h1><fa-icon (click)="goBack()" [icon]="['fas','chevron-left']" size="1x"></fa-icon> Class info</h1>
   </div>
-
-  <div *ngIf="showStu()">
-    <button (click)="onStart()" *ngIf="class.Stu_Status == null">Start</button>
-    <button (click)="onFinish()" *ngIf="class.Stu_Status == 'started'">Done</button>
-    <button (click)="onCancel()" *ngIf="class.Stu_Status == null || class.Stu_Status == 'started'">Cancel</button>
+  <div id="wrap">
+    <div class="info-card element">
+      <div class="content">
+        <h3>Class info</h3>
+        <div class="card-row">
+          <p class="data">{{class.Subject_Name}}</p>
+          <p class="tag">Subject</p>
+        </div>
+        <div class="card-row">
+          <p class="data">{{class.Service_Level}}</p>
+          <p class="tag">Level</p>
+        </div>
+        <div class="card-row">
+          <p class="data">{{dateFormat(class.Date)}}</p>
+          <p class="tag">Date</p>
+        </div>
+        <div class="card-row">
+          <p class="data">{{timeFormat(class.Start_at)}} - {{timeFormat(class.End_at)}}</p>
+          <p class="tag">Time</p>
+        </div>
+        <div class="card-row">
+          <p class="data">{{class.Place}}</p>
+          <p class="tag">Place</p>
+        </div>
+        <div class="card-row">
+          <p class="data">{{class.Price}} KM</p>
+          <p class="tag">Price</p>
+        </div>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="element">
+        <div class="content">
+          <h3>{{tOrS()}} info</h3>
+          <div class="card-row">
+            <p class="data">{{class.First_Name}} {{class.Last_Name}}</p>
+            <p class="tag">Name</p>
+          </div>
+          <div class="card-row">
+            <p class="data">{{age(class.Date_of_Birth)}}</p>
+            <p class="tag">Age</p>
+          </div>
+          <div class="card-row">
+            <p class="data">{{gender(class.Gender)}}</p>
+            <p class="tag">Gender</p>
+          </div>
+          <div class="card-row">
+            <p class="data">{{class.Town}}</p>
+            <p class="tag">Town</p>
+          </div>
+          <div class="card-row">
+            <p class="data">{{class.Country}}</p>
+            <p class="tag">Country</p>
+          </div>
+        </div>
+      </div>
+      <div class="element">
+        <div class="content">
+          <h3>Status</h3>
+          <div class="card-row">
+            <p class="data">{{class.Status}}</p>
+            <p class="tag">Tutor status</p>
+          </div>
+          <div class="card-row">
+            <p class="data">{{stuStatus(class.Stu_Status)}}</p>
+            <p class="tag">Student status</p>
+            <div class="buttons" *ngIf="show()">
+              <button class="status-button green" (click)="onAccept()" *ngIf="class.Status == 'Pending'">Accept <fa-icon [icon]="['far', 'check-circle']" size="1x"></fa-icon></button>
+              <button class="status-button red" (click)="onReject()" *ngIf="class.Status == 'Pending'">Reject <fa-icon [icon]="['far', 'times-circle']"></fa-icon></button>
+              <button class="status-button green" (click)="onStart()" *ngIf="class.Status == 'Accepted'">Start <fa-icon [icon]="['far', 'play-circle']" size="1x"></fa-icon></button>
+              <button class="status-button green" (click)="onFinish()" *ngIf="class.Status == 'Started'">Done <fa-icon [icon]="['far', 'check-circle']"></fa-icon></button>
+              <button class="status-button red" (click)="onCancel()" *ngIf="class.Status == 'Started' || class.Status == 'Accepted'">Cancel <fa-icon [icon]="['far', 'trash-alt']"></fa-icon></button>
+            </div>
+            <div class="buttons" *ngIf="showStu()">
+              <button class="status-button green" (click)="onStart()" *ngIf="class.Stu_Status == null">Start <fa-icon [icon]="['far', 'play-circle']"></fa-icon></button>
+              <button class="status-button green" (click)="onFinish()" *ngIf="class.Stu_Status == 'Started'">Done <fa-icon [icon]="['far', 'check-circle']"></fa-icon> </button>
+              <button class="status-button red" (click)="onCancel()" *ngIf="class.Stu_Status == null || class.Stu_Status == 'Started'">Cancel <fa-icon [icon]="['far', 'trash-alt']"></fa-icon></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div *ngIf="changed == true">
-    <p>Status changed to {{val}}</p>
-    <button (click)="reload()">OK</button>
-  </div>
-
-  <button (click)="goBack()">Back</button>
 </div>
