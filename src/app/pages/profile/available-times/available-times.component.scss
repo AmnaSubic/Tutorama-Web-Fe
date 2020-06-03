@@ -1,0 +1,81 @@
+@media (min-width: 1100px) {
+  .time-container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 825px) and (max-width: 1099px) {
+  .time-container {
+    width: 475px;
+  }
+}
+
+@media (max-width: 824px) {
+  .time-container {
+    width: 300px;
+  }
+}
+
+
+#title {
+  border-bottom: #0c424d 1px solid;
+  width: 80%;
+  margin-left: 10%;
+  padding-top: 65px;
+}
+
+#title h2 {
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: oblique;
+  display: inline;
+}
+
+#title p {
+  font-family: 'Open Sans', sans-serif;
+  display: inline;
+  float: right;
+  font-size: larger;
+  font-weight: bold;
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+  fa-icon {
+    margin-right: 5px;
+  }
+}
+
+#title p:hover {
+  border-bottom: 1px solid #19777b;
+  color: #19777b;
+}
+
+.time-container {
+  font-family: 'Open Sans', sans-serif;
+  height: 50px;
+  margin-top: 15px;
+}
+
+.element {
+  display: inline-grid;
+  margin-top: 15px;
+  margin-right: 5px;
+}
+
+.element:first-child {
+  margin-left: 50px;
+}
+
+.tag {
+  font-style: oblique;
+}
+
+.data {
+  font-weight: 600;
+}
+
+#available-times {
+  background-color: white;
+  min-height: calc(100vh - 250px);
+}

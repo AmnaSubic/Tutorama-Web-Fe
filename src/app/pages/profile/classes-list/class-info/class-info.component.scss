@@ -78,7 +78,7 @@
   margin-left: 10%;
 }
 
-#title h1 {
+#title h2 {
   margin-left: calc((100% - 275px) * 0.1);
   width: 275px;
   font-family: 'Playfair Display', serif;
@@ -87,7 +87,7 @@
   font-style: oblique;
 }
 
-#info-card h3, .info-card h3 {
+#info-card h4, .info-card h4 {
   text-transform: uppercase;
   font-weight: 500;
 }

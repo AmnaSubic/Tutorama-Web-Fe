@@ -1,3 +1,31 @@
+@media (max-width: 575px) {
+  .component-box {
+    margin: 0 calc((100% - 300px) * 0.5);
+  }
+
+  #component {
+    margin-top: 25px;
+  }
+
+  #navigation {
+    margin: 0 calc((100% - 300px) * 0.5);
+  }
+}
+
+@media (min-width: 576px) {
+  #navigation, #component {
+    display: inline-grid;
+  }
+
+  #component {
+    width: calc(100% - 300px);
+  }
+
+  .component-box {
+    margin-left: 50px;
+  }
+}
+
 #profile {
   padding-top: 150px;
   position: relative;
@@ -5,25 +33,21 @@
   background-color: whitesmoke;
 }
 
-#wrapper {
-  //margin-left: calc((100% - px) * 0.5);
-}
-
 #navigation {
-  width: 250px;
+  width: 300px;
   background-color: white;
 }
 
 #user {
-  height: 250px;
-  width: 250px;
+  height: 300px;
+  width: 300px;
 
   h4, p {
     text-align: center;
   }
 
   img {
-    margin: calc((100% - 100px) * 0.2) calc((100% - 100px) * 0.5) 20px;
+    margin: calc((100% - 100px) * 0.2) calc((100% - 100px) * 0.5) 50px;
   }
 }
 
@@ -44,18 +68,14 @@
 }
 
 #component {
-  width: calc(100% - 250px);
+  overflow: auto;
 }
 
-#navigation, #component {
-  display: inline-grid;
+.component-box {
+  margin-bottom: 50px;
 }
 
-app-classes-list, #profile-info, #services, #available-times, #reviews {
-  height: 0;
-  overflow: hidden;
-  margin-right: 50px;
+#user-info-row {
+  background-color: #19777b;
+  color: white;
 }
-
-
-

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {JarwisService} from "../../../services/jarwis.service";
+import {JarwisService} from '../../../../services/jarwis.service';
+import {SnotifyService} from 'ng-snotify';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-add-service',
@@ -19,7 +21,9 @@ export class AddServiceComponent implements OnInit {
   public added = false;
 
   constructor(
-    private jarwisService: JarwisService
+    private jarwisService: JarwisService,
+    private Notify: SnotifyService,
+    private location: Location
   ) { }
 
   ngOnInit() {
@@ -34,10 +38,26 @@ export class AddServiceComponent implements OnInit {
   }
 
   handleResponse() {
-    this.added = true;
+    this.Notify.confirm('Time added!', {
+      buttons: [
+        {
+          text: 'Back', action: (toast) => {
+            this.goBack();
+            this.Notify.remove(toast.id);
+          },
+        },
+        {
+          text: 'Add another', action: (toast) => {
+            this.service.Subject_ID = null;
+            this.service.Service_Level = null;
+            this.service.Service_Cost = null;
+            this.Notify.remove(toast.id);
+          },
+        }]
+    });
   }
 
-  reset() {
-    this.added = false;
+  goBack() {
+    this.location.back();
   }
 }

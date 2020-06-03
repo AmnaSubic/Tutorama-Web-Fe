@@ -1,11 +1,11 @@
 <div id="class-info">
   <div id="title">
-    <h1><fa-icon (click)="goBack()" [icon]="['fas','chevron-left']" size="1x"></fa-icon> Class info</h1>
+    <h2><fa-icon (click)="goBack()" [icon]="['fas','chevron-left']" size="1x"></fa-icon> Class info</h2>
   </div>
   <div id="wrap">
     <div class="info-card element">
       <div class="content">
-        <h3>Class info</h3>
+        <h4>Class info</h4>
         <div class="card-row">
           <p class="data">{{class.Subject_Name}}</p>
           <p class="tag">Subject</p>
@@ -35,7 +35,7 @@
     <div class="info-card">
       <div class="element">
         <div class="content">
-          <h3>{{tOrS()}} info</h3>
+          <h4>{{tOrS()}} info</h4>
           <div class="card-row">
             <p class="data">{{class.First_Name}} {{class.Last_Name}}</p>
             <p class="tag">Name</p>
@@ -60,7 +60,7 @@
       </div>
       <div class="element">
         <div class="content">
-          <h3>Status</h3>
+          <h4>Status</h4>
           <div class="card-row">
             <p class="data">{{class.Status}}</p>
             <p class="tag">Tutor status</p>

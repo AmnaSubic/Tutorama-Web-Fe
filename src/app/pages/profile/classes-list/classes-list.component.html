@@ -1,11 +1,11 @@
 <div id="classes-list">
   <div id="title">
-    <h1>Classes</h1>
+    <h2>Classes</h2>
   </div>
   <div id="cards">
     <div id="card" *ngFor="let c of classes" [routerLink]="['/profile/classes', c.Class_ID]">
       <div id="content">
-        <h3>{{c.Subject_Name}}</h3>
+        <h4>{{c.Subject_Name}}</h4>
         <p id="level">{{c.Service_Level}}</p>
         <p>{{dateFormat(c.Date)}}</p>
         <p>{{timeFormat(c.Start_at)}} - {{timeFormat(c.End_at)}}</p>

@@ -1,0 +1,18 @@
+<div id="available-times">
+  <div id="container">
+    <div id="title">
+      <h2>Available Times</h2>
+      <p routerLink="/add-available-time"><fa-icon [icon]="['fas', 'plus']" size="1x"></fa-icon>Add</p>
+    </div>
+    <div id="components">
+      <div class="time-container" *ngFor="let at of availableTimes">
+        <fa-icon class="element item" [icon]="['fas','hourglass-start']" size="1x"></fa-icon>
+        <p class="data element item" id="day">{{at.Day}}s</p>
+        <p class="tag element time">from</p>
+        <p class="data element time">{{timeFormat(at.Start_Time)}}</p>
+        <p class="element tag time">to</p>
+        <p class="data element time">{{timeFormat(at.End_Time)}}</p>
+      </div>
+    </div>
+  </div>
+</div>

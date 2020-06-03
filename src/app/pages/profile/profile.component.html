@@ -7,45 +7,47 @@
         <h4>{{currentUser.First_Name}} {{currentUser.Last_Name}}</h4>
         <p>@{{currentUser.Username}}</p>
       </div>
-      <div class="nav-row" appOpenProfileInfo>
-        <fa-icon appOpenProfileInfo class="nav-row-item" [icon]="['fas','user']" size="1x"></fa-icon>
-        <p class="nav-row-item">User information</p>
-        <fa-icon class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
+      <div class="nav-row" id="user-info-row">
+        <fa-icon appActiveRowInfo (click)="showP()" class="nav-row-item" [icon]="['fas','user']" size="1x"></fa-icon>
+        <p appActiveRowInfo (click)="showP()" class="nav-row-item">User information</p>
+        <fa-icon appActiveRowInfo (click)="showP()" class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
       </div>
-      <div class="nav-row" appOpenServices>
-        <fa-icon appOpenServices class="nav-row-item" [icon]="['fas','concierge-bell']" size="1x"></fa-icon>
-        <p class="nav-row-item">Services</p>
-        <fa-icon class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
+      <div *ngIf="isTutor()" class="nav-row" id="service-row">
+        <fa-icon appActiveRowServices (click)="showService()" class="nav-row-item" [icon]="['fas','concierge-bell']" size="1x"></fa-icon>
+        <p appActiveRowServices (click)="showService()" class="nav-row-item">Services</p>
+        <fa-icon appActiveRowServices (click)="showService()" class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
       </div>
-      <div class="nav-row" appOpenAvailableTimes>
-        <fa-icon appOpenAvailableTimes class="nav-row-item" [icon]="['fas','clock']" size="1x"></fa-icon>
-        <p class="nav-row-item">Available times</p>
-        <fa-icon class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
+      <div *ngIf="isTutor()" class="nav-row" id="at-row">
+        <fa-icon appActiveRowAt (click)="showAT()" class="nav-row-item" [icon]="['fas','clock']" size="1x"></fa-icon>
+        <p appActiveRowAt (click)="showAT()" class="nav-row-item">Available times</p>
+        <fa-icon appActiveRowAt (click)="showAT()" class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
       </div>
-      <div class="nav-row" appOpenClasses>
-        <fa-icon appOpenClasses class="nav-row-item" [icon]="['fas','book-open']" size="1x"></fa-icon>
-        <p class="nav-row-item">Classes</p>
-        <fa-icon class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
+      <div class="nav-row" id="classes-row">
+        <fa-icon appActiveRowClasses (click)="showC()" class="nav-row-item" [icon]="['fas','book-open']" size="1x"></fa-icon>
+        <p appActiveRowClasses (click)="showC()" class="nav-row-item">Classes</p>
+        <fa-icon appActiveRowClasses (click)="showC()" class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
       </div>
-      <div class="nav-row" appOpenReviews>
-        <fa-icon appOpenReviews class="nav-row-item" [icon]="['fas','star-half-alt']" size="1x"></fa-icon>
-        <p class="nav-row-item">Reviews</p>
-        <fa-icon class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
+      <div class="nav-row" id="reviews-row">
+        <fa-icon appActiveRowReviews (click)="showR()" class="nav-row-item" [icon]="['fas','star-half-alt']" size="1x"></fa-icon>
+        <p appActiveRowReviews (click)="showR()" class="nav-row-item">Reviews</p>
+        <fa-icon appActiveRowReviews (click)="showR()" class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
       </div>
     </div>
     <div id="component">
-      <div id="profile-info">
-        <p>Profile works!</p>
+      <div class="component-box" *ngIf="p">
+        <app-profile-info></app-profile-info>
       </div>
-      <div id="services">
-        <p>Services works!</p>
+      <div class="component-box" *ngIf="s">
+        <app-services></app-services>
       </div>
-      <div id="available-times">
-        <p>Available works!</p>
+      <div class="component-box" *ngIf="at">
+        <app-available-times></app-available-times>
       </div>
-      <app-classes-list id="classes"></app-classes-list>
-      <div id="reviews">
-        <p>Reviews works!</p>
+      <div class="component-box" *ngIf="c">
+        <app-classes-list></app-classes-list>
+      </div>
+      <div class="component-box" *ngIf="r">
+        <app-reviews></app-reviews>
       </div>
     </div>
   </div>

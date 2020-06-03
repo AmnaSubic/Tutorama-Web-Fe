@@ -1,0 +1,82 @@
+@media only screen and (min-width: 401px) {
+  #title h2 {
+    margin-left: calc((100% - 360px) * 0.1);
+    width: 360px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #title h2 {
+    margin-left: calc((100% - 250px) * 0.1);
+    width: 250px;
+  }
+}
+
+
+#add-available-time {
+  padding-top: 100px;
+  min-height: calc(100vh - 100px);
+  position: relative;
+  background-color: whitesmoke;
+}
+
+#title {
+  border-bottom: #0c424d 1px solid;
+  width: 80%;
+  margin-left: 10%;
+}
+
+#title h2 {
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: oblique;
+}
+
+form {
+  width: 300px;
+  margin-left: calc((100% - 300px) * 0.5);
+  background-color: white;
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+}
+
+.form-row label {
+  font-family: 'Open Sans', sans-serif;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+#day, #start-time, #end-time, .form-row label {
+  height: 35px;
+}
+
+.form-row {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 150px;
+  margin-left: calc((100% - 150px) * 0.5);
+}
+
+#start-time, #end-time, #day {
+  width: 150px;
+}
+
+#submit {
+  margin-top: 20px;
+  border-radius: 25px;
+  height: 40px;
+  background-color: #0c424d;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  width: 100px;
+  margin-left: calc((100% - 100px) * 0.5);
+}
+
+#submit fa-icon {
+  margin-right: 10px;
+}
+
+

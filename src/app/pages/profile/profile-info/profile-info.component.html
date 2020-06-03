@@ -1,0 +1,53 @@
+<div id="profile-info">
+  <div id="container">
+    <div id="title">
+      <h2>User Information</h2>
+    </div>
+    <div id="info">
+      <div class="info-row">
+        <p class="data">{{currentUser.First_Name}}</p>
+        <p class="tag">First Name</p>
+      </div>
+      <div class="info-row">
+        <p class="data">{{currentUser.Last_Name}}</p>
+        <p class="tag">Last Name</p>
+      </div>
+      <div class="info-row">
+        <p class="data">{{dob()}}</p>
+        <p class="tag">Date of Birth</p>
+      </div>
+      <div class="info-row">
+        <p class="data">{{gender()}}</p>
+        <p class="tag">Gender</p>
+      </div>
+      <div class="info-row">
+        <p class="data">{{currentUser.Address}}</p>
+        <p class="tag">Address</p>
+      </div>
+      <div class="info-row">
+        <p class="data">{{currentUser.Town}}</p>
+        <p class="tag">Town</p>
+      </div>
+      <div class="info-row">
+        <p class="data">{{currentUser.Country}}</p>
+        <p class="tag">Country</p>
+      </div>
+      <div class="info-row">
+        <p class="data">{{currentUser.Phone_Number}}</p>
+        <p class="tag">Phone Number</p>
+      </div>
+      <div class="info-row" *ngIf="isTutor()">
+        <p class="data">{{currentUser.Description}}</p>
+        <p class="tag">Description</p>
+      </div>
+      <div class="info-row" *ngIf="isTutor()">
+        <p class="data">{{currentUser.Experience}}</p>
+        <p class="tag">Experience</p>
+      </div>
+      <div class="info-row" *ngIf="isTutor()">
+        <p class="data">{{currentUser.Availability}}</p>
+        <p class="tag">Availability</p>
+      </div>
+    </div>
+  </div>
+</div>

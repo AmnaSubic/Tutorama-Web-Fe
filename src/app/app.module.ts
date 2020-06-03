@@ -35,20 +35,23 @@ import {AuthService} from './services/auth.service';
 import {AfterLoginService} from './services/after-login.service';
 import {BeforeLoginService} from './services/before-login.service';
 import {TokenInterceptor} from './interceptor/token.interceptor';
-import { AddServiceComponent } from './pages/profile/add-service/add-service.component';
-import { AddAvailableTimeComponent } from './pages/profile/add-available-time/add-available-time.component';
+import { AddServiceComponent } from './pages/profile/services/add-service/add-service.component';
+import { AddAvailableTimeComponent } from './pages/profile/available-times/add-available-time/add-available-time.component';
 import { ServicesListComponent } from './pages/services-list/services-list.component';
 import { ServiceInfoComponent } from './pages/services-list/service-info/service-info.component';
 import { ScheduleClassComponent } from './pages/schedule-class/schedule-class.component';
 import { TutorProfileComponent } from './pages/tutor-profile/tutor-profile.component';
 import { ClassesListComponent } from './pages/profile/classes-list/classes-list.component';
 import { ClassInfoComponent } from './pages/profile/classes-list/class-info/class-info.component';
-import { StatusDirective } from './directives/status.directive';
-import { OpenClassesDirective } from './directives/open-classes.directive';
-import { OpenProfileInfoDirective } from './directives/open-profile-info.directive';
-import { OpenReviewsDirective } from './directives/open-reviews.directive';
-import { OpenServicesDirective } from './directives/open-services.directive';
-import { OpenAvailableTimesDirective } from './directives/open-available-times.directive';
+import { ServicesComponent } from './pages/profile/services/services.component';
+import { ReviewsComponent } from './pages/profile/reviews/reviews.component';
+import { ProfileInfoComponent } from './pages/profile/profile-info/profile-info.component';
+import { AvailableTimesComponent } from './pages/profile/available-times/available-times.component';
+import { ActiveRowInfoDirective } from './directives/active-row-info.directive';
+import { ActiveRowClassesDirective } from './directives/active-row-classes.directive';
+import { ActiveRowServicesDirective } from './directives/active-row-services.directive';
+import { ActiveRowAtDirective } from './directives/active-row-at.directive';
+import { ActiveRowReviewsDirective } from './directives/active-row-reviews.directive';
 
 @NgModule({
   declarations: [
@@ -77,12 +80,15 @@ import { OpenAvailableTimesDirective } from './directives/open-available-times.d
     TutorProfileComponent,
     ClassesListComponent,
     ClassInfoComponent,
-    StatusDirective,
-    OpenClassesDirective,
-    OpenProfileInfoDirective,
-    OpenReviewsDirective,
-    OpenServicesDirective,
-    OpenAvailableTimesDirective
+    ServicesComponent,
+    ReviewsComponent,
+    ProfileInfoComponent,
+    AvailableTimesComponent,
+    ActiveRowInfoDirective,
+    ActiveRowClassesDirective,
+    ActiveRowServicesDirective,
+    ActiveRowAtDirective,
+    ActiveRowReviewsDirective
   ],
   imports: [
     BrowserModule,

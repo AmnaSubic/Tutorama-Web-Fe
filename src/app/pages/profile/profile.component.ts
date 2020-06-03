@@ -9,7 +9,6 @@ import {JarwisService} from '../../services/jarwis.service';
 })
 export class ProfileComponent implements OnInit {
   public currentUser;
-  public services;
   public availableTimes;
   public image: string;
 
@@ -19,10 +18,6 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.jarwisService.getAuthUser().subscribe(data => this.currentUser = data);
-    // @ts-ignore
-    this.jarwisService.getAuthUserServices().subscribe((data: any[]) => this.services = data);
-    // @ts-ignore
-    this.jarwisService.getAuthUserAvailableTimes().subscribe((data: any[]) => this.availableTimes = data.data);
   }
 
   isTutor() {
@@ -33,29 +28,50 @@ export class ProfileComponent implements OnInit {
     return this.currentUser.Availability == 'Fixed';
   }
 
-  isFree() {
-    if (this.currentUser.Is_Free)
-      return 'Reserved';
-    else return 'Free';
+  public s = false;
+  public c = false;
+  public at = false;
+  public r = false;
+  public p = true;
+
+  showService() {
+    this.s = true;
+    this.c = false;
+    this.p = false;
+    this.r = false;
+    this.at = false;
   }
 
-  dateFormat(date) {
-    let d = date.split('-', 3);
-    return d[2] + '.' + d[1] + '.' + d[0];
+  showAT() {
+    this.at = true;
+    this.c = false;
+    this.p = false;
+    this.r = false;
+    this.s = false;
   }
 
-  timeFormat(time) {
-    let t = time.split(':', 2);
-    return t[0] + ':' + t[1];
+  showC() {
+    this.c = true;
+    this.s = false;
+    this.p = false;
+    this.r = false;
+    this.at = false;
   }
 
-  gender() {
-    if (this.currentUser.Gender)
-      return 'Male';
-    else return 'Female';
+  showP() {
+    this.p = true;
+    this.c = false;
+    this.s = false;
+    this.r = false;
+    this.at = false;
   }
 
-
-
+  showR() {
+    this.r = true;
+    this.c = false;
+    this.p = false;
+    this.s = false;
+    this.at = false;
+  }
 
 }

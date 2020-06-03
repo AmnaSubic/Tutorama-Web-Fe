@@ -1,11 +1,15 @@
 <div id="add-available-time">
-  <h1>Add Available Time</h1>
-
-
+  <div id="title">
+    <h2>
+      <fa-icon (click)="goBack()" [icon]="['fas','chevron-left']" size="1x"></fa-icon>
+      Add Available Time
+    </h2>
+  </div>
   <form #addAvailableTimeForm=ngForm (ngSubmit)="onSubmit()">
-    <label for="day">Choose Day
+    <div class="form-row">
+      <label for="day">Choose Day</label>
       <select id="day" required="required" name="day" [(ngModel)]="availableTime.Day">
-        <option value="">Select...</option>
+        <option disabled="disabled" value="">Select...</option>
         <option value="Monday">Monday</option>
         <option value="Tuesday">Tuesday</option>
         <option value="Wednesday">Wednesday</option>
@@ -14,19 +18,19 @@
         <option value="Saturday">Saturday</option>
         <option value="Sunday">Sunday</option>
       </select>
-    </label>
-    <label for="start-time">Choose Start Time
-      <input type="time" id="start-time" name="start-time" required="required" [(ngModel)]="availableTime.Start_Time">
-    </label>
-    <label for="end-time">Choose End Time
-      <input type="time" id="end-time" name="end-time" required="required" [(ngModel)]="availableTime.End_Time">
-    </label>
-    <button type="submit" [disabled]="!addAvailableTimeForm.valid">Add Available Time</button>
-
-    <div [hidden]="!added">
-      <p>Available Time successfully added</p>
-      <p>Add another?</p><button type="reset" (click)="reset()">Add</button>
     </div>
+    <div class="form-row">
+      <label for="start-time">Choose Start Time</label>
+      <input type="time" id="start-time" name="start-time" required="required" [(ngModel)]="availableTime.Start_Time">
+    </div>
+    <div class="form-row">
+      <label for="end-time">Choose End Time</label>
+      <input type="time" id="end-time" name="end-time" required="required" [(ngModel)]="availableTime.End_Time">
+    </div>
+    <button id="submit" type="submit" [disabled]="!addAvailableTimeForm.valid">
+      <fa-icon [icon]="['fas','plus']"></fa-icon>
+      Add
+    </button>
   </form>
 </div>
 
