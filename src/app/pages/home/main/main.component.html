@@ -8,7 +8,7 @@
           Join Now
         </button>
       </a>
-      <a *ngIf="loggedIn" routerLink="/services" class="button-link">
+      <a *ngIf="loggedIn && isStudent()" routerLink="/services" class="button-link">
         <button class="homepage-buttons">
           Search Services
         </button>

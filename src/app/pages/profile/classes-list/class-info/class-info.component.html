@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-    <div class="info-card">
+    <div class="info-card" [routerLink]="['/public-profile', profileId()]">
       <div class="element">
         <div class="content">
           <h4>{{tOrS()}} info</h4>
@@ -56,6 +56,7 @@
             <p class="data">{{class.Country}}</p>
             <p class="tag">Country</p>
           </div>
+          <span>...click to view profile</span>
         </div>
       </div>
       <div class="element">

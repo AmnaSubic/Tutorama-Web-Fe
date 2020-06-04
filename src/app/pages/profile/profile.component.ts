@@ -9,8 +9,6 @@ import {JarwisService} from '../../services/jarwis.service';
 })
 export class ProfileComponent implements OnInit {
   public currentUser;
-  public availableTimes;
-  public image: string;
 
   constructor(
     private jarwisService: JarwisService
@@ -18,6 +16,16 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.jarwisService.getAuthUser().subscribe(data => this.currentUser = data);
+
+    if (this.currentUser.Is_Tutor) {
+      {
+        document.getElementById('service-row').style.height = '50px';
+      }
+      if (this.currentUser.Availability == 'fixed')
+      {
+        document.getElementById('at-row').style.height = '50px';
+      }
+    }
   }
 
   isTutor() {

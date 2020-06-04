@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {JarwisService} from '../../services/jarwis.service';
-import {ActivatedRoute} from '@angular/router';
+import {JarwisService} from '../../../services/jarwis.service';
+import {ActivatedRoute, Router} from '@angular/router';
 import {Location} from '@angular/common';
+import {SnotifyService} from 'ng-snotify';
 
 @Component({
   selector: 'app-schedule-class',
@@ -32,7 +33,9 @@ export class ScheduleClassComponent implements OnInit {
   constructor(
     private jarwisService: JarwisService,
     private route: ActivatedRoute,
-    private location: Location
+    private router: Router,
+    private location: Location,
+    private Notify: SnotifyService
   ) { }
 
   ngOnInit() {
@@ -82,7 +85,13 @@ export class ScheduleClassComponent implements OnInit {
   public added = false;
 
   handleResponse() {
-    this.added = true;
+    this.Notify.confirm('Time added!', {
+      buttons: [{
+          text: 'Class scheduled!', action: (toast) => {
+            this.router.navigateByUrl('/services').then(r => this.Notify.remove(toast.id))
+          },
+        }]
+    });
   }
 
   maxStartTime() {
@@ -100,7 +109,7 @@ export class ScheduleClassComponent implements OnInit {
   }
 
   p() {
-    return this.form.Place == null || this.form.Place == 'Online' || this.form.Place == this.serviceAddress() || this.form.Place == this.userAddress();
+    return this.form.Place == ('Online' || this.serviceAddress() || this.userAddress() || null);
   }
 
   condition() {

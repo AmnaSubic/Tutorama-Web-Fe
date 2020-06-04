@@ -40,8 +40,7 @@ export class ForgotPasswordResponseComponent implements OnInit {
     this.Notify.confirm('Done!, Now login with new password', {
       buttons: [{
         text: 'Okay', action: (toast) => {
-          _router.navigateByUrl('/login'),
-            this.Notify.remove(toast.id)
+          _router.navigateByUrl('/login').then(r => this.Notify.remove(toast.id))
         },
       }]
     });

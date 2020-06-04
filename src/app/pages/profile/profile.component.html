@@ -12,15 +12,19 @@
         <p appActiveRowInfo (click)="showP()" class="nav-row-item">User information</p>
         <fa-icon appActiveRowInfo (click)="showP()" class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
       </div>
-      <div *ngIf="isTutor()" class="nav-row" id="service-row">
-        <fa-icon appActiveRowServices (click)="showService()" class="nav-row-item" [icon]="['fas','concierge-bell']" size="1x"></fa-icon>
-        <p appActiveRowServices (click)="showService()" class="nav-row-item">Services</p>
-        <fa-icon appActiveRowServices (click)="showService()" class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
+      <div class="nav-row" id="service-row">
+        <div *ngIf="isTutor()" class="tutor-row">
+          <fa-icon appActiveRowServices (click)="showService()" class="nav-row-item" [icon]="['fas','concierge-bell']" size="1x"></fa-icon>
+          <p appActiveRowServices (click)="showService()" class="nav-row-item">Services</p>
+          <fa-icon appActiveRowServices (click)="showService()" class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
+        </div>
       </div>
-      <div *ngIf="isTutor()" class="nav-row" id="at-row">
-        <fa-icon appActiveRowAt (click)="showAT()" class="nav-row-item" [icon]="['fas','clock']" size="1x"></fa-icon>
-        <p appActiveRowAt (click)="showAT()" class="nav-row-item">Available times</p>
-        <fa-icon appActiveRowAt (click)="showAT()" class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
+      <div class="nav-row" id="at-row">
+        <div *ngIf="isTutor()" class="tutor-row">
+          <fa-icon appActiveRowAt (click)="showAT()" class="nav-row-item" [icon]="['fas','clock']" size="1x"></fa-icon>
+          <p appActiveRowAt (click)="showAT()" class="nav-row-item">Available times</p>
+          <fa-icon appActiveRowAt (click)="showAT()" class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
+        </div>
       </div>
       <div class="nav-row" id="classes-row">
         <fa-icon appActiveRowClasses (click)="showC()" class="nav-row-item" [icon]="['fas','book-open']" size="1x"></fa-icon>

@@ -1,0 +1,11 @@
+<div id="public-services-list">
+  <div id="cards">
+    <div id="card" *ngFor="let at of ats">
+      <div id="content">
+        <p id="day">{{at.Day}}</p>
+        <p id="st"><fa-icon [icon]="['fas','hourglass-start']" size="1x"></fa-icon> {{at.Start_Time}}</p>
+        <p id="et"><fa-icon [icon]="['fas','hourglass-end']" size="1x"></fa-icon> {{at.End_Time}}</p>
+      </div>
+    </div>
+  </div>
+</div>

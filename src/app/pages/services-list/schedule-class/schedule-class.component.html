@@ -1,0 +1,50 @@
+<div id="schedule-class">
+  <div id="content">
+    <div id="title">
+      <h2>
+        <fa-icon (click)="goBack()" [icon]="['fas','chevron-left']" size="1x"></fa-icon>
+        Schedule Class
+      </h2>
+    </div>
+    <form #scheduleClassForm=ngForm (ngSubmit)="onSubmit()">
+      <div class="form-row">
+        <label class="label" for="date">Date</label>
+        <input type="date" class="input" id="date" name="date" required="required" placeholder="yyyy-mm-dd" [(ngModel)]="form.Date">
+      </div>
+      <p class="warning">Choose time between 8:00 and 22:00. The duration of the class needs to be at least one hour.</p>
+      <div class="form-row">
+        <p class="label">Start Time</p>
+        <div>
+          <label class="time-tag" for="sth">HH</label><p class="time-tag">:</p><label class="time-tag" for="stm">MM</label>
+        </div>
+        <input id="sth" type="number" name="start-at-h" (change)="maxStartTime()" required="required" min="8" max="21" placeholder="08" [(ngModel)]="time.sth">
+        <input id="stm" type="number" name="start-at-m" required="required" min="0" max="{{time.stm}}" placeholder="00" [(ngModel)]="time.stm">
+      </div>
+      <div class="form-row">
+        <p class="label">End Time</p>
+        <div>
+          <label class="time-tag" for="eth">HH</label><p class="time-tag">:</p><label class="time-tag" for="etm">MM</label>
+        </div>
+        <input id="eth" type="number" name="end-at-h" (change)="maxEndTime()" required="required" min="{{time.sth + 1}}" max="22" placeholder="09" [(ngModel)]="time.eth">
+        <input id="etm" type="number" name="end-at-m" required="required" min="0" max="{{time.etm}}" placeholder="00" [(ngModel)]="time.etm">
+      </div>
+      <div class="form-row">
+        <label class="label" for="place">Place</label>
+        <select name="place" class="input custom-select" id="place" required="required" [(ngModel)]="form.Place">
+          <option value="" disabled="disabled">Select...</option>
+          <option value="Online">Online</option>
+          <option value="{{serviceAddress()}}">Tutor's home: {{serviceAddress()}}</option>
+          <option value="{{userAddress()}}">Student's home: {{userAddress()}}</option>
+          <option value="{{place}}">Enter Address...</option>
+        </select>
+      </div>
+      <div class="form-row" [hidden]="p()">
+        <label class="label" for="other" [hidden]="p()">Enter address</label>
+        <input type="text" class="input" id="other" name="other" [required]="condition()" [hidden]="p()" [disabled]="p()" [(ngModel)]="place">
+      </div>
+      <button id="submit" type="submit" [disabled]="!scheduleClassForm.valid">Schedule</button>
+    </form>
+  </div>
+</div>
+
+

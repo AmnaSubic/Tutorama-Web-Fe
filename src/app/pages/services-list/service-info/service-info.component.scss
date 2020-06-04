@@ -1,3 +1,148 @@
-#info {
-  margin-top: 100px;
+@media only screen and (min-width: 992px) {
+  #wrap {
+    margin-left: calc((100% - 600px) * 0.5);
+  }
+
+  .info-card {
+    width: 600px;
+  }
+
+  .buttons {
+    width: 385px;
+    margin-left: calc((100% - 385px) * 0.5);
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .button:first-child {
+    margin-right: 25px;
+  }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #wrap {
+    margin-left: calc((100% - 450px) * 0.5);
+  }
+
+  .info-card {
+    width: 450px;
+  }
+
+  .buttons {
+    width: 385px;
+    margin-left: calc((100% - 385px) * 0.5);
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .button:first-child {
+    margin-right: 25px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #wrap {
+    margin-left: calc((100% - 300px) * 0.5);
+  }
+
+  .info-card {
+    width: 300px;
+  }
+
+  .buttons {
+    width: 180px;
+    margin-left: calc((100% - 180px) * 0.5);
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .button:first-child {
+    margin-bottom: 20px;
+  }
+}
+
+#service-info {
+  padding-top: 100px;
+  min-height: calc(100vh - 100px);
+  position: relative;
+  background-color: whitesmoke;
+}
+
+#title {
+  border-bottom: #0c424d 1px solid;
+  width: 80%;
+  margin-left: 10%;
+}
+
+#title h2 {
+  margin-left: calc((100% - 275px) * 0.1);
+  width: 275px;
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: oblique;
+}
+
+#info-card h4, .info-card h4 {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+#wrap {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.content {
+  width: 100%;
+  padding: 30px;
+}
+
+.card-row {
+  padding: 0 30px;
+}
+
+.card-row:first-of-type {
+  padding-top: 10px;
+}
+
+.element {
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 1px 12px 20px 0 rgba(50, 50, 50, 0.2);
+}
+
+.data {
+  font-size: large;
+  margin-bottom: 0;
+}
+
+.tag {
+  font-size: small;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #828282;
+  border-top: 1px solid #828282;
+}
+
+.button {
+  height: 60px;
+  width: 180px;
+  border: none;
+  color: white;
+  border-radius: 30px;
+}
+
+.button fa-icon {
+  margin-right: 10px;
+}
+
+.schedule-button {
+  background-color: #19777b;
+}
+
+.profile-button {
+  background-color: #f4c030;
+}
+

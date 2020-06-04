@@ -8,14 +8,14 @@ import { BeforeLoginService } from './services/before-login.service';
 import { AfterLoginService } from './services/after-login.service';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { ForgotPasswordResponseComponent } from './pages/forgot-password-response/forgot-password-response.component';
-import {AddServiceComponent} from "./pages/profile/services/add-service/add-service.component";
-import {AddAvailableTimeComponent} from "./pages/profile/available-times/add-available-time/add-available-time.component";
-import {ServicesListComponent} from "./pages/services-list/services-list.component";
-import {ServiceInfoComponent} from "./pages/services-list/service-info/service-info.component";
-import {TutorProfileComponent} from "./pages/tutor-profile/tutor-profile.component";
-import {ClassesListComponent} from "./pages/profile/classes-list/classes-list.component";
-import {ClassInfoComponent} from "./pages/profile/classes-list/class-info/class-info.component";
-import {ScheduleClassComponent} from "./pages/schedule-class/schedule-class.component";
+import { AddServiceComponent } from './pages/profile/services/add-service/add-service.component';
+import { AddAvailableTimeComponent } from './pages/profile/available-times/add-available-time/add-available-time.component';
+import { ServicesListComponent } from './pages/services-list/services-list.component';
+import { ServiceInfoComponent } from './pages/services-list/service-info/service-info.component';
+import { ClassInfoComponent } from './pages/profile/classes-list/class-info/class-info.component';
+import { ScheduleClassComponent } from './pages/services-list/schedule-class/schedule-class.component';
+import { PublicProfileComponent } from './pages/public-profile/public-profile.component';
+
 
 
 export const appRoutes: Routes = [
@@ -61,26 +61,27 @@ export const appRoutes: Routes = [
   {
     path: 'services',
     component: ServicesListComponent,
+    canActivate: [AfterLoginService]
   },
   {
     path: 'services/:id',
-    component: ServiceInfoComponent
+    component: ServiceInfoComponent,
+    canActivate: [AfterLoginService]
   },
   {
-    path: 'tutor-profile/:id',
-    component: TutorProfileComponent
+    path: 'public-profile/:id',
+    component: PublicProfileComponent,
+    canActivate: [AfterLoginService]
   },
-  //{
-    //path: 'profile/classes',
-    //component: ClassesListComponent
-  //},
   {
     path: 'services/:id/schedule-class',
-    component: ScheduleClassComponent
+    component: ScheduleClassComponent,
+    canActivate: [AfterLoginService]
   },
   {
     path: 'profile/classes/:id',
-    component: ClassInfoComponent
+    component: ClassInfoComponent,
+    canActivate: [AfterLoginService]
   },
   {
     path: '**',

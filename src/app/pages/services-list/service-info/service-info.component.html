@@ -1,15 +1,53 @@
-<div id="info">
-    <p>{{serviceInfo.Subject_Name}}</p>
-    <p>{{serviceInfo.First_Name}}</p>
-    <p>{{serviceInfo.Last_Name}}</p>
-    <p>{{serviceInfo.Service_Level}}</p>
-    <p>{{serviceInfo.Service_Cost}} KM/h</p>
-    <p>{{serviceInfo.Experience}}</p>
-    <p>{{serviceInfo.Description}}</p>
-    <p>{{serviceInfo.Town}}</p>
-    <p>{{serviceInfo.Country}}</p>
-    <a [routerLink]="['/services', serviceInfo.Service_ID,'schedule-class']"><button>Schedule Class</button></a>
-    <a [routerLink]="['/tutor-profile', serviceInfo.Tutor_ID]"><button>Go to Tutor Profile</button></a>
-
-  <button (click)="goBack()">Back</button>
+<div id="service-info">
+  <div id="title">
+    <h2>
+      <fa-icon (click)="goBack()" [icon]="['fas','chevron-left']" size="1x"></fa-icon>
+      Service info
+    </h2>
+  </div>
+  <div id="wrap">
+    <div class="info-card">
+      <div class="content element">
+        <h4>Class info</h4>
+        <div class="card-row">
+          <p class="data">{{serviceInfo.Subject_Name}}</p>
+          <p class="tag">Subject</p>
+        </div>
+        <div class="card-row">
+          <p class="data">{{serviceInfo.Service_Level}}</p>
+          <p class="tag">Level</p>
+        </div>
+        <div class="card-row">
+          <p class="data">{{serviceInfo.Service_Cost}} KM/h</p>
+          <p class="tag">Price per hour</p>
+        </div>
+        <div class="card-row">
+          <p class="data">{{serviceInfo.First_Name}} {{serviceInfo.Last_Name}}</p>
+          <p class="tag">Tutor's Name</p>
+        </div>
+        <div class="card-row">
+          <p class="data">{{serviceInfo.Experience}}</p>
+          <p class="tag">Experience</p>
+        </div>
+        <div class="card-row">
+          <p class="data">{{serviceInfo.Description}}</p>
+          <p class="tag">Description</p>
+        </div>
+        <div class="card-row">
+          <p class="data">{{serviceInfo.Town}}, {{serviceInfo.Country}}</p>
+          <p class="tag">Town</p>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="button schedule-button" [routerLink]="['/services', serviceInfo.Service_ID,'schedule-class']">
+          <fa-icon [icon]="['fas','calendar-plus']" size="1x"></fa-icon>
+          Schedule Class
+        </button>
+        <button class="button profile-button" [routerLink]="['/public-profile', serviceInfo.Tutor_ID]">
+          <fa-icon [icon]="['fas','user']" size="1x"></fa-icon>
+          Tutor Profile
+        </button>
+      </div>
+    </div>
+  </div>
 </div>

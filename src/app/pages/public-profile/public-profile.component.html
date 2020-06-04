@@ -1,0 +1,51 @@
+<div id="public-profile">
+  <div id="profile-container">
+    <div id="name-card">
+      <div id="name-card-container">
+        <div id="image">
+          <img width="150" height="150" *ngIf="!isTutor()" src="../../../assets/images/free-school-icons-vector.png" alt="student">
+          <img width="150" height="150" *ngIf="isTutor()" src="../../../assets/images/education-flat-icons-set-vector.png" alt="tutor">
+        </div>
+        <div id="data">
+          <h4>{{user.First_Name}} {{user.Last_Name}}</h4>
+          <p id="type">{{type()}}</p>
+          <div class="data-row">
+            <p class="data-row-tag">Age:</p>
+            <p class="data-row-data">{{age()}}</p>
+          </div>
+          <div class="data-row">
+            <p class="data-row-tag">From:</p>
+            <p class="data-row-data">{{user.Town}},</p>
+            <p class="data-row-data" style="margin-left: 5px">{{user.Country}}</p>
+          </div>
+          <div class="data-row">
+            <p class="data-row-tag">Contact:</p>
+            <p class="data-row-data">{{user.Phone_Number}}</p>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="isTutor()" id="extra-info">
+        <div class="extra-info-row">
+          <p class="extra-info-row-data">{{user.Description}}</p>
+          <p class="extra-info-row-tag">Description</p>
+        </div>
+        <div class="extra-info-row">
+          <p class="extra-info-row-data">{{user.Experience}}</p>
+          <p class="extra-info-row-tag">Experience</p>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="isTutor()" class="profile-component" id="service-component">
+      <h4>Services</h4>
+      <app-public-tutor-services></app-public-tutor-services>
+    </div>
+    <div *ngIf="isTutor() && isFixed()" class="profile-component" id="at-component">
+      <h4>Time Slots</h4>
+      <app-public-tutor-at></app-public-tutor-at>
+    </div>
+    <div class="profile-component" id="reviews-component">
+      <h4>Reviews</h4>
+      <app-public-reviews></app-public-reviews>
+    </div>
+  </div>
+</div>

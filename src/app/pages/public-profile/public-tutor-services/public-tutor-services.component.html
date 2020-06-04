@@ -1,14 +1,10 @@
-<div id="services-list">
-  <div id="title">
-    <h2>Services</h2>
-  </div>
+<div id="public-services-list">
   <div id="cards">
     <div id="card" *ngFor="let service of services" [routerLink]="['/services', service.Service_ID]">
       <div id="content">
         <h4>{{service.Subject_Name}}</h4>
         <p id="level">{{service.Service_Level}}</p>
         <p>{{service.Service_Cost}} KM/h</p>
-        <p>{{service.Town}}, {{service.Country}}</p>
         <span>...click for more info</span>
       </div>
     </div>

@@ -51,8 +51,12 @@
   }
 }
 
-.nav-row {
+#classes-row, #reviews-row, #user-info-row {
   height: 50px;
+  border-top: 1px solid lightgray;
+}
+
+.tutor-row {
   border-top: 1px solid lightgray;
 }
 

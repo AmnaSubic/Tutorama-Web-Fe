@@ -132,4 +132,9 @@ export class ClassInfoComponent implements OnInit {
       return 'Male';
     else return 'Female';
   }
+
+  profileId() {
+    if (this.user.Is_Tutor) return this.class.Student_ID;
+    else return this.class.Tutor_ID;
+  }
 }
