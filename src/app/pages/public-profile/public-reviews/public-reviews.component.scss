@@ -1,0 +1,54 @@
+#public-reviews {
+  height: 350px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  //white-space: nowrap;
+}
+
+#card {
+  background-color: white;
+  display: inline-grid;
+  width: 225px;
+  height: 275px;
+  border-radius: 15px;
+  margin: 25px 25px;
+  box-shadow: 1px 12px 20px 0 rgba(50, 50, 50, 0.2);
+}
+
+#day, #st, #et {
+  font-weight: bold;
+}
+
+#day {
+  border-bottom: 1px solid #f4c030;
+}
+
+#content {
+  margin: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#cards {
+  padding-bottom: 50px;
+}
+
+#rating {
+  color: #f4c030;
+}
+
+#description {
+  font-style: oblique;
+  width: 185px;
+  max-height: 100px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#name {
+  font-weight: bold;
+}
+
+#date {
+  color: #828282;
+  font-size: small;
+}

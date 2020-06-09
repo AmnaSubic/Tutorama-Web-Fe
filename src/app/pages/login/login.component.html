@@ -1,28 +1,30 @@
 <div id="login">
-  <div id="image">
-    <img src="../../../assets/images/man-laptop.jpg" alt="man with laptop">
+  <div id="login-container">
+    <div id="image">
+      <img src="../../../assets/images/man-laptop-1.png" alt="man with laptop">
+    </div>
+    <form #loginForm=ngForm (ngSubmit)="onSubmit()">
+      <h2>Welcome back!</h2>
+      <div class="alert alert-danger" [hidden]="!error">
+        {{error}}
+      </div>
+      <div class="form-container">
+        <label for="eml"><fa-icon size="1x" style="color: grey" [icon]="['fas', 'envelope']"></fa-icon>
+          <input type="email" placeholder="Enter email" id="eml" name="eml" required="required" [(ngModel)]="form.email" >
+        </label>
+
+        <label for="psw"><fa-icon size="1x" style="color: grey" [icon]="['fas', 'unlock-alt']"></fa-icon>
+          <input type="password" placeholder="Enter password" id="psw" name="psw" required="required" [(ngModel)]="form.password">
+        </label>
+
+        <button type="submit" [disabled]="!loginForm.valid">Login</button>
+        <br>
+        <small><a routerLink="/forgot-password">Forgot password?</a></small>
+      </div>
+
+      <div id="reg">
+        <small>Don't have an account? <a routerLink="/register">Register</a></small>
+      </div>
+    </form>
   </div>
-  <form #loginForm=ngForm (ngSubmit)="onSubmit()">
-    <h2>Welcome back!</h2>
-    <div class="alert alert-danger" [hidden]="!error">
-      {{error}}
-    </div>
-    <div class="form-container">
-      <label for="eml"><fa-icon size="1x" style="color: grey" [icon]="['fas', 'envelope']"></fa-icon>
-        <input type="email" placeholder="Enter email" id="eml" name="eml" required="required" [(ngModel)]="form.email" >
-      </label>
-
-      <label for="psw"><fa-icon size="1x" style="color: grey" [icon]="['fas', 'unlock-alt']"></fa-icon>
-        <input type="password" placeholder="Enter password" id="psw" name="psw" required="required" [(ngModel)]="form.password">
-      </label>
-
-      <button type="submit" [disabled]="!loginForm.valid">Login</button>
-      <br>
-      <small><a routerLink="/forgot-password">Forgot password?</a></small>
-    </div>
-
-    <div id="reg">
-      <small>Don't have an account? <a routerLink="/register">Register</a></small>
-    </div>
-  </form>
 </div>

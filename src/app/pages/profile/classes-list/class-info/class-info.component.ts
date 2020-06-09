@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {JarwisService} from '../../../../services/jarwis.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Location} from '@angular/common';
-import {SnotifyService} from "ng-snotify";
+import {SnotifyService} from 'ng-snotify';
+
 
 @Component({
   selector: 'app-class-info',
@@ -20,8 +21,10 @@ export class ClassInfoComponent implements OnInit {
     private jarwisService: JarwisService,
     private route: ActivatedRoute,
     private location: Location,
-    private Notify: SnotifyService
-  ) { }
+    private Notify: SnotifyService,
+    private router: Router
+  ) {
+  }
 
   ngOnInit() {
     this.jarwisService.getAuthUser().subscribe(data => this.user = data);
@@ -81,7 +84,20 @@ export class ClassInfoComponent implements OnInit {
   }
 
   handleResponse() {
-    this.Notify.confirm('Status changed to: ' + this.val, {
+    if (this.val == 'Finished')
+      this.Notify.confirm('Status changed to: ' + this.val + '. Review ' + this.user.First_Name + ' '+ this.user.Last_Name, {
+        buttons: [{
+          text: 'Okay', action: (toast) => {
+            if (this.user.Is_Tutor) {
+              this.router.navigate(['add-review', this.class.Student_ID]).then(r => this.Notify.remove(toast.id));
+            }
+            else {
+              this.router.navigate(['add-review', this.class.User_ID]).then(r => this.Notify.remove(toast.id));
+            }
+          },
+        }]
+      });
+    else this.Notify.confirm('Status changed to: ' + this.val, {
       buttons: [{
         text: 'Okay', action: (toast) => {
           this.reload()
@@ -90,6 +106,7 @@ export class ClassInfoComponent implements OnInit {
       }]
     });
   }
+
 
   reload() {
     location.reload();

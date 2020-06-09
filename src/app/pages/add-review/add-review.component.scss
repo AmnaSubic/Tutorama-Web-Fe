@@ -12,12 +12,12 @@
   }
 }
 
-
-#add-available-time {
+#add-review {
   padding-top: 100px;
   min-height: calc(100vh - 100px);
   position: relative;
   background-color: whitesmoke;
+  padding-bottom: 50px;
 }
 
 #title {
@@ -47,9 +47,6 @@ form {
   font-family: 'Open Sans', sans-serif;
   margin-right: 10px;
   margin-top: 5px;
-}
-
-#day, #start-time, #end-time, .form-row label {
   height: 35px;
 }
 
@@ -60,8 +57,13 @@ form {
   margin-left: calc((100% - 150px) * 0.5);
 }
 
-#start-time, #end-time, #day {
+#description {
+  height: 100px;
+}
+
+.form-row select {
   width: 150px;
+  height: 35px;
 }
 
 #submit {
@@ -74,10 +76,6 @@ form {
   font-family: 'Open Sans', sans-serif;
   width: 100px;
   margin-left: calc((100% - 100px) * 0.5);
-}
-
-#submit fa-icon {
-  margin-right: 10px;
 }
 
 

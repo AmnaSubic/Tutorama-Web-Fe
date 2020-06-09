@@ -90,4 +90,16 @@ export class JarwisService {
     return this.http.post(`${this.baseUrl}/updateStudentClassStatus/${status}/${id}`, status, id);
   }
 
+  getUserReviews(id) {
+    return this.http.get(`${this.baseUrl}/getUserReviews/${id}`, id);
+  }
+
+  getAuthReviews() {
+    return this.http.get(`${this.baseUrl}/getAuthReviews`);
+  }
+
+  postReview(data) {
+    return this.http.post(`${this.baseUrl}/addReview`, data);
+  }
+
 }

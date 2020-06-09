@@ -55,6 +55,7 @@ import { PublicProfileComponent } from './pages/public-profile/public-profile.co
 import { PublicReviewsComponent } from './pages/public-profile/public-reviews/public-reviews.component';
 import { PublicTutorServicesComponent } from './pages/public-profile/public-tutor-services/public-tutor-services.component';
 import { PublicTutorAtComponent } from './pages/public-profile/public-tutor-at/public-tutor-at.component';
+import { AddReviewComponent } from './pages/add-review/add-review.component';
 
 
 @NgModule({
@@ -96,6 +97,7 @@ import { PublicTutorAtComponent } from './pages/public-profile/public-tutor-at/p
     PublicReviewsComponent,
     PublicTutorServicesComponent,
     PublicTutorAtComponent,
+    AddReviewComponent,
 
   ],
   imports: [

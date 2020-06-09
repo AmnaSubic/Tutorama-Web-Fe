@@ -85,9 +85,9 @@ export class ScheduleClassComponent implements OnInit {
   public added = false;
 
   handleResponse() {
-    this.Notify.confirm('Time added!', {
+    this.Notify.confirm('Class scheduled!', {
       buttons: [{
-          text: 'Class scheduled!', action: (toast) => {
+          text: 'Okay', action: (toast) => {
             this.router.navigateByUrl('/services').then(r => this.Notify.remove(toast.id))
           },
         }]
@@ -109,7 +109,7 @@ export class ScheduleClassComponent implements OnInit {
   }
 
   p() {
-    return this.form.Place == ('Online' || this.serviceAddress() || this.userAddress() || null);
+    return this.form.Place == 'Online' || this.form.Place == this.serviceAddress() || this.form.Place == this.userAddress() || this.form.Place == null;
   }
 
   condition() {

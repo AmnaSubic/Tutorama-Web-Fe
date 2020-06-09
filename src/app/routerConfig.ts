@@ -15,6 +15,7 @@ import { ServiceInfoComponent } from './pages/services-list/service-info/service
 import { ClassInfoComponent } from './pages/profile/classes-list/class-info/class-info.component';
 import { ScheduleClassComponent } from './pages/services-list/schedule-class/schedule-class.component';
 import { PublicProfileComponent } from './pages/public-profile/public-profile.component';
+import {AddReviewComponent} from "./pages/add-review/add-review.component";
 
 
 
@@ -81,6 +82,11 @@ export const appRoutes: Routes = [
   {
     path: 'profile/classes/:id',
     component: ClassInfoComponent,
+    canActivate: [AfterLoginService]
+  },
+  {
+    path: 'add-review/:id',
+    component: AddReviewComponent,
     canActivate: [AfterLoginService]
   },
   {

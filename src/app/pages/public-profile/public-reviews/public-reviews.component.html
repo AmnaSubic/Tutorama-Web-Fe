@@ -1,1 +1,16 @@
-<p>No reviews yet</p>
+<div id="public-reviews">
+  <div id="cards">
+    <div *ngIf="!rev()">
+      <p>No reviews.</p>
+    </div>
+    <div id="card" *ngFor="let r of reviews">
+      <div id="content">
+        <p id="name">{{r.First_Name}} {{r.Last_Name}}</p>
+        <p id="date">{{dateFormat(r.Date)}}</p>
+        <p id="description">"{{r.Description}}"</p>
+        <fa-icon id="rating" *ngFor="let rating of rating(r.Rating)" [icon]="['fas','star']" size="1x"></fa-icon>
+      </div>
+    </div>
+  </div>
+</div>
+

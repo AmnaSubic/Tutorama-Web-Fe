@@ -3,8 +3,8 @@
     <div id="name-card">
       <div id="name-card-container">
         <div id="image">
-          <img width="150" height="150" *ngIf="!isTutor()" src="../../../assets/images/free-school-icons-vector.png" alt="student">
-          <img width="150" height="150" *ngIf="isTutor()" src="../../../assets/images/education-flat-icons-set-vector.png" alt="tutor">
+          <img width="150" height="150" *ngIf="!isTutor()" src="../../../assets/images/graduate.png" alt="student graduate">
+          <img width="150" height="150" *ngIf="isTutor()" src="../../../assets/images/worker.png" alt="man working on laptop">
         </div>
         <div id="data">
           <h4>{{user.First_Name}} {{user.Last_Name}}</h4>
@@ -32,6 +32,10 @@
         <div class="extra-info-row">
           <p class="extra-info-row-data">{{user.Experience}}</p>
           <p class="extra-info-row-tag">Experience</p>
+        </div>
+        <div class="extra-info-row">
+          <p class="extra-info-row-data">{{user.Availability}}</p>
+          <p class="extra-info-row-tag">Availability</p>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 <div id="subjects">
-  <h2>Choose popular subjects</h2>
-  <a *ngIf="loggedIn" routerLink="" class="button-link">
+  <h2>Popular subjects</h2>
+  <!--<a *ngIf="loggedIn" routerLink="" class="button-link">
     <button class="homepage-buttons">
       All Subjects <span>&#8594;</span>
     </button>
@@ -9,67 +9,51 @@
     <button class="homepage-buttons">
       All Subjects <span>&#8594;</span>
     </button>
-  </a>
+  </a>-->
   <div id="subjects-container">
     <div class="sub-row">
-      <a routerLink="" class="link">
-        <button class="sub">
-          <fa-icon [icon]="['fas', 'calculator']" size="2x"></fa-icon>
-          <br>
-         Mathematics
-        </button>
-      </a>
-      <a routerLink="" class="link">
-        <button class="sub">
-          <fa-icon [icon]="['fas', 'atom']" size="2x"></fa-icon>
-          <br>
-          Physics
-        </button>
-      </a>
-      <a routerLink="" class="link">
-        <button class="sub">
-          <fa-icon [icon]="['fas', 'flask']" size="2x"></fa-icon>
-          <br>
-          Chemistry
-        </button>
-      </a>
-      <a routerLink="" class="link">
-        <button class="sub">
-          <fa-icon [icon]="['fas', 'code']" size="2x"></fa-icon>
-          <br>
-          Programming
-        </button>
-      </a>
+      <button class="sub link">
+        <fa-icon [icon]="['fas', 'calculator']" size="2x"></fa-icon>
+        <br>
+        Mathematics
+      </button>
+      <button class="sub link">
+        <fa-icon [icon]="['fas', 'atom']" size="2x"></fa-icon>
+        <br>
+        Physics
+      </button>
+      <button class="sub link">
+        <fa-icon [icon]="['fas', 'flask']" size="2x"></fa-icon>
+        <br>
+        Chemistry
+      </button>
+      <button class="sub link">
+        <fa-icon [icon]="['fas', 'code']" size="2x"></fa-icon>
+        <br>
+        Programming
+      </button>
     </div>
     <div class="sub-row">
-      <a routerLink="" class="link">
-        <button class="sub">
-          <fa-icon [icon]="['fas', 'language']" size="2x"></fa-icon>
-          <br>
-          Languages
-        </button>
-      </a>
-      <a routerLink="" class="link">
-        <button class="sub">
-          <fa-icon [icon]="['fas', 'palette']" size="2x"></fa-icon>
-          <br>
-          Art
-        </button>
-      </a>
-      <a routerLink="" class="link">
-        <button class="sub">
-          <fa-icon [icon]="['fas', 'music']" size="2x"></fa-icon>
-          <br>
-          Music
-        </button>
-      </a>
-      <a routerLink="" class="link">
-        <button class="sub">
-          <fa-icon [icon]="['fas', 'medkit']" size="2x"></fa-icon>
-          <br>
-          Medicine
-        </button>
-      </a>
+      <button class="sub link">
+        <fa-icon [icon]="['fas', 'language']" size="2x"></fa-icon>
+        <br>
+        Languages
+      </button>
+      <button class="sub link">
+        <fa-icon [icon]="['fas', 'palette']" size="2x"></fa-icon>
+        <br>
+        Art
+      </button>
+      <button class="sub link">
+        <fa-icon [icon]="['fas', 'music']" size="2x"></fa-icon>
+        <br>
+        Music
+      </button>
+      <button class="sub link">
+        <fa-icon [icon]="['fas', 'medkit']" size="2x"></fa-icon>
+        <br>
+        Medicine
+      </button>
     </div>
   </div>
 </div>
