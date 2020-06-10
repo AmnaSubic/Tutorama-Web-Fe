@@ -83,11 +83,11 @@ export class JarwisService {
   }
 
   updateClassStatus(status, id) {
-    return this.http.post(`${this.baseUrl}/updateClassStatus/${status}/${id}`, status, id);
+    return this.http.put(`${this.baseUrl}/updateClassStatus/${status}/${id}`, status, id);
   }
 
   updateStudentClassStatus(status, id) {
-    return this.http.post(`${this.baseUrl}/updateStudentClassStatus/${status}/${id}`, status, id);
+    return this.http.put(`${this.baseUrl}/updateStudentClassStatus/${status}/${id}`, status, id);
   }
 
   getUserReviews(id) {

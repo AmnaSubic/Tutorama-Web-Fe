@@ -85,14 +85,14 @@ export class ClassInfoComponent implements OnInit {
 
   handleResponse() {
     if (this.val == 'Finished')
-      this.Notify.confirm('Status changed to: ' + this.val + '. Review ' + this.user.First_Name + ' '+ this.user.Last_Name, {
+      this.Notify.confirm('Status changed to: ' + this.val + '. Review ' + this.class.First_Name + ' '+ this.class.Last_Name, {
         buttons: [{
           text: 'Okay', action: (toast) => {
             if (this.user.Is_Tutor) {
               this.router.navigate(['add-review', this.class.Student_ID]).then(r => this.Notify.remove(toast.id));
             }
             else {
-              this.router.navigate(['add-review', this.class.User_ID]).then(r => this.Notify.remove(toast.id));
+              this.router.navigate(['add-review', this.class.Tutor_ID]).then(r => this.Notify.remove(toast.id));
             }
           },
         }]
