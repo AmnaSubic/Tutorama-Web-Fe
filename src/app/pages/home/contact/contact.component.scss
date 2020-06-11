@@ -3,7 +3,8 @@
 }
 
 .c p, a {
-  font: normal normal normal 10px/1.4em 'Open Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
   color: black;
 }
 
@@ -39,7 +40,7 @@ fa-icon {
 }
 
 #c-links {
-  margin-left: calc((100% - 252px) * 0.5);
+  margin-left: calc((100% - 150px) * 0.5);
 }
 
 @media only screen and (min-width: 576px) {

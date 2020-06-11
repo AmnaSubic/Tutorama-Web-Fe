@@ -7,7 +7,7 @@
 
   #subjects h2 {
     text-align: center;
-    font: normal normal 700 38px/1.4em 'Playfair Display', serif;
+    font-size: 38px;
     left: calc((100% - 160px) * 0.4);
   }
 
@@ -26,7 +26,7 @@
   }
 
   .sub {
-    font: normal normal 600 15px/1.4em 'Open Sans', sans-serif;
+   font-size: 15px;
   }
 }
 
@@ -40,7 +40,7 @@
   #subjects h2 {
     text-align: center;
     left: 0;
-    font: normal normal 700 30.5px/1.4em 'Playfair Display', serif;
+    font-size: 30.5px;
   }
 
   #subjects-container {
@@ -85,7 +85,7 @@
   }
 
   .sub {
-    font: normal normal 600 15px/1.4em 'Open Sans', sans-serif;
+    font-size: 15px;
   }
 
 }
@@ -98,7 +98,7 @@
   }
 
   #subjects h2 {
-    font: normal normal 700 30.5px/1.4em 'Playfair Display', serif;
+    font-size: 30.5px;
     text-align: center;
     left: 0;
   }
@@ -118,7 +118,7 @@
   }
 
   .sub {
-    font: normal normal 600 12px/1.4em 'Open Sans', sans-serif;
+    font-size: 12px;
   }
 }
 
@@ -128,12 +128,15 @@
 }
 
 #subjects h2 {
+  font-family: 'DM Serif Display', serif;
   position: relative;
   top: 0;
   margin: 0;
 }
 
 .sub {
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
   border-radius: 25px;
   border-width: 0;
   height: 110px;

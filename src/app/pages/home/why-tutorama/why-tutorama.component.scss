@@ -16,17 +16,17 @@
   }
 
   #desc h2 {
-    font: normal normal bold 38px/1.4em 'Playfair Display', serif;
+    font-size: 38px;
     width: 300px;
     padding-bottom: 20px;
   }
 
   #reasons-container h3 {
-    font: normal normal 700 22px/2em 'Open Sans Condensed', sans-serif;
+    font-size: 22px;
   }
 
   #reasons-container p, #desc p {
-    font: normal normal 400 15px/1.4em 'Open Sans', sans-serif;
+    font-size: 15px;
     text-align: justify;
   }
 
@@ -61,18 +61,18 @@
   }
 
   #desc h2 {
-    font: normal normal bold 38px/1.4em 'Playfair Display', serif;
+    font-size: 38px;
     width: 300px;
     padding-bottom: 20px;
   }
 
   #reasons-container h3 {
-    font: normal normal 700 22px/2em 'Open Sans Condensed', sans-serif;
+    font-size: 22px;
     text-align: center;
   }
 
   #reasons-container p, #desc p {
-    font: normal normal 400 15px/1.4em 'Open Sans', sans-serif;
+    font-size: 15px;
     text-align: justify;
   }
 
@@ -110,17 +110,17 @@
   }
 
   #desc h2 {
-    font: normal normal bold 30.5px/1.4em 'Playfair Display', serif;
+    font-size: 30.5px;
     padding-bottom: 20px;
   }
 
   #reasons-container h3 {
-    font: normal normal 700 17.6px/2em 'Open Sans Condensed', sans-serif;
+    font-size: 17.6px;
     text-align: center;
   }
 
   #reasons-container p, #desc p {
-    font: normal normal 400 12px/1.4em 'Open Sans', sans-serif;
+    font-size: 12px;
     text-align: justify;
   }
 
@@ -143,6 +143,22 @@
 
 #desc, #reasons-container {
   position: relative;
+}
+
+#desc h2 {
+  font-family: 'DM Serif Display', serif;
+}
+
+#reasons-container p, #desc p, #reasons-container h3 {
+  font-family: 'DM Sans', sans-serif;
+}
+
+#reasons-container h3 {
+  font-weight: 600;
+}
+
+#reasons-container p, #desc p {
+  font-weight: 400;
 }
 
 

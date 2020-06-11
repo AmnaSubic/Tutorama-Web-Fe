@@ -5,11 +5,11 @@
   }
 
   #main-contents h1 {
-    font: normal normal bold 52px/1.4em 'Playfair Display', serif;
+    font-size: 52px;
   }
 
   #main-contents p {
-    font: normal normal normal 21px/1.4em 'Open Sans', sans-serif;
+    font-size: 21px;
   }
 
   #main-contents img {
@@ -40,11 +40,11 @@
   }
 
   #main-contents h1 {
-    font: normal normal bold 52px/1.4em 'Playfair Display', serif;
+    font-size: 52px;
   }
 
   #main-contents p {
-    font: normal normal normal 16px/1.4em 'Open Sans', sans-serif;
+    font-size: 16px;
   }
 
   #main-contents img {
@@ -69,11 +69,11 @@
   }
 
   #main-contents h1 {
-    font: normal normal bold 52px/1.4em 'Playfair Display', serif;
+    font-size: 52px;
   }
 
   #main-contents p {
-    font: normal normal normal 16px/1.4em 'Open Sans', sans-serif;
+    font-size: 16px;
   }
 
   #main-contents img {
@@ -94,11 +94,11 @@
   }
 
   #main-contents h1 {
-    font: normal normal bold 40px/1.4em 'Playfair Display', serif ;
+    font-size: 40px;
   }
 
   #main-contents p {
-    font: normal normal normal 13px/1.4em 'Open Sans', sans-serif;
+    font-size: 13px;
   }
 
   #main-contents img {
@@ -120,11 +120,12 @@
   }
 
   #main-contents h1 {
-    font: normal normal bold 40px/1.4em 'Playfair Display', serif ;
+    font-size: 40px;
   }
 
   #main-contents p {
-    font: normal normal normal 13px/1.4em 'Open Sans', sans-serif;
+
+    font-size: 13px;
   }
 
   #main-contents img {
@@ -147,6 +148,14 @@
 #main-contents h1, #main-contents p {
   position: relative;
   left: 15px;
+}
+
+#main-contents p {
+  font-family: 'DM Sans', sans-serif;
+}
+
+#main-contents h1 {
+  font-family: 'DM Serif Display', serif ;
 }
 
 .button-link {
