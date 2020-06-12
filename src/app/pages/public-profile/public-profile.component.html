@@ -24,16 +24,16 @@
           </div>
         </div>
       </div>
-      <div *ngIf="isTutor()" id="extra-info">
+      <div id="extra-info">
         <div class="extra-info-row">
-          <p class="extra-info-row-data">{{user.Description}}</p>
+          <p class="extra-info-row-data">{{empty(user.Description)}}</p>
           <p class="extra-info-row-tag">Description</p>
         </div>
-        <div class="extra-info-row">
-          <p class="extra-info-row-data">{{user.Experience}}</p>
+        <div class="extra-info-row" *ngIf="isTutor()">
+          <p class="extra-info-row-data">{{empty(user.Experience)}}</p>
           <p class="extra-info-row-tag">Experience</p>
         </div>
-        <div class="extra-info-row">
+        <div class="extra-info-row" *ngIf="isTutor()">
           <p class="extra-info-row-data">{{user.Availability}}</p>
           <p class="extra-info-row-tag">Availability</p>
         </div>

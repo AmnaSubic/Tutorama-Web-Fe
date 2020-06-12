@@ -33,4 +33,8 @@ export class ProfileInfoComponent implements OnInit {
     return this.currentUser.Is_Tutor;
   }
 
+  empty(element) {
+    if (element == null) return '-';
+    return element;
+  }
 }

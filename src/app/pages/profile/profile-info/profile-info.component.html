@@ -36,12 +36,12 @@
         <p class="data">{{currentUser.Phone_Number}}</p>
         <p class="tag">Phone Number</p>
       </div>
-      <div class="info-row" *ngIf="isTutor()">
-        <p class="data">{{currentUser.Description}}</p>
+      <div class="info-row">
+        <p class="data">{{empty(currentUser.Description)}}</p>
         <p class="tag">Description</p>
       </div>
       <div class="info-row" *ngIf="isTutor()">
-        <p class="data">{{currentUser.Experience}}</p>
+        <p class="data">{{empty(currentUser.Experience)}}</p>
         <p class="tag">Experience</p>
       </div>
       <div class="info-row" *ngIf="isTutor()">

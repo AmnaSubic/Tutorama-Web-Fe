@@ -40,4 +40,9 @@ export class PublicProfileComponent implements OnInit {
     return current - d[0];
   }
 
+  empty(element) {
+    if (element == null) return '-';
+    return element;
+  }
+
 }
