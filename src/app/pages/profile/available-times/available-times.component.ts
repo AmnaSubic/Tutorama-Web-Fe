@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {JarwisService} from "../../../services/jarwis.service";
+import {ApiService} from "../../../services/api.service";
 
 @Component({
   selector: 'app-available-times',
@@ -11,12 +11,12 @@ export class AvailableTimesComponent implements OnInit {
   public availableTimes;
 
   constructor(
-    private jarwisService: JarwisService
+    private apiService: ApiService
   ) { }
 
   ngOnInit() {
     // @ts-ignore
-    this.jarwisService.getAuthUserAvailableTimes().subscribe((data: any[]) => this.availableTimes = data.data);
+    this.apiService.getAuthUserAvailableTimes().subscribe((data: any[]) => this.availableTimes = data.data);
   }
 
   timeFormat(time) {

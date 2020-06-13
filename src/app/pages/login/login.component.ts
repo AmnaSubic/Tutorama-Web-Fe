@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {JarwisService} from '../../services/jarwis.service';
+import {ApiService} from '../../services/api.service';
 import {TokenService} from '../../services/token.service';
 import {Router} from '@angular/router';
 import {AuthService} from '../../services/auth.service';
@@ -19,14 +19,14 @@ export class LoginComponent implements OnInit {
   public error = null;
 
   constructor(
-    private Jarwis: JarwisService,
+    private apiService: ApiService,
     private Token: TokenService,
     private router: Router,
     private Auth: AuthService
   ) { }
 
   onSubmit() {
-      this.Jarwis.login(this.form).subscribe(
+      this.apiService.login(this.form).subscribe(
       data => this.handleResponse(data),
       error => this.handleError(error)
     );

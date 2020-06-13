@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { JarwisService } from '../../services/jarwis.service';
+import { ApiService } from '../../services/api.service';
 import { SnotifyService } from 'ng-snotify';
 
 @Component({
@@ -19,7 +19,7 @@ export class ForgotPasswordResponseComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private Jarwis: JarwisService,
+    private apiService: ApiService,
     private router: Router,
     private Notify: SnotifyService
   ) {
@@ -29,7 +29,7 @@ export class ForgotPasswordResponseComponent implements OnInit {
   }
 
   onSubmit() {
-    this.Jarwis.changePassword(this.form).subscribe(
+    this.apiService.changePassword(this.form).subscribe(
       data => this.handleResponse(data),
       error => this.handleError(error)
     )

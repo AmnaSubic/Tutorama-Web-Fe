@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { JarwisService } from '../../services/jarwis.service';
+import { ApiService } from '../../services/api.service';
 import { SnotifyService } from 'ng-snotify';
 
 @Component({
@@ -13,7 +13,7 @@ export class ForgotPasswordComponent implements OnInit {
 };
 
   constructor(
-    private Jarwis: JarwisService,
+    private apiService: ApiService,
     private notify: SnotifyService
   ) { }
 
@@ -22,7 +22,7 @@ export class ForgotPasswordComponent implements OnInit {
 
   onSubmit() {
     this.notify.info('Wait...', {timeout:5000});
-    this.Jarwis.sendPasswordResetLink(this.form).subscribe(
+    this.apiService.sendPasswordResetLink(this.form).subscribe(
       data => this.handleResponse(data),
       error => this.notify.error(error.error.error)
     );

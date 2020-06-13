@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {JarwisService} from '../../../../services/jarwis.service';
+import {ApiService} from '../../../../services/api.service';
 import {SnotifyService} from 'ng-snotify';
 import {Location} from '@angular/common';
 
@@ -21,20 +21,20 @@ export class AddServiceComponent implements OnInit {
   public added = false;
 
   constructor(
-    private jarwisService: JarwisService,
+    private apiService: ApiService,
     private Notify: SnotifyService,
     private location: Location
   ) { }
 
   ngOnInit() {
-    this.jarwisService.getAuthUser().subscribe(data => this.currentUser = data);
+    this.apiService.getAuthUser().subscribe(data => this.currentUser = data);
     // @ts-ignore
-    this.jarwisService.getSubjects().subscribe((data: any[]) => this.subjects = data.data);
+    this.apiService.getSubjects().subscribe((data: any[]) => this.subjects = data.data);
   }
 
   onSubmit() {
     this.service.Tutor_ID = this.currentUser.User_ID;
-    this.jarwisService.postService(this.service).subscribe(response => this.handleResponse());
+    this.apiService.postService(this.service).subscribe(response => this.handleResponse());
   }
 
   handleResponse() {

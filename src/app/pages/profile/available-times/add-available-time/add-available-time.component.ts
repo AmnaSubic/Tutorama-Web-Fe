@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {JarwisService} from '../../../../services/jarwis.service';
+import {ApiService} from '../../../../services/api.service';
 import {Location} from '@angular/common';
 import {SnotifyService} from "ng-snotify";
 
@@ -21,18 +21,18 @@ export class AddAvailableTimeComponent implements OnInit {
   };
 
   constructor(
-    private jarwisService: JarwisService,
+    private apiService: ApiService,
     private location: Location,
     private Notify: SnotifyService
   ) { }
 
   ngOnInit() {
-    this.jarwisService.getAuthUser().subscribe(data => this.currentUser = data);
+    this.apiService.getAuthUser().subscribe(data => this.currentUser = data);
   }
 
   onSubmit() {
     this.availableTime.Tutor_ID = this.currentUser.User_ID;
-    this.jarwisService.postAvailableTime(this.availableTime).subscribe(response => this.handleResponse());
+    this.apiService.postAvailableTime(this.availableTime).subscribe(response => this.handleResponse());
   }
 
   handleResponse() {

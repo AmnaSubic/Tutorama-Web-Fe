@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class JarwisService {
+export class ApiService {
 
   private baseUrl = 'http://localhost:8000/api';
 

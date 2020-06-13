@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {JarwisService} from "../../services/jarwis.service";
+import {ApiService} from "../../services/api.service";
 
 @Component({
   selector: 'app-services-list',
@@ -10,11 +10,11 @@ export class ServicesListComponent implements OnInit {
   public services;
 
   constructor(
-    private jarwisService: JarwisService
+    private apiService: ApiService
   ) { }
 
   ngOnInit() {
-    this.jarwisService.getServices().subscribe((data: any[]) => this.services = data);
+    this.apiService.getServices().subscribe((data: any[]) => this.services = data);
   }
 
 }

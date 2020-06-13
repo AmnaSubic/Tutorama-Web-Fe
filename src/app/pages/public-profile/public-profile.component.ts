@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {JarwisService} from '../../services/jarwis.service';
+import {ApiService} from '../../services/api.service';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
@@ -12,13 +12,13 @@ export class PublicProfileComponent implements OnInit {
 
 
   constructor(
-    private jarwisService: JarwisService,
+    private apiService: ApiService,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
     let id = this.route.snapshot.params.id;
-    this.jarwisService.getUser(id).subscribe(data => this.user = data);
+    this.apiService.getUser(id).subscribe(data => this.user = data);
   }
 
   isTutor() {

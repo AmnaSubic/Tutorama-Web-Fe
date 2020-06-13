@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {JarwisService} from "../../../services/jarwis.service";
+import {ApiService} from "../../../services/api.service";
 import {ActivatedRoute} from "@angular/router";
 
 @Component({
@@ -12,13 +12,13 @@ export class PublicReviewsComponent implements OnInit {
   public reviews;
 
   constructor(
-    private jarwisService: JarwisService,
+    private apiService: ApiService,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
     let id = this.route.snapshot.params.id;
-    this.jarwisService.getUserReviews(id).subscribe(data => this.reviews = data);
+    this.apiService.getUserReviews(id).subscribe(data => this.reviews = data);
   }
 
   dateFormat(date) {

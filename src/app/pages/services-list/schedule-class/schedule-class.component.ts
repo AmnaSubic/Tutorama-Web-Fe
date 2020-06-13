@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {JarwisService} from '../../../services/jarwis.service';
+import {ApiService} from '../../../services/api.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Location} from '@angular/common';
 import {SnotifyService} from 'ng-snotify';
@@ -31,7 +31,7 @@ export class ScheduleClassComponent implements OnInit {
   public error: string;
 
   constructor(
-    private jarwisService: JarwisService,
+    private apiService: ApiService,
     private route: ActivatedRoute,
     private router: Router,
     private location: Location,
@@ -40,8 +40,8 @@ export class ScheduleClassComponent implements OnInit {
 
   ngOnInit() {
     let id = this.route.snapshot.params.id;
-    this.jarwisService.getServiceInfo(id).subscribe(data => this.service = data);
-    this.jarwisService.getAuthUser().subscribe(data => this.user = data);
+    this.apiService.getServiceInfo(id).subscribe(data => this.service = data);
+    this.apiService.getAuthUser().subscribe(data => this.user = data);
   }
 
   onSubmit() {
@@ -69,7 +69,7 @@ export class ScheduleClassComponent implements OnInit {
         this.form.End_at += ':0' + this.time.etm;
       else this.form.End_at += ':' + this.time.etm;
       this.form.End_at += ':00'
-      this.jarwisService.postClass(this.form).subscribe(response => this.handleResponse());
+      this.apiService.postClass(this.form).subscribe(response => this.handleResponse());
     }
   }
 

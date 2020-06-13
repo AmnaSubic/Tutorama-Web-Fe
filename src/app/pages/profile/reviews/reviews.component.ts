@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {JarwisService} from "../../../services/jarwis.service";
+import {ApiService} from "../../../services/api.service";
 
 @Component({
   selector: 'app-reviews',
@@ -12,11 +12,11 @@ export class ReviewsComponent implements OnInit {
   public reviews;
 
   constructor(
-    private jarwisService: JarwisService
+    private apiService: ApiService
   ) { }
 
   ngOnInit() {
-    this.jarwisService.getAuthReviews().subscribe(data => this.reviews = data);
+    this.apiService.getAuthReviews().subscribe(data => this.reviews = data);
   }
 
   dateFormat(date) {

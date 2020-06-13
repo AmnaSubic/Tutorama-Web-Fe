@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {JarwisService} from '../../../services/jarwis.service';
+import {ApiService} from '../../../services/api.service';
 import {Location} from '@angular/common';
 
 @Component({
@@ -11,13 +11,13 @@ export class ClassesListComponent implements OnInit {
   public classes;
 
   constructor(
-    private jarwisService: JarwisService,
+    private apiService: ApiService,
     private location: Location
   ) { }
 
   ngOnInit() {
     // @ts-ignore
-    this.jarwisService.getAuthClasses().subscribe(data => this.classes = data);
+    this.apiService.getAuthClasses().subscribe(data => this.classes = data);
   }
 
   goBack() {

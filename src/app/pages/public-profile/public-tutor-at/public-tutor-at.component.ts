@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {JarwisService} from '../../../services/jarwis.service';
+import {ApiService} from '../../../services/api.service';
 
 @Component({
   selector: 'app-public-tutor-at',
@@ -13,12 +13,12 @@ export class PublicTutorAtComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private jarwisService: JarwisService
+    private apiService: ApiService
   ) { }
 
   ngOnInit() {
     let id = this.route.snapshot.params.id;
-    this.jarwisService.getUserAvailableTimes(id).subscribe(data => this.ats = data["data"]);
+    this.apiService.getUserAvailableTimes(id).subscribe(data => this.ats = data["data"]);
   }
 
   timeFormat(time) {

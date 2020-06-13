@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {JarwisService} from '../../services/jarwis.service';
+import {ApiService} from '../../services/api.service';
 //import {DatePipe} from '@angular/common';
 import {SnotifyService} from 'ng-snotify';
 
@@ -25,13 +25,13 @@ export class AddReviewComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private jarwisService: JarwisService,
+    private apiService: ApiService,
     private router: Router,
     private Notify: SnotifyService
   ) {}
 
   ngOnInit() {
-    this.jarwisService.getAuthUser().subscribe(data => this.user = data);
+    this.apiService.getAuthUser().subscribe(data => this.user = data);
   }
 
   onSubmit() {
@@ -56,7 +56,7 @@ export class AddReviewComponent implements OnInit {
       d = '0' + day;
     else d = day;
     this.review.Date = year + '-' + m + '-' + d;
-    this.jarwisService.postReview(this.review).subscribe(response => this.handleResponse());
+    this.apiService.postReview(this.review).subscribe(response => this.handleResponse());
   }
 
   handleResponse() {

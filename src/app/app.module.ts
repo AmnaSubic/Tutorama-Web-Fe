@@ -29,7 +29,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { ForgotPasswordResponseComponent } from './pages/forgot-password-response/forgot-password-response.component';
 import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
-import { JarwisService } from './services/jarwis.service';
+import { ApiService } from './services/api.service';
 import { TokenService } from './services/token.service';
 import { AuthService } from './services/auth.service';
 import { AfterLoginService } from './services/after-login.service';
@@ -111,7 +111,7 @@ import { AddReviewComponent } from './pages/add-review/add-review.component';
     SnotifyModule
   ],
   providers: [
-    JarwisService,
+    ApiService,
     TokenService,
     AuthService,
     AfterLoginService,

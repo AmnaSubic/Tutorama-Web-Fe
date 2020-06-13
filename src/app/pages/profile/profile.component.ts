@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {JarwisService} from '../../services/jarwis.service';
+import {ApiService} from '../../services/api.service';
 
 
 @Component({
@@ -11,11 +11,11 @@ export class ProfileComponent implements OnInit {
   public currentUser;
 
   constructor(
-    private jarwisService: JarwisService
+    private apiService: ApiService
   ) { }
 
   ngOnInit() {
-    this.jarwisService.getAuthUser().subscribe(data => this.currentUser = data);
+    this.apiService.getAuthUser().subscribe(data => this.currentUser = data);
 
     if (this.currentUser.Is_Tutor) {
       {

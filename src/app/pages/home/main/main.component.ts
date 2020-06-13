@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from "../../../services/auth.service";
-import {JarwisService} from "../../../services/jarwis.service";
+import {ApiService} from "../../../services/api.service";
 
 @Component({
   selector: 'app-main',
@@ -14,7 +14,7 @@ export class MainComponent implements OnInit {
 
   constructor(
     private Auth: AuthService,
-    private jarwisService: JarwisService
+    private jarwisService: ApiService
   ) { }
 
   ngOnInit() {

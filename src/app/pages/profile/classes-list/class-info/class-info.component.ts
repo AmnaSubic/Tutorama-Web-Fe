@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {JarwisService} from '../../../../services/jarwis.service';
+import {ApiService} from '../../../../services/api.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Location} from '@angular/common';
 import {SnotifyService} from 'ng-snotify';
@@ -18,7 +18,7 @@ export class ClassInfoComponent implements OnInit {
   public hidden = false;
 
   constructor(
-    private jarwisService: JarwisService,
+    private apiService: ApiService,
     private route: ActivatedRoute,
     private location: Location,
     private Notify: SnotifyService,
@@ -27,8 +27,8 @@ export class ClassInfoComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.jarwisService.getAuthUser().subscribe(data => this.user = data);
-    this.jarwisService.getAuthClassInfo(this.id).subscribe(data => this.class = data);
+    this.apiService.getAuthUser().subscribe(data => this.user = data);
+    this.apiService.getAuthClassInfo(this.id).subscribe(data => this.class = data);
   }
 
   public val: string;
@@ -51,36 +51,36 @@ export class ClassInfoComponent implements OnInit {
   onStart() {
     this.val = 'Started';
     if (this.user.Is_Tutor)
-      this.jarwisService.updateClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
-    else this.jarwisService.updateStudentClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
+      this.apiService.updateClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
+    else this.apiService.updateStudentClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
   }
 
   onFinish() {
     this.val = 'Finished';
     if (this.user.Is_Tutor)
-      this.jarwisService.updateClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
-    else this.jarwisService.updateStudentClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
+      this.apiService.updateClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
+    else this.apiService.updateStudentClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
   }
 
   onCancel() {
     this.val = 'Cancelled';
     if (this.user.Is_Tutor)
-      this.jarwisService.updateClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
-    else this.jarwisService.updateStudentClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
+      this.apiService.updateClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
+    else this.apiService.updateStudentClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
   }
 
   onAccept() {
     this.val = 'Accepted';
     if (this.user.Is_Tutor)
-      this.jarwisService.updateClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
-    else this.jarwisService.updateStudentClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
+      this.apiService.updateClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
+    else this.apiService.updateStudentClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
   }
 
   onReject() {
     this.val = 'Rejected';
     if (this.user.Is_Tutor)
-      this.jarwisService.updateClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
-    else this.jarwisService.updateStudentClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
+      this.apiService.updateClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
+    else this.apiService.updateStudentClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
   }
 
   handleResponse() {
