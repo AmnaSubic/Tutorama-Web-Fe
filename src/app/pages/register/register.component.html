@@ -1,75 +1,66 @@
 <div id="register">
-  <img src="../../../assets/images/register.png" alt="laptop with file upload and man sitting on the laptop">
-
-  <form #registerForm=ngForm (ngSubmit)="onSubmit()">
-    <div class="alert alert-danger" [hidden]="!error">
-      {{error}}
+  <div id="register-container">
+    <div id="image">
+      <img src="../../../assets/images/register.png" alt="laptop with file upload and man sitting on the laptop">
     </div>
 
-    <div class="form-container">
-      <label for="first-name">
+    <form #registerForm=ngForm (ngSubmit)="onSubmit()">
+      <div class="alert alert-danger" [hidden]="!error">
+        {{error}}
+      </div>
+
+      <div class="form-container">
+        <label for="first-name"></label>
         <input type="text" name="first-name" placeholder="Enter First Name" id="first-name" required="required" [(ngModel)]="form.First_Name">
-      </label>
-      <label for="last-name">
+        <label for="last-name"></label>
         <input type="text" name="last-name" placeholder="Enter Last Name" id="last-name" required="required" [(ngModel)]="form.Last_Name">
-      </label>
-      <label for="dob">
-        <input type="date" name="dob" id="dob" placeholder="yyyy-mm-dd" required="required" [(ngModel)]="form.Date_of_Birth">
-      </label>
-      <label for="gender">Gender
+        <label for="dob">Date of birth</label>
+        <input type="date" style="height: 30px; width: 100px" name="dob" id="dob" placeholder="yyyy-mm-dd" required="required" [(ngModel)]="form.Date_of_Birth">
+        <label for="gender">Gender</label>
         <select name="gender" id="gender" required="required" [(ngModel)]="form.Gender">
           <option value="" disabled="disabled">Select...</option>
           <option value="0">Female</option>
           <option value="1">Male</option>
         </select>
-      </label>
-      <label for="address">
+        <label for="address"></label>
         <input type="text" name="address" id="address" required="required" placeholder="Enter Address" [(ngModel)]="form.Address">
-      </label>
-      <label for="town">
+        <label for="town"></label>
         <input type="text" name="town" id="town" required="required" placeholder="Enter Town" [(ngModel)]="form.Town">
-      </label>
-      <label for="country">
+        <label for="country"></label>
         <input type="text" name="country" id="country" required="required" placeholder="Enter Country" [(ngModel)]="form.Country">
-      </label>
-      <label for="num">
+        <label for="num"></label>
         <input type="text" name="num" id="num" required="required" placeholder="Enter Phone Number" [(ngModel)]="form.Phone_Number">
-      </label>
-      <label for="email">
+        <label for="email"></label>
         <input type="email" name="email" placeholder="Enter Email" id="email" required="required" [(ngModel)]="form.Email">
-      </label>
-      <label for="username">
+        <label for="username"></label>
         <input type="text" name="username" placeholder="Enter Username" id="username" required="required" [(ngModel)]="form.Username">
-      </label>
-      <label for="password">
+        <label for="password"></label>
         <input type="password" name="password" placeholder="Enter Password" id="password" required="required" [(ngModel)]="form.Password">
-      </label>
-      <!--<label for="password-repeat">
-        <input type="password" name="password-repeat" id="password-repeat" placeholder="Repeat Password" required="required" [(ngModel)]="passwordRepeat">
-      </label>-->
 
-      <label for="stu-or-tu">Do you wish to register as Student or Tutor?
+        <!--<label for="password-repeat">
+          <input type="password" name="password-repeat" id="password-repeat" placeholder="Repeat Password" required="required" [(ngModel)]="passwordRepeat">
+        </label>-->
+
+        <label for="stu-or-tu">Do you wish to register as Student or Tutor?</label>
         <select name="stu-or-tu" id="stu-or-tu" required="required" [(ngModel)]="form.Is_Tutor">
           <option value="" disabled="disabled">Select...</option>
           <option value="0">Student</option>
           <option value="1">Tutor</option>
         </select>
-      </label>
-      <label  [hidden]="form.Is_Tutor == 0 || !form.Is_Tutor" for="availability">How available are you?
-        <select name="availability" id="availability" [(ngModel)]="form.Availability">
-          <option value="" disabled="disabled">Select...</option>
-          <option value="Fixed">Fixed</option>
-          <option value="Flexible">Flexible</option>
-        </select>
-      </label>
-      <label [hidden]="form.Is_Tutor == 0 || !form.Is_Tutor" for="experience" [(ngModel)]="form.Experience">Experience
-        <input type="text" id="experience" name="experience" placeholder="e.g. I was a math assistant for 5 years">
-      </label>
-      <label for="description" [(ngModel)]="form.Description">Description
-        <input type="text" id="description" name="description" placeholder="e.g. Currently a 4th year student of computer science">
-      </label>
+        <label  [hidden]="form.Is_Tutor == 0 || !form.Is_Tutor" for="availability">How available are you?</label>
+          <select [hidden]="form.Is_Tutor == 0 || !form.Is_Tutor" name="availability" id="availability" [(ngModel)]="form.Availability">
+            <option value="" disabled="disabled">Select...</option>
+            <option value="Fixed">Fixed</option>
+            <option value="Flexible">Flexible</option>
+          </select>
+        <label [hidden]="form.Is_Tutor == 0 || !form.Is_Tutor" for="experience">Experience</label>
+        <textarea [hidden]="form.Is_Tutor == 0 || !form.Is_Tutor" maxlength="300" id="experience" name="experience" placeholder="e.g. I was a math assistant for 5 years" [(ngModel)]="form.Experience"></textarea>
+        <label for="description">Description</label>
+        <textarea maxlength="300" id="description" name="description" placeholder="e.g. Currently a 4th year student of computer science" [(ngModel)]="form.Description"></textarea>
 
-      <button type="submit" [disabled]="!registerForm.valid">Register</button>
-    </div>
-  </form>
+
+        <button type="submit" [disabled]="!registerForm.valid">Register</button>
+      </div>
+    </form>
+  </div>
 </div>

@@ -1,5 +1,7 @@
 #register {
   padding-top: 100px;
+  position: relative;
+  min-height: calc(100vh - 100px);
   background-color: whitesmoke;
 }
 
@@ -7,3 +9,73 @@ img {
   width: 500px;
   height: auto;
 }
+
+#register-container {
+  margin-left: calc((100% - 665px) * 0.5);
+  width: 665px;
+}
+
+#image img {
+  width: 365px;
+  height: auto;
+}
+
+#register form {
+  position: relative;
+  top: -200px;
+  left: 365px;
+  width: 250px;
+  margin-left: 50px;
+}
+
+label fa-icon {
+  margin-right: 15px;
+}
+
+form button {
+  margin-top: 15px;
+  border-radius: 15px;
+  border-width: 0;
+  background-color: #19777b;
+  color: white;
+  text-decoration: none;
+  font: normal normal normal 15px/1.4em 'DM Sans', sans-serif;
+  height: 30px;
+  width: 150px;
+  margin-left: calc((100% - 150px) * 0.5);
+}
+
+small {
+  color: #828282;
+  a {
+    text-decoration: none;
+    color: #828282;
+  }
+
+  a:hover {
+    color: #19777b;
+    border-bottom: #0c424d .5px solid;
+  }
+}
+
+.form-container small {
+  margin-left: calc((100% - 100px) * 0.5);
+}
+
+.form-container input {
+  border: none;
+}
+
+.form-container label {
+  border-bottom: .2px solid lightgray;
+  margin-top: 15px;
+  width: 100%;
+}
+
+#stu-or-tu {
+  margin-bottom: 20px;
+}
+
+
+
+
