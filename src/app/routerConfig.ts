@@ -1,9 +1,3 @@
-import { Routes} from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { RegisterComponent } from './pages/register/register.component';
-import { LoginComponent } from './pages/login/login.component';
-import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-import { ProfileComponent } from './pages/profile/profile.component';
 import { BeforeLoginService } from './services/before-login.service';
 import { AfterLoginService } from './services/after-login.service';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
@@ -16,6 +10,12 @@ import { ClassInfoComponent } from './pages/profile/classes-list/class-info/clas
 import { ScheduleClassComponent } from './pages/services-list/schedule-class/schedule-class.component';
 import { PublicProfileComponent } from './pages/public-profile/public-profile.component';
 import {AddReviewComponent} from "./pages/add-review/add-review.component";
+import { Routes} from '@angular/router';
+import { HomeComponent } from './pages/home/home.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { LoginComponent } from './pages/login/login.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 
 

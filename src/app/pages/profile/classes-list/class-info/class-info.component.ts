@@ -55,13 +55,6 @@ export class ClassInfoComponent implements OnInit {
     else this.apiService.updateStudentClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
   }
 
-  onFinish() {
-    this.val = 'Finished';
-    if (this.user.Is_Tutor)
-      this.apiService.updateClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
-    else this.apiService.updateStudentClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
-  }
-
   onCancel() {
     this.val = 'Cancelled';
     if (this.user.Is_Tutor)
@@ -78,6 +71,13 @@ export class ClassInfoComponent implements OnInit {
 
   onReject() {
     this.val = 'Rejected';
+    if (this.user.Is_Tutor)
+      this.apiService.updateClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
+    else this.apiService.updateStudentClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
+  }
+
+  onFinish() {
+    this.val = 'Finished';
     if (this.user.Is_Tutor)
       this.apiService.updateClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
     else this.apiService.updateStudentClassStatus(this.val, this.id).subscribe(response => this.handleResponse());
