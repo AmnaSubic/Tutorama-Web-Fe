@@ -106,4 +106,12 @@ export class ApiService {
     return this.http.post(`${this.baseUrl}/addReview`, data);
   }
 
+  deleteAT(id) {
+    return this.http.delete(`${this.baseUrl}/deleteAT/${id}`, id);
+  }
+
+  deleteService(id) {
+    return this.http.delete(`${this.baseUrl}/deleteService/${id}`, id);
+  }
+
 }

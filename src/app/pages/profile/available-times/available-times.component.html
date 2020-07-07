@@ -12,6 +12,7 @@
         <p class="data element time">{{timeFormat(at.Start_Time)}}</p>
         <p class="element tag time">to</p>
         <p class="data element time">{{timeFormat(at.End_Time)}}</p>
+        <button class="element" (click)="warning(at.Available_Time_ID)">Delete</button>
       </div>
     </div>
   </div>
