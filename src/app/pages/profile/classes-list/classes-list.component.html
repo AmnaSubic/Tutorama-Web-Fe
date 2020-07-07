@@ -2,16 +2,30 @@
   <div id="title">
     <h2>Classes</h2>
   </div>
+  <button (click)="showCurrent()">Current</button>
+  <button (click)="showHistory()">History</button>
   <div id="cards">
-    <div id="card" *ngFor="let c of classes" [routerLink]="['/profile/classes', c.Class_ID]">
-      <div id="content">
-        <h4>{{c.Subject_Name}}</h4>
-        <p id="level">{{c.Service_Level}}</p>
-        <p>{{dateFormat(c.Date)}}</p>
-        <p>{{timeFormat(c.Start_at)}} - {{timeFormat(c.End_at)}}</p>
-        <p id="status">{{c.Status}}</p>
+    <div *ngIf="curr">
+      <div class="card" *ngFor="let c of classesCurrent" [routerLink]="['/profile/classes', c.Class_ID]">
+        <div class="content">
+          <h4>{{c.Subject_Name}}</h4>
+          <p class="level">{{c.Service_Level}}</p>
+          <p>{{dateFormat(c.Date)}}</p>
+          <p>{{timeFormat(c.Start_at)}} - {{timeFormat(c.End_at)}}</p>
+          <p class="status">{{c.Status}}</p>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="his">
+      <div class="card" *ngFor="let c of classesHistory" [routerLink]="['/profile/classes', c.Class_ID]">
+        <div class="content">
+          <h4>{{c.Subject_Name}}</h4>
+          <p class="level">{{c.Service_Level}}</p>
+          <p>{{dateFormat(c.Date)}}</p>
+          <p>{{timeFormat(c.Start_at)}} - {{timeFormat(c.End_at)}}</p>
+          <p class="status">{{c.Status}}</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
-

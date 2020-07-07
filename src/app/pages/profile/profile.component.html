@@ -7,31 +7,31 @@
         <h4>{{currentUser.First_Name}} {{currentUser.Last_Name}}</h4>
         <p>@{{currentUser.Username}}</p>
       </div>
-      <div class="nav-row" id="user-info-row">
+      <div appActiveRowInfo (click)="showP()" class="nav-row" id="user-info-row">
         <fa-icon appActiveRowInfo (click)="showP()" class="nav-row-item" [icon]="['fas','user']" size="1x"></fa-icon>
         <p appActiveRowInfo (click)="showP()" class="nav-row-item">User information</p>
         <fa-icon appActiveRowInfo (click)="showP()" class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
       </div>
-      <div class="nav-row" id="service-row">
-        <div *ngIf="isTutor()" class="tutor-row">
+      <div appActiveRowServices (click)="showService()" class="nav-row" id="service-row">
+        <div appActiveRowServices *ngIf="isTutor()" class="tutor-row">
           <fa-icon appActiveRowServices (click)="showService()" class="nav-row-item" [icon]="['fas','concierge-bell']" size="1x"></fa-icon>
           <p appActiveRowServices (click)="showService()" class="nav-row-item">Services</p>
           <fa-icon appActiveRowServices (click)="showService()" class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
         </div>
       </div>
-      <div class="nav-row" id="at-row">
-        <div *ngIf="isTutor()" class="tutor-row">
+      <div appActiveRowAt (click)="showAT()" class="nav-row" id="at-row">
+        <div appActiveRowAt (click)="showAT()" *ngIf="isTutor()" class="tutor-row">
           <fa-icon appActiveRowAt (click)="showAT()" class="nav-row-item" [icon]="['fas','clock']" size="1x"></fa-icon>
           <p appActiveRowAt (click)="showAT()" class="nav-row-item">Time slots</p>
           <fa-icon appActiveRowAt (click)="showAT()" class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
         </div>
       </div>
-      <div class="nav-row" id="classes-row">
+      <div appActiveRowClasses (click)="showC()" class="nav-row" id="classes-row">
         <fa-icon appActiveRowClasses (click)="showC()" class="nav-row-item" [icon]="['fas','book-open']" size="1x"></fa-icon>
         <p appActiveRowClasses (click)="showC()" class="nav-row-item">Classes</p>
         <fa-icon appActiveRowClasses (click)="showC()" class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>
       </div>
-      <div class="nav-row" id="reviews-row">
+      <div appActiveRowReviews (click)="showR()" class="nav-row" id="reviews-row">
         <fa-icon appActiveRowReviews (click)="showR()" class="nav-row-item" [icon]="['fas','star-half-alt']" size="1x"></fa-icon>
         <p appActiveRowReviews (click)="showR()" class="nav-row-item">Reviews</p>
         <fa-icon appActiveRowReviews (click)="showR()" class="nav-row-item" [icon]="['fas','chevron-right']" size="1x"></fa-icon>

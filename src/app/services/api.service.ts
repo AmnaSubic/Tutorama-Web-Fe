@@ -50,8 +50,8 @@ export class ApiService {
     return this.http.get(`${this.baseUrl}/getAuthUserAvailableTimes`);
   }
 
-  getServices() {
-    return this.http.get(`${this.baseUrl}/getServices`);
+  getServices(subject) {
+    return this.http.get(`${this.baseUrl}/search/${subject}`, subject);
   }
 
   getServiceInfo(id) {
@@ -70,8 +70,12 @@ export class ApiService {
     return this.http.get(`${this.baseUrl}/getUser/${id}/availableTimes`, id)
   }
 
-  getAuthClasses() {
-    return this.http.get(`${this.baseUrl}/getAuthClasses`);
+  getAuthClassesCurrent() {
+    return this.http.get(`${this.baseUrl}/getAuthClassesCurrent`);
+  }
+
+  getAuthClassesHistory() {
+    return this.http.get(`${this.baseUrl}/getAuthClassesHistory`);
   }
 
   postClass(data) {

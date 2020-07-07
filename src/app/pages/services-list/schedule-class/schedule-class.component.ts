@@ -88,7 +88,7 @@ export class ScheduleClassComponent implements OnInit {
     this.Notify.confirm('Class scheduled!', {
       buttons: [{
           text: 'Okay', action: (toast) => {
-            this.router.navigateByUrl('/services').then(r => this.Notify.remove(toast.id))
+            this.router.navigateByUrl('/search/all').then(r => this.Notify.remove(toast.id))
           },
         }]
     });

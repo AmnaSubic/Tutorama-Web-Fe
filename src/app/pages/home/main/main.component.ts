@@ -11,6 +11,7 @@ export class MainComponent implements OnInit {
 
   public loggedIn: boolean;
   public user;
+  public subject;
 
   constructor(
     private Auth: AuthService,

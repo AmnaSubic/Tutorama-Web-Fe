@@ -60,7 +60,7 @@ export const appRoutes: Routes = [
     canActivate: [AfterLoginService]
   },
   {
-    path: 'services',
+    path: 'search/:subject',
     component: ServicesListComponent,
     canActivate: [AfterLoginService]
   },

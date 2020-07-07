@@ -158,10 +158,6 @@
   font-family: 'DM Serif Display', serif ;
 }
 
-.button-link {
-  left: calc((100% - 120px) * 0.5);
-}
-
 #main {
  background-color: whitesmoke;
   width: 100%;
@@ -169,8 +165,5 @@
 
 .homepage-buttons {
   width: 120px;
-}
-
-.button-link {
-  width: 120px;
+  left: calc((100% - 120px) * 0.5);
 }

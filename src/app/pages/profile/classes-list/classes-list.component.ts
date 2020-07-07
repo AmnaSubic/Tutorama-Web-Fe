@@ -8,7 +8,8 @@ import {Location} from '@angular/common';
   styleUrls: ['./classes-list.component.scss']
 })
 export class ClassesListComponent implements OnInit {
-  public classes;
+  public classesCurrent;
+  public classesHistory;
 
   constructor(
     private apiService: ApiService,
@@ -16,8 +17,8 @@ export class ClassesListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // @ts-ignore
-    this.apiService.getAuthClasses().subscribe(data => this.classes = data);
+    this.apiService.getAuthClassesCurrent().subscribe(data => this.classesCurrent = data);
+    this.apiService.getAuthClassesHistory().subscribe(data => this.classesHistory = data);
   }
 
   goBack() {
@@ -32,6 +33,19 @@ export class ClassesListComponent implements OnInit {
   timeFormat(time) {
     let t = time.split(':', 2);
     return t[0] + ':' + t[1];
+  }
+
+  public curr = true;
+  public his = false;
+
+  showCurrent() {
+    this.curr = true;
+    this.his = false;
+  }
+
+  showHistory() {
+    this.curr = false;
+    this.his = true;
   }
 
 }

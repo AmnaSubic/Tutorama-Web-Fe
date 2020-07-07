@@ -4,7 +4,7 @@
     margin-left: calc((100% - 775px) * 0.5);
   }
 
-  #card:nth-child(3n - 1) {
+  .card:nth-child(3n - 1) {
     margin: 0 50px;
   }
 }
@@ -15,7 +15,7 @@
     margin-left: calc((100% - 500px) * 0.5);
   }
 
-  #card:nth-child(odd) {
+  .card:nth-child(odd) {
     margin-right: 50px;
   }
 
@@ -28,7 +28,7 @@
   }
 }
 
-#card {
+.card {
   background-color: white;
   display: inline-block;
   width: 225px;
@@ -38,7 +38,7 @@
   box-shadow: 1px 12px 20px 0 rgba(50, 50, 50, 0.2);
 }
 
-#card:hover {
+.card:hover {
   box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -48,14 +48,14 @@
     0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
-#level {
+.level {
   color: #828282;
   font-size: 12px;
   font-weight: bold;
   font-style: oblique;
 }
 
-#content {
+.content {
   margin: 10px;
   font-family: 'DM Sans', sans-serif;
 }
@@ -75,7 +75,7 @@
   padding-top: 60px;
 }
 
-#status {
+.status {
   font-style: italic;
   font-size: small;
 
