@@ -7,6 +7,11 @@
   .card:nth-child(3n - 1) {
     margin: 0 50px;
   }
+
+  #buttons {
+    margin-left: calc(100% - 323px);
+    display: inline-block;
+  }
 }
 
 @media (min-width: 875px) and (max-width: 1199px) {
@@ -17,6 +22,11 @@
 
   .card:nth-child(odd) {
     margin-right: 50px;
+  }
+
+  #buttons {
+    margin-left: calc(100% - 323px);
+    display: inline-block;
   }
 
 }
@@ -72,7 +82,7 @@
   font-weight: 500;
   font-style: oblique;
   display: inline-block;
-  padding-top: 60px;
+  margin-bottom: 0;
 }
 
 .status {
@@ -83,4 +93,19 @@
 
 #classes-list {
   min-height: calc(100vh - 100px);
+}
+
+.class-button {
+  border: 1px solid #828282;
+  height: 40px;
+  width: 100px;
+  background-color: white;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+#current {
+  border-right: 0;
+  background-color: #19777b;
+  color: white;
 }

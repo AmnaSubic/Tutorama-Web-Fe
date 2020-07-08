@@ -16,6 +16,9 @@ import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import {EditProfileComponent} from "./pages/profile/profile-info/edit-profile/edit-profile.component";
+import {EditServiceComponent} from "./pages/profile/services/edit-service/edit-service.component";
+import {EditAtComponent} from "./pages/profile/available-times/edit-at/edit-at.component";
 
 
 
@@ -87,6 +90,21 @@ export const appRoutes: Routes = [
   {
     path: 'add-review/:id',
     component: AddReviewComponent,
+    canActivate: [AfterLoginService]
+  },
+  {
+    path: 'profile/edit',
+    component: EditProfileComponent,
+    canActivate: [AfterLoginService]
+  },
+  {
+    path: 'profile/edit-service/:id',
+    component: EditServiceComponent,
+    canActivate: [AfterLoginService]
+  },
+  {
+    path: 'profile/edit-at/:id',
+    component: EditAtComponent,
     canActivate: [AfterLoginService]
   },
   {

@@ -48,4 +48,12 @@ export class ClassesListComponent implements OnInit {
     this.his = true;
   }
 
+  emptyCurr() {
+    if (this.classesCurrent.length == 0) return true;
+  }
+
+  emptyHis() {
+    if (this.classesHistory.length == 0) return true;
+  }
+
 }

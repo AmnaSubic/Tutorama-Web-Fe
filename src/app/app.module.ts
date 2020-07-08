@@ -56,6 +56,11 @@ import { PublicReviewsComponent } from './pages/public-profile/public-reviews/pu
 import { PublicTutorServicesComponent } from './pages/public-profile/public-tutor-services/public-tutor-services.component';
 import { PublicTutorAtComponent } from './pages/public-profile/public-tutor-at/public-tutor-at.component';
 import { AddReviewComponent } from './pages/add-review/add-review.component';
+import { EditProfileComponent } from './pages/profile/profile-info/edit-profile/edit-profile.component';
+import { EditServiceComponent } from './pages/profile/services/edit-service/edit-service.component';
+import { EditAtComponent } from './pages/profile/available-times/edit-at/edit-at.component';
+import { CurrentClassDirective } from './directives/current-class.directive';
+import { HistoryClassDirective } from './directives/history-class.directive';
 
 
 @NgModule({
@@ -98,6 +103,11 @@ import { AddReviewComponent } from './pages/add-review/add-review.component';
     PublicTutorServicesComponent,
     PublicTutorAtComponent,
     AddReviewComponent,
+    EditProfileComponent,
+    EditServiceComponent,
+    EditAtComponent,
+    CurrentClassDirective,
+    HistoryClassDirective,
 
   ],
   imports: [

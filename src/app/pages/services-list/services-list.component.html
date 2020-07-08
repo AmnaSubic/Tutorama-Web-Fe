@@ -4,10 +4,8 @@
   </div>
   <div id="search">
     <label for="subject"></label>
-    <input type="text" id="subject" name="search" placeholder="Enter subject, e.g. mathematics" [(ngModel)]="subject">
-    <button (click)="search()">
-      Search
-    </button>
+    <input type="text" id="subject" name="search" placeholder="Search subject, e.g. math" [(ngModel)]="subject">
+    <button (click)="search()">Search</button>
   </div>
   <div id="cards">
     <div *ngIf="empty()">

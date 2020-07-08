@@ -114,4 +114,23 @@ export class ApiService {
     return this.http.delete(`${this.baseUrl}/deleteService/${id}`, id);
   }
 
+  editProfile(data) {
+    return this.http.put(`${this.baseUrl}/updateInfo`, data);
+  }
+
+  editService(data, id) {
+    return this.http.put(`${this.baseUrl}/updateService/${id}`, data, id);
+  }
+
+  editAT(data, id) {
+    return this.http.put(`${this.baseUrl}/updateAT/${id}`, data, id);
+  }
+
+  getAT(id) {
+    return this.http.get(`${this.baseUrl}/getAvailableTime/${id}`, id);
+  }
+
+  getAuthService(id) {
+    return this.http.get(`${this.baseUrl}/getAuthService/${id}`, id);
+  }
 }

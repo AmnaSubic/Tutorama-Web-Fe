@@ -1,0 +1,90 @@
+@media only screen and (min-width: 601px) {
+  #title h2 {
+    margin-left: calc((100% - 360px) * 0.1);
+    width: 360px;
+  }
+
+  form {
+    width: 500px;
+    margin-left: calc((100% - 500px) * 0.5);
+  }
+
+  .form-row {
+    width: 350px;
+    margin-left: calc((100% - 350px) * 0.5);
+  }
+
+  .form-row input, .form-row textarea, .form-row select {
+    margin-left: calc(100% - 200px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #title h2 {
+    margin-left: calc((100% - 250px) * 0.1);
+    width: 250px;
+  }
+
+  form {
+    width: 300px;
+    margin-left: calc((100% - 300px) * 0.5);
+  }
+
+  .form-row {
+    width: 150px;
+    margin-left: calc((100% - 150px) * 0.5);
+  }
+}
+
+#edit-profile {
+  padding-top: 100px;
+  min-height: calc(100vh - 100px);
+  position: relative;
+  background-color: whitesmoke;
+  padding-bottom: 50px;
+}
+
+#title {
+  border-bottom: #0c424d 1px solid;
+  width: 80%;
+  margin-left: 10%;
+}
+
+#title h2 {
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-style: oblique;
+}
+
+form {
+  background-color: white;
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+}
+
+.form-row label {
+  font-family: 'Open Sans', sans-serif;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+
+.form-row {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#submit {
+  margin-top: 20px;
+  border: 0;
+  border-radius: 25px;
+  height: 40px;
+  background-color: #0c424d;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  width: 100px;
+  margin-left: calc((100% - 100px) * 0.5);
+}

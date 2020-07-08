@@ -1,0 +1,54 @@
+<div id="edit-profile">
+  <div id="title">
+    <h2>
+      <fa-icon (click)="goBack()" [icon]="['fas','chevron-left']" size="1x"></fa-icon>
+      Edit Profile
+    </h2>
+  </div>
+  <form #editProfileForm=ngForm (ngSubmit)="onSubmit()">
+    <div class="form-row">
+      <label for="name">First Name</label>
+      <input type="text" id="name" name="name" required="required" [(ngModel)]="user.First_Name">
+    </div>
+    <div class="form-row">
+      <label for="surname">Last Name</label>
+      <input type="text" id="surname" name="surname" required="required" [(ngModel)]="user.Last_Name">
+    </div>
+    <div class="form-row">
+      <label for="address">Address</label>
+      <input type="text" id="address" name="address" required="required" [(ngModel)]="user.Address">
+    </div>
+    <div class="form-row">
+      <label for="town">Town</label>
+      <input type="text" id="town" name="town" required="required" [(ngModel)]="user.Town">
+    </div>
+    <div class="form-row">
+      <label for="country">Country</label>
+      <input type="text" id="country" name="country" required="required" [(ngModel)]="user.Country">
+    </div>
+    <div class="form-row">
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" name="phone" required="required" [(ngModel)]="user.Phone_Number">
+    </div>
+    <div class="form-row">
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" required="required" [(ngModel)]="user.Email">
+    </div>
+    <div *ngIf="isTutor()" class="form-row">
+      <label for="experience">Experience</label>
+      <textarea maxlength="300" id="experience" name="experience" [(ngModel)]="user.Experience"></textarea>
+    </div>
+    <div class="form-row">
+      <label for="description">Description</label>
+      <textarea maxlength="300" id="description" name="description" [(ngModel)]="user.Description"></textarea>
+    </div>
+    <div *ngIf="isTutor()" class="form-row">
+      <label for="availability">Availability</label>
+      <select name="availability" id="availability" [(ngModel)]="user.Availability">
+        <option value="Fixed">Fixed</option>
+        <option value="Flexible">Flexible</option>
+      </select>
+    </div>
+    <button id="submit" type="submit" [disabled]="!editProfileForm.valid">Update</button>
+  </form>
+</div>

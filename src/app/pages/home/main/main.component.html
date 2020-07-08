@@ -3,15 +3,11 @@
     <div id="main-text">
       <h1>The place for all your tutoring needs</h1>
       <p>Welcome to Tutorama.ba - Bosnia and Herzegovina's first tutoring web application.</p>
-        <button *ngIf="!loggedIn" routerLink="/register" class="homepage-buttons">
-          Join Now
-        </button>
+        <button *ngIf="!loggedIn" routerLink="/register" class="homepage-buttons join">Join Now</button>
         <div id="search">
           <label for="subject"></label>
-          <input type="text" id="subject" name="subject" placeholder="Enter subject, e.g. mathematics" [(ngModel)]="subject">
-          <button class="homepage-buttons" *ngIf="loggedIn && isStudent()" [routerLink]="['search', subject]">
-            Search Services
-          </button>
+          <input  *ngIf="loggedIn && isStudent()" type="text" id="subject" name="subject" placeholder="Search subject, e.g. math" [(ngModel)]="subject">
+          <button class="homepage-buttons search" *ngIf="loggedIn && isStudent()" [routerLink]="['search', subject]">Search</button>
         </div>
     </div>
     <img src="../../../../assets/images/homepage.png" alt="solving problems together flat vector background">

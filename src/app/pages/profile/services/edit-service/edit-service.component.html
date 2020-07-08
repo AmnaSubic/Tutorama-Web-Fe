@@ -1,0 +1,28 @@
+<div id="edit-service">
+  <div id="title">
+    <h2>
+      <fa-icon (click)="goBack()" [icon]="['fas','chevron-left']" size="1x"></fa-icon>
+      Edit Service
+    </h2>
+  </div>
+  <form #editServiceForm=ngForm (ngSubmit)="onSubmit()">
+    <div class="form-row">
+      <label for="subject">Subject</label>
+      <p style="font-weight: bold" id="subject">{{service.Subject_Name}}</p>
+    </div>
+    <div class="form-row">
+      <label for="level">Choose Level</label>
+      <select id="level" name="level" required="required" [(ngModel)]="service.Service_Level">
+        <option value="Elementary">Elementary</option>
+        <option value="High School">High School</option>
+        <option value="University">University</option>
+        <option value="On Demand">On Demand</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label for="price">Enter price (KM/h)</label>
+      <input type="number" id="price" name="price" required="required" [(ngModel)]="service.Service_Cost">
+    </div>
+    <button id="submit" type="submit" [disabled]="!editServiceForm.valid">Update</button>
+  </form>
+</div>

@@ -1,11 +1,14 @@
 <div id="classes-list">
   <div id="title">
     <h2>Classes</h2>
+    <div id="buttons">
+      <button appCurrentClass id="current" class="class-button" (click)="showCurrent()">Current</button>
+      <button appHistoryClass id="history" class="class-button" (click)="showHistory()">History</button>
+    </div>
   </div>
-  <button (click)="showCurrent()">Current</button>
-  <button (click)="showHistory()">History</button>
   <div id="cards">
     <div *ngIf="curr">
+      <p style="margin: 25px" *ngIf="emptyCurr()">No classes</p>
       <div class="card" *ngFor="let c of classesCurrent" [routerLink]="['/profile/classes', c.Class_ID]">
         <div class="content">
           <h4>{{c.Subject_Name}}</h4>
@@ -18,6 +21,7 @@
     </div>
     <div *ngIf="his">
       <div class="card" *ngFor="let c of classesHistory" [routerLink]="['/profile/classes', c.Class_ID]">
+        <p *ngIf="emptyHis()">No classes</p>
         <div class="content">
           <h4>{{c.Subject_Name}}</h4>
           <p class="level">{{c.Service_Level}}</p>
