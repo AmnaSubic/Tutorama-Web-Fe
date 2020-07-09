@@ -42,7 +42,7 @@ export class ClassInfoComponent implements OnInit {
 
   showStu() {
     if (!this.user.Is_Tutor)
-      if (this.class.Status == 'Pending' || this.class.Status == 'Cancelled' || this.class.Status == 'Rejected')
+      if (this.class.Status == 'Cancelled' || this.class.Status == 'Rejected')
         return false;
       else return this.class.Stu_Status == 'Started' || this.class.Stu_Status == null;
     return false;

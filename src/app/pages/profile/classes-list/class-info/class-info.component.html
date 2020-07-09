@@ -77,7 +77,7 @@
               <button class="status-button red" (click)="onCancel()" *ngIf="class.Status == 'Started' || class.Status == 'Accepted'">Cancel <fa-icon [icon]="['far', 'trash-alt']"></fa-icon></button>
             </div>
             <div class="buttons" *ngIf="showStu()">
-              <button class="status-button green" (click)="onStart()" *ngIf="class.Stu_Status == null">Start <fa-icon [icon]="['far', 'play-circle']"></fa-icon></button>
+              <button class="status-button green" (click)="onStart()" *ngIf="class.Stu_Status == null && class.Status != 'Pending'">Start <fa-icon [icon]="['far', 'play-circle']"></fa-icon></button>
               <button class="status-button green" (click)="onFinish()" *ngIf="class.Stu_Status == 'Started'">Done <fa-icon [icon]="['far', 'check-circle']"></fa-icon> </button>
               <button class="status-button red" (click)="onCancel()" *ngIf="class.Stu_Status == null || class.Stu_Status == 'Started'">Cancel <fa-icon [icon]="['far', 'trash-alt']"></fa-icon></button>
             </div>
