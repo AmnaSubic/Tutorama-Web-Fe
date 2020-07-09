@@ -44,6 +44,10 @@ export class ScheduleClassComponent implements OnInit {
     this.apiService.getAuthUser().subscribe(data => this.user = data);
   }
 
+  minutes(start, end) {
+    return Math.abs(start - end)/60
+  }
+
   onSubmit() {
     let hour = this.time.eth - this.time.sth;
     let minutes = Math.abs(this.time.stm - this.time.etm)/60;
