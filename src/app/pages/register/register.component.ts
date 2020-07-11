@@ -48,7 +48,7 @@ export class RegisterComponent implements OnInit {
 
   handleResponse(data) {
     this.Token.handle(data.access_token);
-    this.router.navigateByUrl('/login');
+    this.router.navigateByUrl('/profile');
   }
 
   ngOnInit() {
